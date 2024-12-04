@@ -8,7 +8,7 @@ export default function UpdatePage() {
   const params = useParams();
   const navigate = useNavigate();
 
-  const url = `https://offthepath-webapp-default-rtdb.firebaseio.com/posts/${params.id}.json`;
+  const url = `https://ziptrip-ec0b6-default-rtdb.firebaseio.com//posts/${params.id}.json`;
 
   // Fetch post data from the database
   useEffect(() => {

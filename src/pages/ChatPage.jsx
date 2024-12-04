@@ -15,13 +15,13 @@ export default function ChatPage() {
       try {
         // Fetching all the chats 'allChats' data from our firebase
         const allChatsResponse = await fetch(
-          "https://offthepath-webapp-default-rtdb.firebaseio.com/allChats.json"
+          "https://ziptrip-ec0b6-default-rtdb.firebaseio.com//allChats.json"
         );
         const allChatsData = await allChatsResponse.json();
 
         // Fetch all the chats 'matchChats' data from our firebase
         const matchChatsResponse = await fetch(
-          "https://offthepath-webapp-default-rtdb.firebaseio.com/matchChats.json"
+          "https://ziptrip-ec0b6-default-rtdb.firebaseio.com//matchChats.json"
         );
         const matchChatsData = await matchChatsResponse.json();
 

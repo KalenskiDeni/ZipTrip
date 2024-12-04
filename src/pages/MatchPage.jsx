@@ -30,7 +30,7 @@ export default function MatchPage() {
         const fetchData = async () => {
             try {
                 const response = await fetch( //waits until all the data is loaded to process it
-                    "https://offthepath-webapp-default-rtdb.firebaseio.com/locals.json"
+                    "https://ziptrip-ec0b6-default-rtdb.firebaseio.com//locals.json"
                 );
                 if (!response.ok) {
                     throw new Error("Network response was not ok");

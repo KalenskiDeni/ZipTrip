@@ -22,7 +22,7 @@ export default function HomePage() {
   useEffect(() => {
     async function fetchPosts() {
       const url =
-        "https://offthepath-webapp-default-rtdb.firebaseio.com/posts.json";
+        "https://ziptrip-ec0b6-default-rtdb.firebaseio.com//posts.json";
       const response = await fetch(url);
       const data = await response.json();
 

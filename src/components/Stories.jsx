@@ -10,7 +10,7 @@ const Stories = () => {
   useEffect(() => {
     const fetchStories = async () => {
       try {
-        const url = "https://offthepath-webapp-default-rtdb.firebaseio.com/stories.json";
+        const url = "https://ziptrip-ec0b6-default-rtdb.firebaseio.com//stories.json";
         const response = await fetch(url);
         const data = await response.json();
 

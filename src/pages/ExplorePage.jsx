@@ -16,7 +16,7 @@ export default function ExplorePage() {
   useEffect(() => {
     async function fetchPosts() {
       const url =
-        "https://offthepath-webapp-default-rtdb.firebaseio.com/explorePosts.json"; // fetch data from the url, specifically the explorePosts section
+        "https://ziptrip-ec0b6-default-rtdb.firebaseio.com//explorePosts.json"; // fetch data from the url, specifically the explorePosts section
       const response = await fetch(url);
       const data = await response.json(); // get the data from the response and parse it
       // from object to array
