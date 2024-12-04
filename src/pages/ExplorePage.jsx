@@ -1,66 +1,97 @@
-//created by Beatrise
 
+
+// HomePage.js
 import { useEffect, useState } from "react";
-import ExploreCard from "../components/ExploreCard";
+import PostCard from "../components/PostCard";
+import Stories from "../components/Stories"; // Import Stories component
 import { NavLink } from "react-router-dom";
-import "/src/styles.css";
-import HeartIcon from "../assets/icons/heart.svg"; //for the button that leads to favorites page
-import logo from "../assets/icons/logo-blue.svg";
-import backButton from "../assets/icons/backButton.svg";
+import avatarImage from "../assets/story-alex.png";
+import logo from "/src/assets/logoziptrip.png"; // Path to the logo
+import searchIcon from "../assets/icons/search-icon.svg";
+import settingsIcon from "../assets/icons/cog-icon.svg";
 import bar from "../assets/status-bar.png";
 
-export default function ExplorePage() {
-  const [posts, setPosts] = useState([]); // set the initial state to an empty array
+// useState is a hook that lets you add state to functional components.
+// It returns an array with two elements: the current state value and a function to update that state.
+export default function HomePage() {
+  const [posts, setPosts] = useState([]);
+  const [activeTab, setActiveTab] = useState("forYou");
 
+  // useEffect hook to fetch posts from the database
   useEffect(() => {
     async function fetchPosts() {
       const url =
-        "https://ziptrip-ec0b6-default-rtdb.firebaseio.com//explorePosts.json"; // fetch data from the url, specifically the explorePosts section
+        "https://ziptrip-ec0b6-default-rtdb.firebaseio.com//posts.json";
       const response = await fetch(url);
-      const data = await response.json(); // get the data from the response and parse it
-      // from object to array
+      const data = await response.json();
+
+      // Convert object to array for easier iteration, consistent data structure & state management
       const postsArray = Object.keys(data).map((postId) => ({
         id: postId,
         ...data[postId],
-      })); // map the data to an array of objects
-      setPosts(postsArray); // set the posts state with the postsArray
+      }));
+      setPosts(postsArray);
     }
 
     fetchPosts();
   }, []);
 
+  //a return statement defines the HTML structure of the component that will be rendered on the webpage
   return (
     <section className="page">
       <header className="top-bar">
         <div className="top-bar-content">
-          <NavLink to="/" activeClassName="active">
-            <img src={backButton} alt="Back Button" className="back-button" />
-          </NavLink>{" "}
           <img src={bar} alt="status bar" className="bar" />
           <img src={logo} alt="Off The Path Logo" className="logo" />
-          <div className="top-bar-icons"></div>
+        
         </div>
       </header>
 
-      <div className="search-bar-button">
-        <div className="search-bar">
-          <NavLink to="/search" activeClassName="active">
-            <span className="placeholder-text">
-              What do you want to explore?
-            </span>
-          </NavLink>
-        </div>
-        <NavLink to="/favorites" activeClassName="active">
-          <img src={HeartIcon} alt="Favorites" className="heart-icon" />
-        </NavLink>
+      {/* Tabs Section */}
+      <div className="tab-buttons-home">
+        <button
+          className={activeTab === "forYou" ? "active" : ""}
+          onClick={() => setActiveTab("forYou")}
+        >
+          Your Rides
+        </button>
+        <button
+          className={activeTab === "daily" ? "active" : ""}
+          onClick={() => setActiveTab("daily")}
+        >
+          Host a ride
+        </button>
       </div>
-      <div className="card-container">
-        {posts.map((post) => (
-          <ExploreCard key={post.id} post={post} />
-        ))}
+
+      {/* Tab Content */}
+      <div className="tab-content">
+        {activeTab === "forYou" && (
+          <>
+            {/* Create Post Button */}
+            <div className="create-post-button">
+              <NavLink to="/create" activeClassName="active">
+                
+              </NavLink>
+            </div>
+          
+
+            {/* Posts Grid */}
+            <div className="grid">
+              {posts.map((post) => (
+                <PostCard key={post.id} post={post} />
+              ))}
+            </div>
+          </>
+        )}
+
+        {activeTab === "daily" && (
+          <div className="daily-content">
+            <h2>Daily Inspiration</h2>
+            <p>Discover new places and experiences every day!</p>
+            {/* Add more content or components specific to the "Daily" tab here */}
+          </div>
+        )}
       </div>
     </section>
   );
 }
-
-//top-bar is the header of the page. it contains the logo, and back button

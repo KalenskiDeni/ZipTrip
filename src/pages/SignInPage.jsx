@@ -7,11 +7,11 @@ import "/src/styles.css";
 
 // Importing icons and images
 import arrowIcon from "../assets/icons/arrow-icon.svg";
-import mailIcon from "../assets/icons/mail-icon.svg";
+import mailIcon from "../assets/icons/mail.icon.svg";
 import lockIcon from "../assets/icons/lock-icon.svg";
 import appleIcon from "../assets/icons/apple-icon.svg";
 import googleIcon from "../assets/icons/google-icon.svg";
-import logo from "../assets/icons/logo-blue.svg";
+import logo from "/src/assets/logoziptrip.png"; // Path to the logo
 import backButton from "../assets/icons/backButton.svg";
 
 // SignInPage component
@@ -37,14 +37,15 @@ export default function SignInPage() {
   // Return the JSX for the SignInPage component
   return (
     <section id="sign-in-page" className="page">
+      
       <div className="header">
-        <img src={backButton} alt="Back Button" className="back-button" />
+        <img src={backButton} alt="Back Button" className="back-button-login" />
         <img src={logo} alt="Off The Path Logo" className="logo" />
       </div>
       <h1 className="login-title">Log In</h1>
       <p className="login-subtext">
         Log in now to access all the features of{" "}
-        <span className="highlight">OffThePath!</span>
+        <span className="highlight">ZipTrip!</span>
       </p>
 
       <form id="sign-in-form" className="login-form" onSubmit={handleSignIn}>

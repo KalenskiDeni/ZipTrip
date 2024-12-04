@@ -1,15 +1,15 @@
 // Created by Deni Kalenski
 import { NavLink, useLocation } from "react-router-dom";
-import homeOutlined from "../assets/icons/home-outlined.svg";
-import homeFilled from "../assets/icons/home-filled.svg";
-import exploreOutlined from "../assets/icons/explore-outlined.svg";
-import exploreFilled from "../assets/icons/explore-filled.svg";
-import matchOutlined from "../assets/icons/match-outlined.svg";
-import matchFilled from "../assets/icons/match-filled.svg";
+import homeOutlined from "../assets/icons/search-outlined.svg";
+import homeFilled from "../assets/icons/search-filled.svg";
+import exploreOutlined from "../assets/icons/rides-outlined.svg";
+import exploreFilled from "../assets/icons/rides-filled.svg";
+import matchOutlined from "../assets/icons/host-outlined.svg";
+import matchFilled from "../assets/icons/host-filled.svg";
 import chatOutlined from "../assets/icons/chat-outlined.svg";
 import chatFilled from "../assets/icons/chat-filled.svg";
-import profileOutlined from "../assets/icons/profile-outlined.svg";
-import profileFilled from "../assets/icons/profile-filled.svg";
+import profileOutlined from "../assets/icons/rent-outlined.svg";
+import profileFilled from "../assets/icons/rent-filled.svg";
 
 // Nav component
 export default function Nav() {
@@ -24,7 +24,7 @@ export default function Nav() {
           alt="Home"
           className="icon"
         />
-        <span>Home</span>
+        <span>Search</span>
       </NavLink>
       <NavLink to="/explore" activeClassName="active">
         <img
@@ -34,15 +34,15 @@ export default function Nav() {
           alt="Explore"
           className="icon"
         />
-        <span>Explore</span>
+        <span>Rides</span>
       </NavLink>
-      <NavLink to="/match" activeClassName="active">
+      <NavLink to="/create" activeClassName="active">
         <img
-          src={location.pathname === "/match" ? matchFilled : matchOutlined}
+          src={location.pathname === "/create" ? matchFilled : matchOutlined}
           alt="Match"
           className="icon"
         />
-        <span>Match</span>
+        <span>Host</span>
       </NavLink>
       <NavLink to="/chat" activeClassName="active">
         <img
@@ -50,7 +50,7 @@ export default function Nav() {
           alt="Chat"
           className="icon"
         />
-        <span>Chat</span>
+        <span>Messages</span>
       </NavLink>
       <NavLink to="/profile" activeClassName="active">
         <img
@@ -60,7 +60,7 @@ export default function Nav() {
           alt="Profile"
           className="icon"
         />
-        <span>Profile</span>
+        <span>Rent</span>
       </NavLink>
     </nav>
   );

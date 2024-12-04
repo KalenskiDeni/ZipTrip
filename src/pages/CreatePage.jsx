@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "/src/styles.css";
+import { NavLink } from "react-router-dom";
 
 // Importing our images and icons
 import profileIcon from "../assets/profile-img.png"; 
@@ -10,6 +11,8 @@ import publicIcon from "../assets/icons/public-icon.svg";
 import photosIcon from "../assets/icons/image-icon.svg";
 import videosIcon from "../assets/icons/video-icon.svg";
 import locationIcon from "../assets/icons/location-icon.svg";
+import logo from "/src/assets/logoziptrip.png"; // Path to the logo
+import bar from "../assets/status-bar.png";
 
 // CreatePage component
 export default function CreatePage() {
@@ -65,12 +68,19 @@ export default function CreatePage() {
   // Return the JSX for the CreatePage component
   return (
     <section className="page create-post-page">
+      
       {/* Header */}
       <header className="create-post-header">
+      <div className="top-bar-content">
+          <img src={bar} alt="status bar" className="bar" />
+          <img src={logo} alt="Off The Path Logo" className="logo" />
+         
+        </div>
+
         <button onClick={() => navigate("/")} className="header-btn">
           Cancel
         </button>
-        <p>New Post</p>
+        <p>Host a ride</p>
         <button onClick={handleSubmit} className="header-btn share-btn">
           Share
         </button>

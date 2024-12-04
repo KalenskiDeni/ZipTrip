@@ -161,15 +161,22 @@ form[action$="destroy"] button:hover,
 
 /* Logo styling */
 .logo {
-  height: 16px; 
-  margin-right: auto;
-  color: #396660;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: -30px;
+  width: 101px;
+  height: 52px;
+  flex-shrink: 0;
+  margin-top: 40px;
+  margin-left: 40px;
+align-items: center;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
 
 /* Icons container */
 .top-bar-icons {
@@ -192,6 +199,47 @@ form[action$="destroy"] button:hover,
 .settings-icon {
   fill: #396660; 
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+/* Register page */
+/* Register page */
+/* Register page */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ---------- Form Specific Styling ---------- */
@@ -307,6 +355,8 @@ nav {
   padding: 0.5em 0;
   border-top: 1px rgb(78, 78, 78);
   z-index: 1000000000000; 
+  position: fixed; /* Makes the navbar stay in place */
+  bottom: 0; /* Positions it at the bottom */
 }
 
 nav a {
@@ -355,72 +405,158 @@ nav a i {
 /* Onboarding page */
 /* Onboarding page */
 
-.video {
-  position: relative;
-  width: 100vw;
+/* General container for onboarding */
+.onboarding-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative; /* Ensures that content stays above the background */
+}
+
+/* Light theme for the first screen */
+.onboarding-light {
+  color: white;
+  position: relative;
   overflow: hidden;
 }
 
-.background-gif {
+/* Dark theme for subsequent screens */
+.onboarding-dark {
+  background: #ffffff; /* White background */
+  color: #000;
+}
+
+/* Video (GIF) as the background for the first screen */
+.onboarding-video-container {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensures the video is in the background */
+}
+
+.onboarding-video {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensures the GIF covers the entire container */
-  z-index: 1; /* Places GIF behind the content */
 }
 
-/* Overlay div */
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Adjust color and opacity */
-  z-index: 2;
+/* Logo at the top */
+.onboarding-logo img {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+  align-self: flex-start;
+  z-index: 3; /* Keeps logo above the background */
 }
 
-.content {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  bottom: 0; /* Sticks to the bottom of the parent container */
-  display: flex; /* Enables flexbox layout */
-  flex-direction: column; /* Aligns children vertically */
-  justify-content: flex-end; /* Aligns items to the bottom */
-  color: #fff; /* Optional: White text for visibility */
-  padding: 20px;
-  text-align: left; /* Align text to the left */
-  z-index: 3;
+.onboarding-logo {
+ 
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  z-index: 2; /* Make sure the logo is above the GIF */
 }
 
-.Continue,
-.Skip {
+/* Content section */
+.onboarding-content {
+  text-align: left;
+  width: 90%;
+  position: relative;
+  z-index: 3; /* Ensures the content stays above the video */
+}
+
+/* Image styling for other screens */
+.onboarding-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.onboarding-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+}
+
+/* Title and paragraph */
+.onboarding-title {
+  font-size: 24px;
+  font-weight: bold;
   margin-bottom: 10px;
+  margin-left: -15px;
+  
 }
 
-.Skip {
-  background-color: transparent;
-  color: var(--brand-light-gray);
-  border: none;
-  box-shadow: none;
-}
+.onboarding-paragraph {
 
-.Continue {
-  margin-top: 40px;
-}
+  font-feature-settings: 'liga' off, 'clig' off;
 
-.Title {
-  font-size: 32px;
-}
-
-.Paragraph {
-  color: white;
+  font-family: Poppins;
   font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 85px;
+  margin-left: -35px;
 }
+
+
+
+.onboarding-continue {
+  display: flex;
+  width: 361px;
+  height: 55px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 16px;
+background: var(--Brand-blue, #16559F);
+margin-left: -20px;
+margin-bottom: 20px;
+color: white;
+text-decoration: none !important;
+
+}
+
+.onboarding-continue:hover,
+.onboarding-continue:active,
+.onboarding-continue:focus {
+  background-color: var(--brand-blue); /* Optional: Keep the background color unchanged */
+  color: white; /* Ensure the text stays white */
+  outline: none; /* Remove focus outline if you prefer */
+}
+
+
+/* Dots indicator container */
+.onboarding-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+/* Individual dot styles */
+.onboarding-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d3d3d3; /* Light gray by default */
+  transition: background-color 0.3s ease;
+}
+
+/* Active dot (filled with brand blue) */
+.onboarding-dot.active {
+  background-color: var(--brand-blue, #16559F);
+}
+
+
+
 
 
 
@@ -616,6 +752,7 @@ nav a i {
   height: 85vh;
 }
 
+
 .error-message {
   color: var(--text-color-danger);
   margin-top: 10px;
@@ -740,20 +877,16 @@ nav a i {
   color: #333;
 }
 
-/* Header */
-.header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 60px;
-  margin-top: 80px;
-  margin-left: -110px;
+.back-button-login {
+  margin-top: 40px;
+  margin-left: -135px;
 }
 
-.back-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  cursor: pointer;
+.logo {
+
+  max-height: auto;
+  margin-top: 35px;
+  margin-left: 70px;
 }
 
 .app-title {
@@ -768,12 +901,26 @@ nav a i {
   font-size: 28px;
   font-weight: 700;
   margin: 0 0 5px;
-  margin-left: -270px;
+  margin-left: -260px;
+  font-family: Poppins;
+  color: var(--Brand-dark-blue, #182726);
+font-family: Poppins;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
 }
 
 .login-subtext {
   color: #6b6b6b;
   margin-bottom: 20px;
+  margin-left: -20px;
+  color: var(--brand-black-50, rgba(18, 19, 18, 0.50));
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
 .highlight {
@@ -797,8 +944,14 @@ nav a i {
 }
 
 .input-label {
-  font-size: 14px;
-  color: #6b6b6b;
+
+  color: var(--brand-black-50, rgba(18, 19, 18, 0.50));
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 16px */
+  letter-spacing: -0.384px;
   margin-bottom: 5px;
   display: block;
 }
@@ -831,15 +984,34 @@ nav a i {
   font-size: 16px;
   width: 130%;
   box-shadow: none;
+  color: var(--Brand-light-gray, #D1CFC9);
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+letter-spacing: -0.176px;
 }
 
 /* Forgot Password */
 .forgot-password {
-  font-size: 14px;
-  color: #16559F;
-  text-align: right;
-  cursor: pointer;
-  margin: 0 0 20px;
+  color: var(--brand-black-50, rgba(18, 19, 18, 0.50));
+  text-align: center;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 200% */
+  letter-spacing: -0.132px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  margin-left: -270px;
+  margin-top: -25px;
+  margin-bottom: 50px;
 }
 
 /* Login Button */
@@ -862,6 +1034,294 @@ nav a i {
   align-items: center;
   gap: 8px;
   flex-shrink: 0;
+  color: var(--Brand-white, #F7F7F7);
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+/* Social Login */
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.apple-login {
+  background-color: #000;
+  color: #fff;
+  width: 361px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: var(--M, 16px);
+background: var(--Brand-black, #121312);
+color: var(--brand-white, #FAFEFF);
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.google-login {
+  background-color: #fff;
+  color: #6b6b6b;
+  border: 1px solid #e0e0e0;
+  width: 361px;
+  height: 55px;
+  flex-shrink: 0;
+  color: var(--brand-black-50, rgba(18, 19, 18, 0.50));
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.social-icon {
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Register Link */
+.register-link {
+  text-align: center;
+  color: #6b6b6b;
+  font-size: 14px;
+  color: var(--brand-black-50, rgba(18, 19, 18, 0.50));
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.register-link-text {
+  color: #16559F;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--brand-black-50, rgba(18, 19, 18, 0.50));
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+color: var(--Brand-blue, #16559F);
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: none;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+text-underline-position: from-font;
+}
+
+/* Error Message */
+.error-message {
+  text-align: center;
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Register Page Styling ---------- */
+/* ---------- Register Page Styling ---------- */
+/* ---------- Register Page Styling ---------- */
+.page {
+  font-family: Arial, sans-serif;
+  max-width: 393px;
+  margin: auto;
+  padding: 20px;
+  color: #333;
+}
+
+/* Header */
+.header {
+
+  align-items: center;
+
+  margin-top: 80px;
+
+}
+.back-button {
+  margin-top: -80px;
+  margin-left: -10px;
+}
+
+.logo-register {
+
+  max-height: auto;
+  margin-top: -50px;
+  margin-right: 120px;
+}
+
+/* Titles and Subtexts */
+.register-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 5px;
+  margin-left: 0px;
+  margin-top: 0px;
+  font-family: Poppins;
+  color: var(--Brand-dark-blue, #182726);
+font-family: Poppins;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+ 
+}
+
+.register-subtext {
+  color: var(--brand-black-50, rgba(18, 19, 18, 0.50));
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 50px;
+  margin-left: -20px;
+
+}
+
+.highlight {
+  color: #16559F;
+  font-weight: bold;
+}
+
+/* ---------- Form Styling ---------- */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  background-color: var(--Brand-white);
+  box-shadow: none;
+  margin-top: -30px;
+}
+
+/* Input Groups */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-label {
+  font-size: 14px;
+  color: var(--brand-black-50, rgba(18, 19, 18, 0.50));
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 16px */
+  letter-spacing: -0.384px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f7f7f7;
+  width: 130%;
+  border-radius: var(--M, 16px);
+  background: #e8e8e8;
+  width: 361px;
+  height: 57px;
+  flex-shrink: 0;
+}
+
+.input-icon {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  border: none;
+  box-shadow: none;
+}
+
+.input-box {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+  width: 130%;
+  box-shadow: none;
+  color: var(--Brand-light-gray, #D1CFC9);
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+letter-spacing: -0.176px;
+}
+
+/* Register Button */
+.register-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: white;
+  background-color: #16559F;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  width: 361px;
+  height: 55px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-top: 100px;
+  color: var(--Brand-white, #F7F7F7);
+font-feature-settings: 'liga' off, 'clig' off;
+
+/* H2 */
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.register-btn:hover {
+  background-color: #134d85;
 }
 
 /* Social Login */
@@ -905,17 +1365,39 @@ nav a i {
   height: 20px;
 }
 
-/* Register Link */
-.register-link {
+/* Login Link */
+.login-link {
   text-align: center;
   color: #6b6b6b;
   font-size: 14px;
+  color: var(--brand-black-50, rgba(18, 19, 18, 0.50));
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
-.register-link-text {
+.login-link a {
   color: #16559F;
   font-weight: bold;
   text-decoration: none;
+  color: var(--Brand-blue, #16559F);
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: none;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+text-underline-position: from-font;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
 }
 
 /* Error Message */
@@ -938,57 +1420,23 @@ nav a i {
 
 
 /* ---------- Explore Card Styling ---------- */
-.explore-card {
-  position: relative;
-  width: 172px; /* Same size as mentioned in Figma */
-  height: 195px; /* Same size as mentioned in Figma */
-  overflow: hidden;
-  border-radius: 8px; /* Optional: rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a nice effect */
-}
 
-.explore-card:hover {
-  /*this wouldnt show up on mobile*/
-  box-shadow: 0 8px 16px 0 var(--brand-blue);
-}
 
-.explore-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image fills the card without distortion */
-}
-
-.explore-card h6 {
-  position: absolute;
-  bottom: -20px; /* Position text at the bottom; adjust as needed */
-  left: 5%;
-  color: white;
-  font-size: 14px;
-  font-weight: 400;
-  font-family: 'Poppins';
-}
-
-/* Grid container for the cards */
-.card-container {
-  display: grid;
-  align-items: flex-start;
-  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-  gap: 16px; /* Space between cards */
-  max-width: 172px; /* Optional: adjust max-width to fit content */
-  padding: 0 16px;
-  padding-top: 24px; /* Add padding to the top */
-}
 
 /*search bar*/
 .search-bar {
   display: flex;
   align-items: center;
-  background-color: #f9f9f9;
+  border-radius: var(--M, 16px);
+  background: #F3F3F3;
   padding: 15px 15px;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
   width: 316px;
   font-family: 'Poppins';
+  height: 55px;
+
+
 }
 
 .search-bar-button {
@@ -997,51 +1445,13 @@ nav a i {
   align-items: center;
   margin-top: 16px; /* Adjust as needed */
   padding: 0 16px;
+  
 }
 
-/* Heart icon */
-.heart-icon {
-  width: 24px;
-  height: 24px;
-  margin-left: 10px; /* Space between text and icon */
-  margin-top: 10px; /* Space between text and icon */
-}
 
-/* Top bar */
-.top-bar {
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  background-color: #fff; /* Adjust as needed */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a nice effect */
-  height: 64px; /* Adjust as needed */
-}
 
-/* Top bar content alignment */
-.top-bar-content {
-  display: flex;
-  align-items: left;
-}
 
-/*back button*/
-.back-button {
-  display: flex;
-  align-items: left;
-  padding-top: 40px;
-}
 
-/*the time, wifi and battery icons*/
-.bar {
-  margin-left: 16px; /* Adjust as needed */
-}
-
-/*off the path logo*/
-.logo {
-  margin-left: 40px;
-  margin-right: auto;
-  width: 118px;
-  height: 12px;
-}
 
 
 

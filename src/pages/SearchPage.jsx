@@ -3,8 +3,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import "/src/styles.css";
-import logo from "../assets/icons/logo-blue.svg";
+import logo from "/src/assets/logoziptrip.png"; // Path to the logo
 import backButton from "../assets/icons/backButton.svg";
 import bar from "../assets/status-bar.png";
 
@@ -25,7 +24,7 @@ export default function SearchPage() {
     <section className="page">
       <header className="top-bar">
         <div className="top-bar-content">
-          <NavLink to="/explore" activeClassName="active">
+          <NavLink to="/homepage" activeClassName="active">
             <img src={backButton} alt="Back Button" className="back-button" />
           </NavLink>
           <img src={bar} alt="status bar" className="bar" />

@@ -1,15 +1,22 @@
-// Created by Deni Kalenski
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase-config";
 import "/src/styles.css";
 
-// SignUpPage component
-export default function SignUpPage() {
+
+// Importing icons and images
+import mailIcon from "../assets/icons/mail.icon.svg";
+import userIcon from "../assets/icons/user-icon.svg";
+import lockIcon from "../assets/icons/lock-icon.svg";
+import logo from "/src/assets/logoziptrip.png"; // Path to the logo
+import backButton from "../assets/icons/backButton.svg";
+
+// RegisterPage component
+export default function RegisterPage() {
   const [errorMessage, setErrorMessage] = useState("");
 
-  function handleSignUp(event) {
+  function handleRegister(event) {
     event.preventDefault();
     const form = event.target;
 
@@ -19,75 +26,103 @@ export default function SignUpPage() {
 
     createUserWithEmailAndPassword(auth, mail, password)
       .then((userCredential) => {
-        // Created and signed in
         const user = userCredential.user;
-        createUser(user.uid, name, mail); // Creating a new user in the database
+        console.log("User registered:", user);
       })
       .catch((error) => {
-        let code = error.code; // Saving error code in variable
-        console.log(code);
-        code = code.replaceAll("-", " "); // Some JS string magic to display error message.
-        code = code.replaceAll("auth/", "");
+        let code = error.code.replaceAll("-", " ").replaceAll("auth/", "");
         setErrorMessage(code);
       });
   }
 
-  async function createUser(uid, name, mail) {
-    const url = `https://fb-rest-race-default-rtdb.firebaseio.com/users/${uid}.json`;
-    const response = await fetch(url, {
-      method: "PUT",
-      body: JSON.stringify({ name, mail }),
-    });
-    if (response.ok) {
-      const data = await response.json();
-      console.log("New user created: ", data);
-    } else {
-      setErrorMessage("Sorry, something went wrong");
-    }
-  }
-
-  // Return the JSX for the SignUpPage component
+  // Return JSX
   return (
-    <section id="sign-up-page" className="page">
-      <h1>Sign Up</h1>
-      <form id="sign-up-form" onSubmit={handleSignUp}>
-        <label htmlFor="name">Name</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          placeholder="Type your name..."
-        />
-        <label htmlFor="mail">Mail</label>
-        <input
-          id="mail"
-          type="email"
-          name="mail"
-          aria-label="mail"
-          placeholder="Type your mail..."
-          required
-          autoComplete="off"
-        />
+    <section id="register-page" className="page">
 
-        <label htmlFor="password">Password</label>
+      <div className="header">
+      <img src={backButton} alt="Back Button" className="back-button" />
+        <img src={logo} alt="ZipTrip Logo" className="logo-register" />
+ 
+      </div>
+      <h1 className="register-title">Register</h1>
+      <p className="register-subtext">
+        Create an <span className="highlight">account</span> to access all the
+        features of <span className="highlight">ZipTrip!</span>
+      </p>
 
-        <input
-          id="password"
-          type="password"
-          name="password"
-          aria-label="password"
-          placeholder="Type your password..."
-          autoComplete="current-password"
-        />
-        <div className="error-message">
-          <p>{errorMessage}</p>
+      <form id="register-form" className="register-form" onSubmit={handleRegister}>
+        {/* Email Input */}
+        <div className="input-group email-group">
+          <label htmlFor="mail" className="input-label">
+            Email
+          </label>
+          <div className="input-field email-field">
+            <img src={mailIcon} alt="Mail icon" className="input-icon" />
+            <input
+              id="mail"
+              type="email"
+              name="mail"
+              placeholder="Ex: email@example.com"
+              required
+              className="input-box"
+            />
+          </div>
         </div>
-        <div className="btns">
-          <button>Sign Up</button>
+
+        {/* Name Input */}
+        <div className="input-group name-group">
+          <label htmlFor="name" className="input-label">
+            Your Name
+          </label>
+          <div className="input-field name-field">
+            <img src={userIcon} alt="User icon" className="input-icon" />
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Ex: John Smith"
+              required
+              className="input-box"
+            />
+          </div>
         </div>
+
+        {/* Password Input */}
+        <div className="input-group password-group">
+          <label htmlFor="password" className="input-label">
+            Your Password
+          </label>
+          <div className="input-field password-field">
+            <img src={lockIcon} alt="Lock icon" className="input-icon" />
+            <input
+              id="password"
+              type="password"
+              name="password"
+              placeholder="********"
+              required
+              className="input-box"
+            />
+          </div>
+        </div>
+
+        {/* Error Message */}
+        {errorMessage && (
+          <div className="error-message">
+            <p>{errorMessage}</p>
+          </div>
+        )}
+
+        {/* Register Button */}
+        <button type="submit" className="register-btn">
+          Register
+        </button>
       </form>
-      <p className="text-center">
-        Already have an account? <Link to="/signin">Sign In</Link>
+
+      <p className="login-link">
+        Already have an account?{" "}
+        <Link to="/signin" className="login-link-text">
+          Log In
+        </Link>
       </p>
     </section>
   );
