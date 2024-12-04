@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import "/src/styles.css";
 
 export default function UpdatePage() {
   const [content, setContent] = useState("");

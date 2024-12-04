@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import PostCard from "../components/PostCard";
 import Stories from "../components/Stories"; // Import Stories component
 import { NavLink } from "react-router-dom";
-import "/src/styles/homepage.css";
 import avatarImage from "../assets/story-alex.png";
 import logo from "../assets/icons/logo-blue.svg";
 import searchIcon from "../assets/icons/search-icon.svg";

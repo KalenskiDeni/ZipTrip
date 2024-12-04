@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import "/src/styles/onboarding.css";
-import gif from "/src/assets/vid.gif"; // Path to your GIF file
+import "/src/styles.css";
+import gif from "/src/assets/tesla.gif"; // Path to your GIF file
 
 function MyComponent() {
   return (
@@ -12,18 +12,13 @@ function MyComponent() {
       <div className="overlay"></div>
 
       <div className="content">
-        <h1 className="Title">Go OFF THE PATH!</h1>
+        <h1 className="Title">Welcome to ZipTrip!</h1>
         <br />
         <p className="Paragraph">
-          Connect with locals, discover hidden gems, and explore the world on
-          your terms. <br />
-          Let’s make travel unforgettable!
+        Join a community of travelers who share rides and reduce the carbon footprint together. Connect with others, save money, and explore new places—all while making a positive impact on the environment.
         </p>
         <NavLink to="/signin" activeClassName="active">
-          <button className="Continue">Continue</button>
-        </NavLink>
-        <NavLink to="/signin" activeClassName="active">
-          <button className="Skip">Skip for now</button>
+          <button className="Continue">Get Started</button>
         </NavLink>
       </div>
     </div>

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "/src/styles/createpage.css";
+import "/src/styles.css";
 
 // Importing our images and icons
 import profileIcon from "../assets/profile-img.png"; 

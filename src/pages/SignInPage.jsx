@@ -3,7 +3,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase-config";
-import "../styles/authentication.css";
+import "/src/styles.css";
 
 // Importing icons and images
 import arrowIcon from "../assets/icons/arrow-icon.svg";

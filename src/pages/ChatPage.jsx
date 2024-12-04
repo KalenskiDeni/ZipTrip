@@ -1,7 +1,7 @@
 // Created by Deni Kalenski
 import { useState, useEffect } from "react";
 
-import "/src/styles/chat.css";
+import "/src/styles.css";
 
 // ChatPage component
 export default function ChatPage() {

@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import "/src/styles/search.css";
 import "/src/styles.css";
 import logo from "../assets/icons/logo-blue.svg";
 import backButton from "../assets/icons/backButton.svg";

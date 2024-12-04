@@ -1,7 +1,7 @@
 // Created by Magda
 import React, { useEffect, useState } from "react";
 import { Range } from "react-range";
-import "/src/styles/match.css";
+import "/src/styles.css";
 
 // Icons
 import location from "../assets/icons/location.svg";

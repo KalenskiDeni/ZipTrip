@@ -1,5 +1,5 @@
 // Created by Deni Kalenski
-import "/src/styles/profile.css";
+import "/src/styles.css";
 
 // Importing icons and images
 import globeIcon from "../assets/icons/globe-icon.png";

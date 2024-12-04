@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase-config";
-import "/src/styles/authentication.css";
+import "/src/styles.css";
 
 // SignUpPage component
 export default function SignUpPage() {

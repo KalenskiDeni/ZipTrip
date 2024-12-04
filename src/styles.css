@@ -1,7 +1,7 @@
 /* ---------- Root Variables ---------- */
 :root {
-  --brand-blue: #216869;
-  --brand-white: #f7f7f7;
+  --brand-blue: #16559F;
+  --brand-white: #FAFEFF;
   --brand-dark-blue: #182726;
   --brand-black: #121312;
   --brand-light-gray: #d1cfc9;
@@ -351,6 +351,99 @@ nav a i {
   color: white;
 }
 
+/* Onboarding page */
+/* Onboarding page */
+/* Onboarding page */
+
+.video {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-gif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the GIF covers the entire container */
+  z-index: 1; /* Places GIF behind the content */
+}
+
+/* Overlay div */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Adjust color and opacity */
+  z-index: 2;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0; /* Sticks to the bottom of the parent container */
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Aligns children vertically */
+  justify-content: flex-end; /* Aligns items to the bottom */
+  color: #fff; /* Optional: White text for visibility */
+  padding: 20px;
+  text-align: left; /* Align text to the left */
+  z-index: 3;
+}
+
+.Continue,
+.Skip {
+  margin-bottom: 10px;
+}
+
+.Skip {
+  background-color: transparent;
+  color: var(--brand-light-gray);
+  border: none;
+  box-shadow: none;
+}
+
+.Continue {
+  margin-top: 40px;
+}
+
+.Title {
+  font-size: 32px;
+}
+
+.Paragraph {
+  color: white;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---------- Post Card Styling ---------- */
 .post-card {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
@@ -635,3 +728,1383 @@ nav a i {
 }
 
 
+
+
+
+/* ---------- Login Page Styling ---------- */
+.page {
+  font-family: Arial, sans-serif;
+  max-width: 393px;
+  margin: auto;
+  padding: 20px;
+  color: #333;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  margin-top: 80px;
+  margin-left: -110px;
+}
+
+.back-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.app-title {
+  font-size: 18px;
+  color: #16559F;
+  font-weight: 600;
+  margin-top: 170px;
+}
+
+/* Titles and Subtexts */
+.login-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 5px;
+  margin-left: -270px;
+}
+
+.login-subtext {
+  color: #6b6b6b;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #16559F;
+  font-weight: bold;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  background-color: var(--Brand-white);
+  box-shadow: none;
+  margin-top: -30px;
+}
+
+/* Input Groups */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-label {
+  font-size: 14px;
+  color: #6b6b6b;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #f7f7f7;
+  width: 130%;
+  border-radius: var(--M, 16px);
+  background: #e8e8e8;
+  width: 361px;
+  height: 57px;
+  flex-shrink: 0;
+}
+
+.input-icon {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.input-box {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+  width: 130%;
+  box-shadow: none;
+}
+
+/* Forgot Password */
+.forgot-password {
+  font-size: 14px;
+  color: #16559F;
+  text-align: right;
+  cursor: pointer;
+  margin: 0 0 20px;
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: white;
+  background-color: #16559F;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  width: 361px;
+  height: 55px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Social Login */
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.apple-login {
+  background-color: #000;
+  color: #fff;
+  width: 361px;
+  height: 55px;
+  flex-shrink: 0;
+}
+
+.google-login {
+  background-color: #fff;
+  color: #6b6b6b;
+  border: 1px solid #e0e0e0;
+  width: 361px;
+  height: 55px;
+  flex-shrink: 0;
+}
+
+.social-icon {
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Register Link */
+.register-link {
+  text-align: center;
+  color: #6b6b6b;
+  font-size: 14px;
+}
+
+.register-link-text {
+  color: #16559F;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Error Message */
+.error-message {
+  text-align: center;
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+/* ---------- Explore Page ---------- */
+/* ---------- Explore Page ---------- */
+/* ---------- Explore Page ---------- */
+
+
+/* ---------- Explore Card Styling ---------- */
+.explore-card {
+  position: relative;
+  width: 172px; /* Same size as mentioned in Figma */
+  height: 195px; /* Same size as mentioned in Figma */
+  overflow: hidden;
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a nice effect */
+}
+
+.explore-card:hover {
+  /*this wouldnt show up on mobile*/
+  box-shadow: 0 8px 16px 0 var(--brand-blue);
+}
+
+.explore-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the card without distortion */
+}
+
+.explore-card h6 {
+  position: absolute;
+  bottom: -20px; /* Position text at the bottom; adjust as needed */
+  left: 5%;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Poppins';
+}
+
+/* Grid container for the cards */
+.card-container {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 16px; /* Space between cards */
+  max-width: 172px; /* Optional: adjust max-width to fit content */
+  padding: 0 16px;
+  padding-top: 24px; /* Add padding to the top */
+}
+
+/*search bar*/
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 15px 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  width: 316px;
+  font-family: 'Poppins';
+}
+
+.search-bar-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px; /* Adjust as needed */
+  padding: 0 16px;
+}
+
+/* Heart icon */
+.heart-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px; /* Space between text and icon */
+  margin-top: 10px; /* Space between text and icon */
+}
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background-color: #fff; /* Adjust as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a nice effect */
+  height: 64px; /* Adjust as needed */
+}
+
+/* Top bar content alignment */
+.top-bar-content {
+  display: flex;
+  align-items: left;
+}
+
+/*back button*/
+.back-button {
+  display: flex;
+  align-items: left;
+  padding-top: 40px;
+}
+
+/*the time, wifi and battery icons*/
+.bar {
+  margin-left: 16px; /* Adjust as needed */
+}
+
+/*off the path logo*/
+.logo {
+  margin-left: 40px;
+  margin-right: auto;
+  width: 118px;
+  height: 12px;
+}
+
+
+
+/* ---------- Match Page ---------- */
+/* ---------- Match Page ---------- */
+/* ---------- Match Page ---------- */
+
+.page1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.container1 {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.local-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  margin: 10px 0;
+  text-align: center;
+  background-color: rgba(249, 249, 249, 0.8);
+  position: relative;
+}
+
+.avatar1-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 90%;
+  border-style: solid;
+  border-color: white;
+  border-width: 8px;
+  box-shadow: 0px 8px 4px 0px gainsboro;
+}
+
+.local-card h3 {
+  margin: 10px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.local-card .info-row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 10px 0;
+  font-size: 12px;
+}
+
+.local-card .info-row div {
+  flex: 1;
+  text-align: center;
+}
+
+.local-card p {
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Make container full width for side alignment */
+  max-width: 300px; /* Optional: Control the max width of the button area */
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 10px;
+  border-radius: 999999px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 44px;
+}
+
+/* Adjust margin for button spacing */
+.button-container button:first-child {
+  margin-right: auto; /* Pushes 'No' to the left */
+  background-color: var(--brand-white);
+}
+
+.button-container button:last-child {
+  margin-left: auto; /* Pushes 'Yes' to the right */
+}
+
+/* Filter */
+
+.filter-section {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 4px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.filter-button {
+  background: none;
+  border-radius: 16px;
+  border: none;
+  color: #333;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0px;
+  width: 82px;
+  height: 26px;
+}
+
+.dropdown-options {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 8px;
+  position: absolute;
+  top: 40px; /* Position below the button */
+  width: max-content;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.dropdown-options label {
+  margin: 4px 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Icons */
+.iconM img {
+  width: 1px;
+  height: 1px;
+}
+
+
+/* Slider */
+.age-range-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.age-range-slider h5 {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #333;
+}
+
+.apply-filter-button{
+  font-size: 12px ;
+  width: 120px;
+  margin-top: 10px;
+}
+
+
+.age-range-dropdown {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  width: 200px; /* Adjust the width as needed */
+  position: absolute; /* Position it accordingly */
+  z-index: 10; /* Make sure it appears above other elements */
+}
+
+.slider-container {
+  margin: 10px 0;
+}
+
+/* Other existing styles... */
+
+.filter-section {
+  position: relative; /* Ensure dropdowns position correctly */
+}
+
+/* Icons */
+img.iconM{
+  width:12px;
+  height: 12px;
+}
+
+img.iconY{
+  width: 22px;
+  height: 22px;
+}
+
+.yes{
+  height: 48px;
+  width: 48px;
+}
+
+
+
+
+/* ---------- Chat Page ---------- */
+/* ---------- Chat Page ---------- */
+/* ---------- Chat Page ---------- */
+.chat-page {
+  padding: 16px;
+}
+
+.chat-page h1 {
+font-size: 24px;
+}
+
+.search-bar-chat {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  margin-top: 80px;
+}
+
+.search-bar-chat input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+}
+
+
+.tab-buttons {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.tab-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 16px;
+  background-color: #e0e0e0;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tab-buttons button.active {
+  background-color: var(--brand-blue); 
+  color: white;
+}
+
+.chat-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc; 
+  margin-right: 10px;
+}
+
+.chat-info {
+  flex: 1;
+}
+
+.chat-name {
+  font-weight: bold;
+}
+
+.chat-message {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.chat-meta {
+  text-align: right;
+}
+
+.chat-time {
+  font-size: 0.8em;
+  color: #999;
+}
+
+.unread-badge {
+  background-color: var(--brand-blue); 
+  color: white;
+  font-size: 0.65em;
+  padding: 0px 6px;
+  border-radius: 50%;
+  margin-left: 7px;
+
+
+}
+
+
+
+/* Profile Page */
+/* Profile Page */
+/* Profile Page */
+
+
+
+
+
+/* Profile Page Basic Styles */
+
+
+.profile-page {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
+/* Earth Section */
+.earth-section {
+  z-index: -1;
+}
+
+.earth-image {
+  background-image: url("./src/assets/earth-image1.png");
+  background-size: cover;
+  width: 100%;
+  height: 720px;
+  position: relative;
+}
+
+.countries-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.stat {
+  text-align: center;
+  margin-top: 570px;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #a0a0a0;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 16px;
+  flex-direction: column;
+  margin-top: 570px;
+  margin-left: -7px;
+}
+
+.divider hr {
+  width: 1px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  margin: 0 52px;
+}
+
+.arrow-icon {
+  margin-top: 8px;
+  width: 36px;
+  height: 36px;
+  margin-left: 0px;
+}
+
+/* Profile Info Section */
+.profile-info {
+  background: var(--brand-white);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: -55px;
+  height: 800px;
+}
+
+.profile-header {
+  text-align: center;
+}
+
+/* Outer container for positioning */
+.outer-thumbnail-container {
+  position: relative;
+  top: -10px;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* White circular container */
+.profile-thumbnail-container {
+  width: 90px;
+  height: 90px;
+  background-color: var(--brand-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Profile image styling */
+.profile-thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-image: url("./src/assets/profile-img.png");
+  background-size: cover;
+}
+
+h2 {
+  margin: 5px 0;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+p {
+  margin: 2px 0;
+}
+
+/* Buttons */
+.action-btn {
+  display: inline-block;
+  width: 48%;
+  padding: 10px;
+  margin: 15px 1%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  color: #333;
+  font-weight: 500;
+  background-color: var(--brand-white);
+}
+
+/* Verification Section */
+.verification {
+  text-align: left;
+  background: var(--brand-white);
+  padding: 10px;
+  border-radius: 8px;
+  margin: 0px 0;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.verification-icon {
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+}
+
+.verification span {
+  font-size: 12px;
+  color: gray;
+  font-weight: 400;
+}
+
+.settings-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.settings-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.icon-profile {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Settings List */
+.settings-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 15px 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.settings-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--brand-white);
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* travel assistant */
+.travel-assistant-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1 important!;
+}
+
+.pro-feature-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #2a6352;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.travel-content {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.travel-text h2 {
+  font-size: 16px;
+  margin: 0;
+  margin-top: 0px;
+}
+
+.travel-text p {
+  font-size: 12px;
+  color: gray;
+  font-weight: 400;
+}
+
+.cta-link {
+  color: #2a6352;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.travel-icon {
+  width: 68px;
+  height: 68px;
+  margin-left: 16px;
+  margin-top: 20px;
+}
+
+.language-display {
+  display: flex;
+  align-items: center;
+  margin-left: 135px;
+  margin-top: -5px;
+  margin-bottom: 20px;
+}
+
+.language-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.your-countries-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin-top: 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: black;
+  cursor: pointer;
+}
+
+.your-countries-button .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+
+
+
+
+
+/* ---------- Barcelona Page ---------- */
+/* ---------- Barcelona Page ---------- */
+/* ---------- Barcelona Page ---------- */
+.barcelona-page {
+  padding: 16px;
+  font-family: "Poppins", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.back-button {
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.main-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.location-info h1 {
+  font-size: 24px; /* Adjust the size as needed */
+  font-weight: bold; /* Make it bold */
+  color: #2b2b2b; /* Dark color for better readability */
+  text-align: center; /* Center the text */
+  margin: 20px 0; /* Add spacing around it */
+}
+
+.rating {
+  color: var(--brand-blue);
+}
+
+.recommended-places,
+.local-guides,
+.general-info,
+.recent-posts {
+  margin-top: 20px;
+}
+
+.places-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.place {
+  padding: 6px 12px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+}
+
+.guides-list {
+  display: flex;
+  gap: 22px;
+}
+
+.guide img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.posts-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+  gap: 16px; /* Space between grid items */
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.post img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.show-more {
+  background-color: var(--brand-blue);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+/* ---------- Create Trip Page ---------- */
+/* ---------- Create Trip Page ---------- */
+/* ---------- Create Trip Page ---------- */
+/* Page Container */
+.page.create-post-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  color: #333;
+  font-family: poppins;
+}
+
+.page.create-post-page p {
+  font-size: 16px;
+  padding: 30px;
+  color: var(--Brand-black, #121312);
+  text-align: center;
+  font-family: "SF Pro Text";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Header */
+.create-post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fff;
+  font-size: 16px;
+  font-family: "SF Pro Text";
+}
+
+.header-btn {
+  font-size: 16px;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.header-btn.share-btn {
+  color: var(--brand-blue);
+  font-weight: bold;
+  padding: 10px;
+}
+
+/* Post Input Area */
+.post-input-container {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.privacy-selector {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.privacy-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.caption-input {
+  width: 100%;
+  font-size: 14px;
+  padding: 12px;
+  border: none;
+  outline: none;
+  resize: none;
+  min-height: 80px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.image-url-input {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  color: #333;
+}
+
+.image-preview {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Media Options Footer */
+.media-options {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 300px;
+  border: none;
+}
+
+.media-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--brand-black);
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+}
+
+.media-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  border: none;
+}
+
+/* Create Page Styles */
+
+.media-preview {
+  width: 100%;
+  max-height: 300px;
+  margin-top: 10px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.media-options {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.media-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  color: var(--Brand-black);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.media-option img.media-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
+/* ---------- Update Trip Page ---------- */
+/* ---------- Update Trip Page ---------- */
+/* ---------- Update Trip Page ---------- */
+/* Page Container */
+.page.create-post-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #fff;
+  font-family: Poppins, Arial, sans-serif; /* Include Poppins */
+  color: #333;
+}
+
+/* Post Input Area */
+.post-input-container {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* Input Styles */
+.caption-input {
+  width: 100%;
+  font-size: 14px;
+  padding: 12px;
+  border: none; /* No border */
+  outline: none; /* No outline */
+  resize: none; /* No resizing */
+  min-height: 80px; /* Minimum height for textarea */
+  background-color: #fafafa; /* Light background */
+  border-radius: 8px; /* Rounded corners */
+  color: #333; /* Text color */
+  margin-bottom: 16px; /* Spacing */
+}
+
+.file-input {
+  margin-bottom: 10px; /* Spacing below file input */
+}
+
+/* Image Preview Styles */
+.image-preview {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 8px; /* Spacing above image */
+  border: none; /* No border */
+}
+
+/* Button Styles */
+.header-btn {
+  font-size: 16px;
+  color: #333;
+  background: none;
+  border: none; /* No border */
+  cursor: pointer; /* Pointer on hover */
+  padding: 10px;
+}
+
+.header-btn.share-btn {
+  color: var(--brand-blue); /* Blue color for Share button */
+  font-weight: bold; /* Bold text */
+}
+
+
+
+
+/* ---------- Popout ---------- */
+/* ---------- Popout ---------- */
+/* ---------- Popout ---------- */
+/*created by Beatrise*/
+
+h2 {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+p {
+  padding-left: 20px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  height: 150px;
+}
+
+.close-button {
+  background-color: #216869;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+
+
+/* ---------- Search bar ---------- */
+/* ---------- Search bar ---------- */
+/* ---------- Search bar ---------- */
+/* Search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Search input */
+.search-input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 364px;
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+}

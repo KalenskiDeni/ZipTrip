@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import ExploreCard from "../components/ExploreCard";
 import { NavLink } from "react-router-dom";
-import "/src/styles/explore.css";
 import "/src/styles.css";
 import HeartIcon from "../assets/icons/heart.svg"; //for the button that leads to favorites page
 import logo from "../assets/icons/logo-blue.svg";

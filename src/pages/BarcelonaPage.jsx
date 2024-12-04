@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../styles/barcelona.css";
+import "/src/styles.css";
 
 // Importing icons and images
 import logo from "../assets/icons/logo-blue.svg";

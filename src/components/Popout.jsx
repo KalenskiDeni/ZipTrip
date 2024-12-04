@@ -1,7 +1,6 @@
 //created by Beatrise
 
 import "/src/styles.css";
-import "/src/styles/popout.css";
 
 const ResizePopout = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
