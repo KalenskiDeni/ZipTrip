@@ -1,0 +1,60 @@
+/* Page Container */
+.page.create-post-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #fff;
+    font-family: Poppins, Arial, sans-serif; /* Include Poppins */
+    color: #333;
+}
+
+/* Post Input Area */
+.post-input-container {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+/* Input Styles */
+.caption-input {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
+    border: none; /* No border */
+    outline: none; /* No outline */
+    resize: none; /* No resizing */
+    min-height: 80px; /* Minimum height for textarea */
+    background-color: #fafafa; /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    color: #333; /* Text color */
+    margin-bottom: 16px; /* Spacing */
+}
+
+.file-input {
+    margin-bottom: 10px; /* Spacing below file input */
+}
+
+/* Image Preview Styles */
+.image-preview {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 8px; /* Spacing above image */
+    border: none; /* No border */
+}
+
+/* Button Styles */
+.header-btn {
+    font-size: 16px;
+    color: #333;
+    background: none;
+    border: none; /* No border */
+    cursor: pointer; /* Pointer on hover */
+    padding: 10px;
+}
+
+.header-btn.share-btn {
+    color: var(--brand-blue); /* Blue color for Share button */
+    font-weight: bold; /* Bold text */
+}

@@ -1,0 +1,637 @@
+/* ---------- Root Variables ---------- */
+:root {
+  --brand-blue: #216869;
+  --brand-white: #f7f7f7;
+  --brand-dark-blue: #182726;
+  --brand-black: #121312;
+  --brand-light-gray: #d1cfc9;
+  --text-color-light: #f1f1f1;
+  --white: #f1f1f1;
+}
+
+/* ---------- Global Styling ---------- */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+html {
+  background-color: var(--Brand-white, #f7f7f7);
+  color: var(--brand-black);
+  font-family: "Poppins", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  height: 100%;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Typography ---------- */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+h2,
+h3 {
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+/* ---------- Link Styling ---------- */
+a {
+  color: var(--green);
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: var(--brand-dark-blue);
+}
+
+/* ---------- Form, Input, and Button Styling ---------- */
+textarea,
+input,
+button,
+select {
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+  background-color: white;
+  line-height: 1.5;
+  margin: 0;
+}
+
+button {
+  color: var(--white);
+  font-weight: 500;
+  cursor: pointer;
+  padding: 1em 2em;
+  background-color: var(--brand-blue);
+  transition: 0.5s;
+  width: 100%;
+}
+
+button:hover {
+  background-color: var(--light-green);
+  color: var(--green);
+}
+
+textarea:hover,
+input:hover,
+button:hover {
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+}
+
+button:active {
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.4);
+  transform: translateY(1px);
+}
+
+form[action$="destroy"] button,
+.btn-cancel,
+.btn-delete {
+  background-color: var(--white);
+  color: #f44250;
+}
+
+form[action$="destroy"] button:hover,
+.btn-cancel:hover,
+.btn-delete:hover {
+  background-color: #f44250;
+  color: var(--white);
+}
+
+
+
+/* ---------- top bar ---------- */
+/* General styling for the header */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0ed; /* Background color */
+  padding: 10px 0;
+}
+
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  width: 90%; /* Central alignment with space around */
+  max-width: 800px; /* Adjust width based on your design */
+  justify-content: space-between;
+}
+
+/* Status bar styling */
+/* General styling for the header */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0ed; /* Background color */
+  padding: 50px 0;
+}
+
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  width: 90%; 
+  max-width: 800px; 
+  justify-content: space-between;
+}
+
+/* Status bar styling */
+.bar {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  margin-top: -10px;
+}
+
+/* Logo styling */
+.logo {
+  height: 16px; 
+  margin-right: auto;
+  color: #396660;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: -30px;
+}
+
+/* Icons container */
+.top-bar-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  margin-bottom: -30px;
+}
+
+/* Styling for individual icons */
+.icon {
+  height: 20px; 
+  cursor: pointer;
+}
+
+.search-icon {
+  fill: #396660; 
+}
+
+.settings-icon {
+  fill: #396660; 
+}
+
+
+/* ---------- Form Specific Styling ---------- */
+form input {
+  width: 100%;
+}
+
+form .btns {
+  grid-column: 2;
+}
+
+form img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1em;
+  align-items: center;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  padding: 1.5em;
+  background-color: var(--white);
+  transition: 0.5s;
+  animation: fadeIn 0.5s;
+  border-radius: 8px;
+}
+
+#sign-in-form,
+#sign-up-form {
+  width: 35rem;
+}
+
+/* ---------- Button Group ---------- */
+.btns {
+  display: flex;
+  gap: 0.5em;
+}
+
+.container > .btns {
+  margin: 1em 0;
+}
+
+.create-button-text {
+  color: var(--brand-light-gray);
+}
+
+.create-post-button {
+  padding: 15px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.create-post-box {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 15px 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  margin-left: -42px;
+  width: 133%;
+  text-decoration: none; 
+}
+
+.search-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.placeholder-text {
+  font-size: 12px;
+  color: #b0b0b0; 
+  flex-grow: 1;
+}
+
+.text1-stories {
+  color: var(--Brand-dark-blue, #182726);
+  /* H1 */
+  font-family: Poppins;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 27px;
+}
+
+.btns {
+  gap: 10px; 
+  margin-bottom: 20px; 
+}
+
+.btn-cancel,
+.btn {
+  margin-bottom: 100px;
+}
+
+/* ---------- Navigation Styling ---------- */
+nav {
+  background-color: var(--brand-white);
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5em 0;
+  border-top: 1px rgb(78, 78, 78);
+  z-index: 1000000000000; 
+}
+
+nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: gray;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9em;
+  padding: 8px;
+}
+
+nav a span {
+  margin-top: 4px;
+  font-size: 0.8em;
+}
+
+nav a i {
+  font-size: 1.5em;
+}
+
+.tab-buttons-home {
+  margin-top: 15px;
+  display: flex;
+
+  padding: 0 25px;
+}
+
+.tab-buttons-home button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 16px;
+  background-color: #e0e0e0;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}
+.tab-buttons-home button.active {
+  background-color: var(--brand-blue); 
+  color: white;
+}
+
+/* ---------- Post Card Styling ---------- */
+.post-card {
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+  padding: 1em;
+  background-color: var(--white);
+  transition: 0.5s;
+  animation: fadeIn 0.5s;
+  cursor: pointer;
+  border-radius: 10px;
+
+  margin-top: 40px;
+}
+
+.post-card:hover {
+  box-shadow: 0 8px 16px 0 var(--brand-blue);
+}
+
+.post-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.post-card h2 {
+  margin: 0.5em 0 0;
+}
+
+.post-card .title {
+  margin: 0;
+}
+
+.post-card p {
+  font-size: 14px;
+}
+
+.location {
+  margin-left: 67px;
+  margin-top: -40px;
+  font-weight: 350;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.time {
+  color: #989898;
+  /* Body S light */
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-left: 290px;
+  margin-top: -44px;
+}
+
+.caption {
+  color: var(--Brand-black, #121312);
+
+  /* Body light */
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  width: 360px;
+  margin-bottom: 10px;
+}
+
+.hashtags {
+  color: var(--brand-black-50, rgba(18, 19, 18, 0.5));
+  /* Body S light */
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-top: 5px;
+  margin-bottom: 12px;
+}
+
+/* Reactions */
+
+.reaction-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.reaction-group-left,
+.reaction-group-right {
+  display: flex;
+  gap: 15px;
+}
+
+.reaction-button {
+  background: none !important;
+  border: none !important;
+  text-decoration: none !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: none;
+  padding: 0;
+  box-shadow: none;
+  cursor: pointer;
+  margin-bottom: -16px;
+}
+
+.reaction-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.reaction-button p {
+  color: var(--Brand-black, #121312);
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+/* ---------- Avatar Styling ---------- */
+.avatar {
+  display: flex;
+  align-items: center;
+  margin: 0 0 1.2em;
+  text-align: left;
+}
+
+.avatar span {
+  margin: 0 0 0 1em;
+}
+
+.avatar h3,
+.avatar p {
+  margin: 0;
+  line-height: 1.2;
+}
+.post-card h3 {
+  margin-top: -15px;
+}
+
+.post-card .avatar img {
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* ---------- Post Page Styling ---------- */
+#post-page .post-card > img {
+  height: auto;
+}
+
+#post-page .btns {
+  padding: 1em 0;
+}
+
+/* ---------- Login Form Styling ---------- */
+#sign-in-page,
+#sign-up-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+}
+
+.error-message {
+  color: var(--text-color-danger);
+  margin-top: 10px;
+  grid-column: 2;
+}
+
+.hide {
+  display: none;
+}
+
+.image-preview {
+  cursor: pointer;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Stories.css */
+.stories {
+  display: flex;
+  gap: 8px;
+  padding: 23px;
+  overflow-x: auto;
+  margin-bottom: -33px;
+  margin-top: -17px;
+ 
+}
+
+.story {
+  width: 100px;
+  height: 180px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.story:hover {
+  transform: scale(1.05);
+}
+
+.create-story {
+  background-color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+}
+
+.create-story-button {
+  font-size: 14px;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.story-info {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 11px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.profile-picture {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.create-story .story-image {
+  height: auto;
+}
+
+.create-story .create-story-button {
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  color: #333;
+  height: 60px;
+}
+
+

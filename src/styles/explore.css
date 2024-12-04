@@ -1,0 +1,105 @@
+/* ---------- Explore Card Styling ---------- */
+.explore-card {
+  position: relative;
+  width: 172px; /* Same size as mentioned in Figma */
+  height: 195px; /* Same size as mentioned in Figma */
+  overflow: hidden;
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a nice effect */
+}
+
+.explore-card:hover {
+  /*this wouldnt show up on mobile*/
+  box-shadow: 0 8px 16px 0 var(--brand-blue);
+}
+
+.explore-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the card without distortion */
+}
+
+.explore-card h6 {
+  position: absolute;
+  bottom: -20px; /* Position text at the bottom; adjust as needed */
+  left: 5%;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Poppins';
+}
+
+/* Grid container for the cards */
+.card-container {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 16px; /* Space between cards */
+  max-width: 172px; /* Optional: adjust max-width to fit content */
+  padding: 0 16px;
+  padding-top: 24px; /* Add padding to the top */
+}
+
+/*search bar*/
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 15px 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  width: 316px;
+  font-family: 'Poppins';
+}
+
+.search-bar-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px; /* Adjust as needed */
+  padding: 0 16px;
+}
+
+/* Heart icon */
+.heart-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px; /* Space between text and icon */
+  margin-top: 10px; /* Space between text and icon */
+}
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background-color: #fff; /* Adjust as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a nice effect */
+  height: 64px; /* Adjust as needed */
+}
+
+/* Top bar content alignment */
+.top-bar-content {
+  display: flex;
+  align-items: left;
+}
+
+/*back button*/
+.back-button {
+  display: flex;
+  align-items: left;
+  padding-top: 40px;
+}
+
+/*the time, wifi and battery icons*/
+.bar {
+  margin-left: 16px; /* Adjust as needed */
+}
+
+/*off the path logo*/
+.logo {
+  margin-left: 40px;
+  margin-right: auto;
+  width: 118px;
+  height: 12px;
+}

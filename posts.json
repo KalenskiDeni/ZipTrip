@@ -1,0 +1,186 @@
+{
+  "posts": {
+    "0": {
+      "caption": "Such a great cultural day today! I visited the National Museum of History, it was absolutely amazing!",
+      "image": "https://plus.unsplash.com/premium_photo-1697729828374-96545e9e26be?q=80&w=1816&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "time": "12 min ago",
+      "hashtags": ["#museum ", "#culture"],
+      "location": "Madrid, Spain",
+      "uid": "John"
+    },
+    "1": {
+      "caption": "Just spent the last few days exploring Bali, and I am completely blown away! The beaches are stunning, but it is the hidden temples and lush rice terraces that really made my solo trip unforgettable. I met some locals who showed me around Ubud, and the food? Incredible.",
+      "image": "https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "time": "7 h ago",
+      "hashtags": ["#nature ", "#culture"],
+      "location": "Bali, Indonesia",
+      "uid": "Amanda"
+    }
+  },
+
+  "users": {
+    "John": {
+      "image": "https://plus.unsplash.com/premium_photo-1670985849576-175bab7fe0e4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "name": "John Smith"
+    },
+    "Amanda": {
+      "image": "https://images.unsplash.com/photo-1584650854920-c728d644c77f?q=80&w=1905&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "name": "Amanda Davis"
+    }
+  },
+
+  "locals": {
+    "Albert": {
+      "gender": "male",
+      "avatar": "https://plus.unsplash.com/premium_photo-1670985849576-175bab7fe0e4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "name": "Albert",
+      "location": "Madrid, Spain",
+      "age": "27",
+      "interests": ["hiking", "camping, parks"],
+      "about": "I am a local from Madrid, and I love to show people around the city. I am a big fan of the outdoors, and I know all the best spots for hiking and camping. I also love to visit the parks in the city, and I can show you some of the best ones in Madrid.",
+      "photos": "https://plus.unsplash.com/premium_photo-1697730214411-90916c40f30d?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "photos-location": "Madrid, Spain",
+      "background-image": "https://images.unsplash.com/photo-1553697069-44bab35c1738?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    "Luis": {
+      "gender": "other",
+      "avatar": "https://images.unsplash.com/photo-1533621834623-d0b25d0b14e7?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "name": "Luis",
+      "location": "Rome, Italy",
+      "age": "21",
+      "interests": ["photography", "museums"],
+      "about": "I am a local from Rome, and I love to show people around the city. I am a big fan of photography, and I know all the best spots for taking pictures. I also love to visit the museums in the city, and I can show you some of the best ones in Rome.",
+      "photos": "https://images.unsplash.com/photo-1650811019535-26c83d4f5315?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "photos-location": "Rome, Italy",
+      "background-image": "https://images.unsplash.com/photo-1691287850810-00fe9fa14c28?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    "Lucia": {
+      "gender": "female",
+      "avatar": "https://images.unsplash.com/photo-1484608856193-968d2be4080e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "name": "Lucia",
+      "location": "NYC, USA",
+      "age": "24",
+      "interests": ["food tasting", "shopping"],
+      "about": "I am a local from NYC, and I love to show people around the city. I am a big fan of food tasting, and I know all the best spots for trying out different cuisines. I also love to go shopping in the city, and I can show you some of the best places to shop in NYC.",
+      "photos": "https://images.unsplash.com/photo-1582719806491-a8bc5b9fa65c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "photos-location": "NYC, USA",
+      "background-image": "https://images.unsplash.com/photo-1728942756635-0407678db122?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  },
+
+  "stories": {
+    "0": {
+      "name": "John Smith",
+      "image": "https://plus.unsplash.com/premium_photo-1677343210638-5d3ce6ddbf85?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "avatar": "https://plus.unsplash.com/premium_photo-1670985849576-175bab7fe0e4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    "1": {
+      "name": "Amanda Davis",
+      "image": "https://plus.unsplash.com/premium_photo-1673657332512-b87806f4f49e?q=80&w=3372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "avatar": "https://images.unsplash.com/photo-1584650854920-c728d644c77f?q=80&w=1905&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  },
+
+  "allChats": [
+    {
+      "name": "John Smith",
+      "message": "This trip was really nice...",
+      "time": "2:14 PM",
+      "unread": true,
+      "avatar": "https://images.unsplash.com/photo-1505068981102-ab0938cad78c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDQ3fHx8ZW58MHx8fHx8"
+    },
+    {
+      "name": "Amanda Davis",
+      "message": "Just got back from the beach!",
+      "time": "5:45 AM",
+      "unread": true,
+      "avatar": "https://plus.unsplash.com/premium_photo-1673151333256-a125a6bf1bce?q=80&w=3165&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Sophia Martinez",
+      "message": "Can't believe how clear the water...",
+      "time": "3:30 AM",
+      "unread": false,
+      "avatar": "https://images.unsplash.com/photo-1663727727890-8b70e898f965?q=80&w=3165&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Michael Brown",
+      "message": "Found a great local restaurant...",
+      "time": "Yesterday",
+      "unread": false,
+      "avatar": "https://images.unsplash.com/photo-1531141445733-14c2eb7d4c1f?q=80&w=3165&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Lily Johnson",
+      "message": "We're hiking up the mountain...",
+      "time": "Yesterday",
+      "unread": false,
+      "avatar": "https://images.unsplash.com/photo-1599231091889-c1fd76b87226?q=80&w=2565&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "James Thompson",
+      "message": "Just landed in Bali! The weather...",
+      "time": "23 Oct",
+      "unread": false,
+      "avatar": "https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Olivia Jensen",
+      "message": "The architecture here is incredible...",
+      "time": "21 Oct",
+      "unread": false,
+      "avatar": "https://images.unsplash.com/photo-1599457382197-820d65b8bbdc?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ],
+  "matchChats": [
+    {
+      "name": "Amelia Roberts",
+      "message": "Check out the market on King...",
+      "time": "3:22 PM",
+      "unread": true,
+      "avatar": "https://images.unsplash.com/photo-1597976618063-810eb50c84fb?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Daniel Parker",
+      "message": "The best time to visit the park...",
+      "time": "8:17 AM",
+      "unread": true,
+      "avatar": "https://images.unsplash.com/photo-1442328166075-47fe7153c128?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Grace Evans",
+      "message": "If you want to experience the local...",
+      "time": "6:14 AM",
+      "unread": false,
+      "avatar": "https://images.unsplash.com/photo-1520310809185-5cc119cf8b08?q=80&w=1707&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ],
+
+  "explorePosts": {
+    "Barcelona": {
+      "location": "Barcelona, Spain",
+      "photo": "https://images.unsplash.com/photo-1511527661048-7fe73d85e9a4?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFyY2Vsb25hfGVufDB8fDB8fHww",
+      "path": "/barcelona"
+    },
+    "Tokyo": {
+      "location": "Tokyo, Japan",
+      "photo": "https://images.unsplash.com/photo-1542931287-023b922fa89b?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    "Riga": {
+      "location": "Riga, Latvia",
+      "photo": "https://images.unsplash.com/photo-1694198992412-085378aac577?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHJpZ2F8ZW58MHx8MHx8fDA%3D"
+    },
+    "Varna": {
+      "location": "Varna, Bulgaria",
+      "photo": "https://images.unsplash.com/photo-1697831447294-ca0f55c2bc42?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dmFybmElMjBidWxnYXJpYXxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    "Paris": {
+      "location": "Paris, France",
+      "photo": "https://images.unsplash.com/photo-1697831447294-ca0f55c2bc42?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dmFybmElMjBidWxnYXJpYXxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    "New York": {
+      "location": "Paris, France",
+      "photo": "https://images.unsplash.com/photo-1697831447294-ca0f55c2bc42?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dmFybmElMjBidWxnYXJpYXxlbnwwfHwwfHx8MA%3D%3D"
+    }
+  }
+}

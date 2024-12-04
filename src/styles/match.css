@@ -1,0 +1,205 @@
+.page1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.container1 {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.local-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  margin: 10px 0;
+  text-align: center;
+  background-color: rgba(249, 249, 249, 0.8);
+  position: relative;
+}
+
+.avatar1-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.avatar1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 90%;
+  border-style: solid;
+  border-color: white;
+  border-width: 8px;
+  box-shadow: 0px 8px 4px 0px gainsboro;
+}
+
+.local-card h3 {
+  margin: 10px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.local-card .info-row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 10px 0;
+  font-size: 12px;
+}
+
+.local-card .info-row div {
+  flex: 1;
+  text-align: center;
+}
+
+.local-card p {
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Make container full width for side alignment */
+  max-width: 300px; /* Optional: Control the max width of the button area */
+  margin-top: 20px;
+}
+
+.button-container button {
+  padding: 10px;
+  border-radius: 999999px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 44px;
+}
+
+/* Adjust margin for button spacing */
+.button-container button:first-child {
+  margin-right: auto; /* Pushes 'No' to the left */
+  background-color: var(--brand-white);
+}
+
+.button-container button:last-child {
+  margin-left: auto; /* Pushes 'Yes' to the right */
+}
+
+/* Filter */
+
+.filter-section {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 4px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.filter-button {
+  background: none;
+  border-radius: 16px;
+  border: none;
+  color: #333;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0px;
+  width: 82px;
+  height: 26px;
+}
+
+.dropdown-options {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 8px;
+  position: absolute;
+  top: 40px; /* Position below the button */
+  width: max-content;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.dropdown-options label {
+  margin: 4px 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Icons */
+.iconM img {
+  width: 1px;
+  height: 1px;
+}
+
+
+/* Slider */
+.age-range-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.age-range-slider h5 {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #333;
+}
+
+.apply-filter-button{
+  font-size: 12px ;
+  width: 120px;
+  margin-top: 10px;
+}
+
+
+.age-range-dropdown {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  width: 200px; /* Adjust the width as needed */
+  position: absolute; /* Position it accordingly */
+  z-index: 10; /* Make sure it appears above other elements */
+}
+
+.slider-container {
+  margin: 10px 0;
+}
+
+/* Other existing styles... */
+
+.filter-section {
+  position: relative; /* Ensure dropdowns position correctly */
+}
+
+/* Icons */
+img.iconM{
+  width:12px;
+  height: 12px;
+}
+
+img.iconY{
+  width: 22px;
+  height: 22px;
+}
+
+.yes{
+  height: 48px;
+  width: 48px;
+}
