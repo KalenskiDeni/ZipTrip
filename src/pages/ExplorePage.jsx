@@ -1,49 +1,49 @@
-
-
 // HomePage.js
 import { useEffect, useState } from "react";
 import PostCard from "../components/PostCard";
-import Stories from "../components/Stories"; // Import Stories component
 import { NavLink } from "react-router-dom";
 import avatarImage from "../assets/story-alex.png";
 import logo from "/src/assets/logoziptrip.png"; // Path to the logo
 import searchIcon from "../assets/icons/search-icon.svg";
 import settingsIcon from "../assets/icons/cog-icon.svg";
 import bar from "../assets/status-bar.png";
+import userAvatar from "../assets/icons/userAvatar.svg"; // Placeholder for user avatar
 
-// useState is a hook that lets you add state to functional components.
-// It returns an array with two elements: the current state value and a function to update that state.
 export default function HomePage() {
   const [posts, setPosts] = useState([]);
   const [activeTab, setActiveTab] = useState("forYou");
 
-  // useEffect hook to fetch posts from the database
+  // Fetch posts from the database
   useEffect(() => {
     async function fetchPosts() {
       const url =
-        "https://ziptrip-ec0b6-default-rtdb.firebaseio.com//posts.json";
+        "https://ziptrip-ec0b6-default-rtdb.firebaseio.com/posts.json";
       const response = await fetch(url);
       const data = await response.json();
 
-      // Convert object to array for easier iteration, consistent data structure & state management
-      const postsArray = Object.keys(data).map((postId) => ({
-        id: postId,
-        ...data[postId],
-      }));
-      setPosts(postsArray);
+      if (data) {
+        // Convert object to array for easier iteration
+        const postsArray = Object.keys(data).map((postId) => ({
+          id: postId,
+          ...data[postId],
+        }));
+        setPosts(postsArray);
+      }
     }
 
     fetchPosts();
   }, []);
 
-  //a return statement defines the HTML structure of the component that will be rendered on the webpage
   return (
     <section className="page">
+      {/* Top Bar */}
       <header className="top-bar">
         <div className="top-bar-content">
           <img src={bar} alt="status bar" className="bar" />
-          <img src={logo} alt="Off The Path Logo" className="logo" />
-        
+          <div className="logo-container">
+            <img src={logo} alt="ZipTrip Logo" className="logo" />
+          </div>
+          <img src={userAvatar} alt="User Profile" className="avatar-profile" />
         </div>
       </header>
 
@@ -59,7 +59,7 @@ export default function HomePage() {
           className={activeTab === "daily" ? "active" : ""}
           onClick={() => setActiveTab("daily")}
         >
-          Host a ride
+          Host a Ride
         </button>
       </div>
 
@@ -67,28 +67,24 @@ export default function HomePage() {
       <div className="tab-content">
         {activeTab === "forYou" && (
           <>
-            {/* Create Post Button */}
-            <div className="create-post-button">
-              <NavLink to="/create" activeClassName="active">
-                
-              </NavLink>
-            </div>
-          
+
 
             {/* Posts Grid */}
             <div className="grid">
-              {posts.map((post) => (
-                <PostCard key={post.id} post={post} />
-              ))}
+              {posts.length > 0 ? (
+                posts.map((post) => (
+                  <PostCard key={post.id} ride={post} />
+                ))
+              ) : (
+                <p>No rides available.</p>
+              )}
             </div>
           </>
         )}
 
         {activeTab === "daily" && (
           <div className="daily-content">
-            <h2>Daily Inspiration</h2>
-            <p>Discover new places and experiences every day!</p>
-            {/* Add more content or components specific to the "Daily" tab here */}
+            <p>No future rides...</p>
           </div>
         )}
       </div>

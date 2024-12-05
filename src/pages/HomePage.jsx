@@ -1,70 +1,91 @@
-//created by Beatrise
-
-import { useEffect, useState } from "react";
-import ExploreCard from "../components/ExploreCard";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "/src/styles.css";
-import HeartIcon from "../assets/icons/heart.svg"; //for the button that leads to favorites page
-import logo from "/src/assets/logoziptrip.png"; // Path to the logo
-import backButton from "../assets/icons/backButton.svg";
 import bar from "../assets/status-bar.png";
+import logo from "/src/assets/logoziptrip.png"; // Logo path
+import userAvatar from "../assets/icons/userAvatar.svg"; // Placeholder for user avatar
+import locationIcon1 from "../assets/icons/locationIcon1.svg"; // Add icons for inputs
+import locationIcon2 from "../assets/icons/locationIcon2.svg"; // Add icons for inputs
+import calendarIcon from "../assets/icons/calendarIcon.svg";
+import illustration from "../assets/icons/car-people.svg";
 
 export default function ExplorePage() {
-  const [posts, setPosts] = useState([]); // set the initial state to an empty array
-
-  
+  // State for inputs
+  const [fromLocation, setFromLocation] = useState("");
+  const [toLocation, setToLocation] = useState("");
+  const [travelDate, setTravelDate] = useState("");
 
   return (
     <section className="page">
+      {/* Top Bar */}
       <header className="top-bar">
-        <div className="top-bar-content">
-          <img src={bar} alt="status bar" className="bar" />
-          <img src={logo} alt="Off The Path Logo" className="logo" />
-          <div className="top-bar-icons"></div>
-        </div>
-      </header>
+  <div className="top-bar-content">
+    <img src={bar} alt="status bar" className="bar" />
+    <div className="logo-container">
+      <img src={logo} alt="ZipTrip Logo" className="logo" />
+    </div>
+    <img src={userAvatar} alt="User Profile" className="avatar-profile" />
+  </div>
+</header>
 
-      <div className="search-bar-button">
-        <div className="search-bar">
-          <NavLink to="/search" activeClassName="active">
-            <span className="placeholder-text">
-              Where from?
-            </span>
-            
-          </NavLink>
-        </div>
-       
+
+       {/* Page Heading */}
+       <div className="weird-text">
+        <h1>Search your destination</h1>
       </div>
 
-
-      <div className="search-bar-button">
-        <div className="search-bar">
-          <NavLink to="/search" activeClassName="active">
-            <span className="placeholder-text">
-              Where to?
-            </span>
-            
-          </NavLink>
+      {/* Search Inputs */}
+      <div className="search-container">
+        {/* Where From */}
+        <div className="input-container-home">
+          <img src={locationIcon1} alt="Where From Icon" className="input-icon-home" />
+          <input
+            type="text"
+            placeholder="Where from?"
+            className="input-field-home"
+            value={fromLocation}
+            onChange={(e) => setFromLocation(e.target.value)}
+          />
         </div>
-       
+
+        {/* Where To */}
+        <div className="input-container-home">
+          <img src={locationIcon2} alt="Where To Icon" className="input-icon-home" />
+          <input
+            type="text"
+            placeholder="Where to?"
+            className="input-field-home"
+            value={toLocation}
+            onChange={(e) => setToLocation(e.target.value)}
+          />
+        </div>
+
+        {/* When */}
+        <div className="input-container-home">
+          <img src={calendarIcon} alt="When Icon" className="input-icon-home" />
+          <input
+            type="date"
+            className="input-field-home"
+            value={travelDate}
+            onChange={(e) => setTravelDate(e.target.value)}
+          />
+        </div>
       </div>
 
+      {/* Illustration Section */}
+      <section className="illustration-section">
+        <img src={illustration} alt="People in a car with a map" className="illustration-image" />
+      </section>
 
-
-      <div className="search-bar-button">
-        <div className="search-bar">
-          <NavLink to="/search" activeClassName="active">
-            <span className="placeholder-text">
-              When?
-            </span>
-            
-          </NavLink>
-        </div>
-       
-      </div>
-     
+      {/* CTA Button */}
+      <button
+        className="cta-button"
+        onClick={() =>
+          console.log(`From: ${fromLocation}, To: ${toLocation}, Date: ${travelDate}`)
+        }
+      >
+        Search rides
+      </button>
     </section>
   );
 }
-
-//top-bar is the header of the page. it contains the logo, and back button

@@ -1,129 +1,92 @@
-// Created by Deni Kalenski
-import "/src/styles.css";
+import React, { useState, useEffect } from "react";
 
-// Importing icons and images
-import globeIcon from "../assets/icons/globe-icon.png";
-import arrowIcon from "../assets/icons/arrow-icon.svg";
-import languageIcon from "../assets/icons/flag/DK.svg";
-import verificationIcon from "../assets/icons/verification-icon.svg";
-import settingsIcon from "../assets/icons/cog-icon.svg";
-import favouritesIcon from "../assets/icons/heart-icon.svg";
-import archiveIcon from "../assets/icons/archive-icon.svg";
-import subscriptionsIcon from "../assets/icons/star-icon.svg";
-import travelIcon from "../assets/icons/travel-icon.png";
+import "/src/styles.css"; // Import the CSS styles
 
-// ProfilePage component
+// Importing all the icons for the car details
+import keylessIcon from "../assets/icons/keyless.svg";
+import blackFridayIcon from "../assets/icons/black-friday.svg";
+import electricIcon from "../assets/icons/electric.svg";
+import luggageIcon from "../assets/icons/luggage.svg";
+import seatsIcon from "../assets/icons/seats.svg";
+import distanceIcon from "../assets/icons/distance.svg";
+
 export default function ProfilePage() {
+  const [cars, setCars] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // Fetching the cars data from Firebase Realtime Database
+  useEffect(() => {
+    async function fetchCars() {
+      try {
+        const carsResponse = await fetch(
+          "https://ziptrip-ec0b6-default-rtdb.firebaseio.com/cars.json"
+        );
+        const carsData = await carsResponse.json();
+        console.log("Fetched Cars Data:", carsData); // Log the fetched data to check if it's coming in
+        setCars(carsData || []);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching car data:", error);
+        setLoading(false);
+      }
+    }
+
+    fetchCars();
+  }, []);
+
+  if (loading) {
+    console.log("Loading..."); // Log loading state
+    return <div>Loading...</div>;
+  }
+
+  console.log("Cars Data in State:", cars); // Log the cars data stored in state
+
   return (
-    <section className="profile-page">
-      <div className="earth-section">
-        <div className="earth-image">
-          <div className="countries-stats">
-            <div className="stat">
-              <p className="stat-number">1 / 202</p>
-              <p className="stat-label">countries been</p>
-            </div>
-
-            <div className="divider">
-              <hr />
-              <img src={arrowIcon} alt="Arrow Icon" className="arrow-icon" />
-            </div>
-
-            <div className="stat">
-              <p className="stat-number">0%</p>
-              <p className="stat-label">of the world</p>
+    <div className="ziptrip-car-page">
+      <h1>Rent a Car</h1>
+      <div className="ziptrip-car-list">
+        {cars.map((car, index) => (
+          <div key={index} className="ziptrip-car-card">
+            <img src={car.image || "https://via.placeholder.com/150"} alt={car.name} className="ziptrip-car-image" />
+            <h3>{car.name}</h3>
+            <p>{car.price} {car.currency} for {car.duration}</p>
+            <div className="ziptrip-details">
+              <p>
+                <img src={seatsIcon} alt="Seats" /> {car.seats} seats
+              </p>
+              <p>
+                <img src={distanceIcon} alt="Distance Included" /> {car.distanceIncluded} km included
+              </p>
+              <p>
+                {car.isElectric ? (
+                  <img src={electricIcon} alt="Electric" />
+                ) : (
+                  "Not Electric"
+                )}
+              </p>
+              <p>
+                {car.hasLuggageSpace && (
+                  <img src={luggageIcon} alt="Luggage Space" />
+                )}
+                {car.hasLuggageSpace && " Space for Luggage"}
+              </p>
+              {car.hasKeyless && (
+                <div className="ziptrip-keyless">
+                  <img src={keylessIcon} alt="Keyless" />
+                  
+                </div>
+              )}
+              {car.discount >= 10 && (
+                <div className="ziptrip-black-friday">
+                  <img src={blackFridayIcon} alt="Black Friday" />
+                
+                </div>
+              )}
+              <div className="ziptrip-discount">{car.discount}% Off</div>
             </div>
           </div>
-        </div>
+        ))}
       </div>
-
-      <div className="your-countries-button">
-        <img src={globeIcon} alt="Globe Icon" className="icon" />
-        <span>Your countries</span>
-      </div>
-
-      <div className="profile-info">
-        <div className="profile-header">
-          <div className="outer-thumbnail-container">
-            <div className="profile-thumbnail-container">
-              <div className="profile-thumbnail" />
-            </div>
-          </div>
-          <h2>Alex, 21</h2>
-          <div className="language-display">
-            <img
-              src={languageIcon}
-              alt="Language Icon"
-              className="language-icon"
-            />
-            <p>Danish</p>
-          </div>
-        </div>
-
-        <button className="action-btn">View Profile</button>
-        <button className="action-btn">Edit Profile</button>
-
-        <div className="verification">
-          <img
-            src={verificationIcon}
-            alt="Verification Icon"
-            className="verification-icon"
-          />
-          <div className="verification-text">
-            <p>Not Verified Yet</p>
-            <span>Verify your profile to get a verification badge</span>
-          </div>
-        </div>
-
-        <ul className="settings-list">
-          <li>
-            <img
-              src={settingsIcon}
-              alt="Settings Icon"
-              className="icon-profile"
-            />
-            General Settings
-          </li>
-          <li>
-            <img
-              src={favouritesIcon}
-              alt="Favourites Icon"
-              className="icon-profile"
-            />
-            Favourites
-          </li>
-          <li>
-            <img
-              src={archiveIcon}
-              alt="Archive Icon"
-              className="icon-profile"
-            />
-            Archive
-          </li>
-          <li>
-            <img
-              src={subscriptionsIcon}
-              alt="Subscriptions Icon"
-              className="icon-profile"
-            />
-            My Subscriptions
-          </li>
-        </ul>
-
-        <div className="travel-assistant-card">
-          <div className="pro-feature-badge">Pro Feature</div>
-          <div className="travel-content">
-            <div className="travel-text">
-              <h2>Travel Assistant</h2>
-              <p>Smartest AI Travel Assistant</p>
-              <a href="/offthepath-pro" className="cta-link">
-                Get OffThePath Pro
-              </a>
-            </div>
-            <img src={travelIcon} alt="Travel Icon" className="travel-icon" />
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
   );
 }

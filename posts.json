@@ -1,20 +1,36 @@
 {
   "posts": {
-    "0": {
-      "caption": "Such a great cultural day today! I visited the National Museum of History, it was absolutely amazing!",
-      "image": "https://plus.unsplash.com/premium_photo-1697729828374-96545e9e26be?q=80&w=1816&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "time": "12 min ago",
-      "hashtags": ["#museum ", "#culture"],
-      "location": "Madrid, Spain",
-      "uid": "John"
+    "post1": {
+      "date": "Wed, 11 Dec",
+      "time": "13:00",
+      "departureTime": "13:00",
+      "arrivalTime": "16:00",
+      "pickupLocation": "Hovedbanegarden, København",
+      "dropoffLocation": "Sumatravej 1, Aarhus",
+      "ferry": true,
+      "driver": {
+        "profileImage": "https://images.unsplash.com/photo-1492447166138-50c3889fccb1?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "name": "Morten",
+        "rating": 4,
+        "ratingCount": 722
+      },
+      "price": 150
     },
-    "1": {
-      "caption": "Just spent the last few days exploring Bali, and I am completely blown away! The beaches are stunning, but it is the hidden temples and lush rice terraces that really made my solo trip unforgettable. I met some locals who showed me around Ubud, and the food? Incredible.",
-      "image": "https://plus.unsplash.com/premium_photo-1677829177642-30def98b0963?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "time": "7 h ago",
-      "hashtags": ["#nature ", "#culture"],
-      "location": "Bali, Indonesia",
-      "uid": "Amanda"
+    "post2": {
+      "date": "Thu, 12 Dec",
+      "time": "14:00",
+      "departureTime": "14:00",
+      "arrivalTime": "17:00",
+      "pickupLocation": "Copenhagen Airport",
+      "dropoffLocation": "Aarhus C",
+      "ferry": false,
+      "driver": {
+        "profileImage": "https://images.unsplash.com/photo-1441123694162-e54a981ceba5?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "name": "Sofie",
+        "rating": 5,
+        "ratingCount": 450
+      },
+      "price": 180
     }
   },
 
@@ -83,53 +99,53 @@
 
   "allChats": [
     {
-      "name": "John Smith",
-      "message": "This trip was really nice...",
-      "time": "2:14 PM",
+      "name": "Emma Jensen",
+      "message": "Hey Michael! Are we still on...",
+      "time": "6:17 PM",
       "unread": true,
-      "avatar": "https://images.unsplash.com/photo-1505068981102-ab0938cad78c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDQ3fHx8ZW58MHx8fHx8"
+      "avatar": "https://images.unsplash.com/photo-1686491730811-df4581911c55?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "name": "Amanda Davis",
-      "message": "Just got back from the beach!",
-      "time": "5:45 AM",
+      "name": "Lars Mikkelsen",
+      "message": "Just wanted to check if you...",
+      "time": "2:25 AM",
       "unread": true,
-      "avatar": "https://plus.unsplash.com/premium_photo-1673151333256-a125a6bf1bce?q=80&w=3165&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "avatar": "https://images.unsplash.com/photo-1576110598658-096ae24cdb97?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "name": "Sophia Martinez",
-      "message": "Can't believe how clear the water...",
-      "time": "3:30 AM",
+      "name": "Sophie Nielsen",
+      "message": "Excited to have you on boa...",
+      "time": "8:39 AM",
       "unread": false,
-      "avatar": "https://images.unsplash.com/photo-1663727727890-8b70e898f965?q=80&w=3165&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "avatar": "https://images.unsplash.com/photo-1533973427779-4b8c2eb4c3cd?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "name": "Michael Brown",
-      "message": "Found a great local restaurant...",
+      "name": "Jonas Eriksen",
+      "message": "I will be at the meeting point...",
+      "time": "11:12 AM",
+      "unread": false,
+      "avatar": "https://images.unsplash.com/photo-1700163433953-318c031aa845?q=80&w=2016&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Mia Sørensen",
+      "message": "The car is electric and fully...",
       "time": "Yesterday",
       "unread": false,
-      "avatar": "https://images.unsplash.com/photo-1531141445733-14c2eb7d4c1f?q=80&w=3165&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "avatar": "https://images.unsplash.com/photo-1505481454812-642d2c1a7da9?q=80&w=2882&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "name": "Lily Johnson",
-      "message": "We're hiking up the mountain...",
-      "time": "Yesterday",
+      "name": "Clara Thomsen",
+      "message": "Just confirming our ride for...",
+      "time": "25 Nov",
       "unread": false,
-      "avatar": "https://images.unsplash.com/photo-1599231091889-c1fd76b87226?q=80&w=2565&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "avatar": "https://images.unsplash.com/photo-1501943416256-08140ba03763?q=80&w=2885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "name": "James Thompson",
-      "message": "Just landed in Bali! The weather...",
-      "time": "23 Oct",
+      "name": "Frederik Larsen",
+      "message": "I have some snacks in the car...",
+      "time": "23 Nov",
       "unread": false,
-      "avatar": "https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-      "name": "Olivia Jensen",
-      "message": "The architecture here is incredible...",
-      "time": "21 Oct",
-      "unread": false,
-      "avatar": "https://images.unsplash.com/photo-1599457382197-820d65b8bbdc?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "avatar": "https://images.unsplash.com/photo-1544728397-e9f8875bd5fc?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ],
   "matchChats": [
@@ -182,5 +198,101 @@
       "location": "Paris, France",
       "photo": "https://images.unsplash.com/photo-1697831447294-ca0f55c2bc42?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dmFybmElMjBidWxnYXJpYXxlbnwwfHwwfHx8MA%3D%3D"
     }
+  }, 
+
+  "explorePosts": {
+    "date": "Wed, 11 Dec",
+    "departureTime": "13:00",
+    "arrivalTime": "16:00",
+    "pickupLocation": "Hovedbanegarden, København",
+    "dropoffLocation": "Sumatravej 1, Aarhus",
+    "price": 150,
+    "seats": 3,
+    "details": {
+      "detour": "The driver is willing to make a 5 min. detour",
+      "luggageSize": "Large - e.g. bag or suitcase"
+    },
+    "preferences": ["Music", "Smoking", "Pets", "Children"],
+    "driver": {
+      "profileImage": "https://via.placeholder.com/50",
+      "name": "Morten",
+      "joined": "April 2021",
+      "ratings": 722
+    },
+    "vehicle": {
+      "image": "https://via.placeholder.com/400x200",
+      "model": "Tesla Model 3",
+      "year": 2020,
+      "type": "Electric"
+    },
+    "passengers": ["Morten Larsen", "Passenger 2", "Passenger 3"],
+    "environmentalBenefits": {
+      "kg CO2 saved": 37,
+      "clean air": "10%",
+      "gallons of gas": 174,
+      "trees": 1.4
+    }
+  },
+
+
+    "cars": [
+      {
+        "name": "Tesla Model Y",
+        "price": 2800,
+        "currency": "DKK",
+        "duration": "5 days",
+        "seats": 5,
+        "distanceIncluded": 1500,
+        "isElectric": true,
+        "hasKeyless": true,
+        "hasLuggageSpace": true,
+        "discount": 20,
+        "image": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "tags": ["BLACK FRIDAY"]
+      },
+      {
+        "name": "Hyundai Ioniq 5",
+        "price": 2600,
+        "currency": "DKK",
+        "duration": "5 days",
+        "seats": 4,
+        "distanceIncluded": 1400,
+        "isElectric": true,
+        "hasKeyless": false,
+        "hasLuggageSpace": true,
+        "discount": 30,
+        "image": "https://images.unsplash.com/photo-1647418552401-f3958302b72a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "tags": ["BLACK FRIDAY"]
+      },
+      {
+        "name": "Polestar 2",
+        "price": 3000,
+        "currency": "DKK",
+        "duration": "5 days",
+        "seats": 5,
+        "distanceIncluded": 1600,
+        "isElectric": true,
+        "hasKeyless": true,
+        "hasLuggageSpace": true,
+        "discount": 10,
+        "image": "https://images.unsplash.com/photo-1655287778401-ce90c81a630f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "tags": ["BLACK FRIDAY"]
+      },
+      {
+        "name": "BMW X6 M",
+        "price": 3800,
+        "currency": "DKK",
+        "duration": "5 days",
+        "seats": 5,
+        "distanceIncluded": 2000,
+        "isElectric": true,
+        "hasKeyless": true,
+        "hasLuggageSpace": true,
+        "discount": 15,
+        "image": "https://images.unsplash.com/photo-1541443131876-44b03de101c5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "tags": ["BLACK FRIDAY"]
+      }
+    ]
   }
-}
+  
+  

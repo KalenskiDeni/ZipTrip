@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 
 import "/src/styles.css";
 
+import logo from "/src/assets/logoziptrip.png"; // Logo path
+import userAvatar from "../assets/icons/userAvatar.svg"; // Placeholder for user avatar
+import bar from "../assets/status-bar.png";
+
 // ChatPage component
 export default function ChatPage() {
   const [activeTab, setActiveTab] = useState("all");
@@ -49,23 +53,27 @@ export default function ChatPage() {
   // Return the chat page
   return (
     <section className="chat-page">
+
+        {/* Top Bar */}
+        <header className="top-bar">
+  <div className="top-bar-content">
+    <img src={bar} alt="status bar" className="bar" />
+    <div className="logo-container">
+      <img src={logo} alt="ZipTrip Logo" className="logo" />
+    </div>
+    <img src={userAvatar} alt="User Profile" className="avatar-profile" />
+  </div>
+</header>
+
+        {/* Page Heading */}
+        <div className="weird-text-messages">
+        <h1>Messages</h1>
+      </div>
+
       <div className="search-bar-chat">
         <input type="text" placeholder="Search..." />
       </div>
-      <div className="tab-buttons">
-        <button
-          className={activeTab === "all" ? "active" : ""}
-          onClick={() => setActiveTab("all")}
-        >
-          All
-        </button>
-        <button
-          className={activeTab === "matches" ? "active" : ""}
-          onClick={() => setActiveTab("matches")}
-        >
-          Your matches
-        </button>
-      </div>
+     
       <div className="chat-list">
         {chatsToDisplay.map((chat, index) => (
           <div key={index} className="chat-item">

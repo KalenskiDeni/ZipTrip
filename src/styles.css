@@ -22,7 +22,7 @@ html {
 
 body,
 html {
-  background-color: var(--Brand-white, #f7f7f7);
+  background-color: var(--Brand-white);
   color: var(--brand-black);
   font-family: "Poppins", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -193,11 +193,11 @@ align-items: center;
 }
 
 .search-icon {
-  fill: #396660; 
+  fill: var(--brand-blue); 
 }
 
 .settings-icon {
-  fill: #396660; 
+  fill: var(--brand-blue); 
 }
 
 .header {
@@ -382,23 +382,63 @@ nav a i {
 .tab-buttons-home {
   margin-top: 15px;
   display: flex;
-
+margin-top: -60px;
   padding: 0 25px;
+  display: flex;
+width: 361px;
+height: 34px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+color: var(--Brand-dark-blue, #182726);
+text-align: center;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 22px; /* 137.5% */
+border-radius: 8px;
+
+background: var(--brand-white);
+padding: 2px 2px;
+
+
 }
 
 .tab-buttons-home button {
   flex: 1;
   padding: 10px;
   border: none;
-  border-radius: 16px;
+  border-radius: 7px;
   background-color: #e0e0e0;
   color: #333;
   font-weight: bold;
   cursor: pointer;
+  display: flex;
+  padding: 2px 2px;
+height: 30px;
+background: var(--brand-white);
+
+justify-content: center;
+align-items: center;
+gap: 8px;
+
 }
 .tab-buttons-home button.active {
   background-color: var(--brand-blue); 
   color: white;
+  border-radius: 7px;
+background: var(--Brand-blue, #16559F);
+box-shadow: 0px 0px 4px 3px rgba(163, 163, 163, 0.25);
+display: flex;
+
+padding: 2px 2px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+flex-shrink: 0;
+
 }
 
 /* Onboarding page */
@@ -581,157 +621,123 @@ text-decoration: none !important;
 
 
 /* ---------- Post Card Styling ---------- */
+/* Post Card Styles */
 .post-card {
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
-  padding: 1em;
-  background-color: var(--white);
-  transition: 0.5s;
-  animation: fadeIn 0.5s;
-  cursor: pointer;
-  border-radius: 10px;
-
-  margin-top: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: "Inter", sans-serif;
 }
 
-.post-card:hover {
-  box-shadow: 0 8px 16px 0 var(--brand-blue);
-}
-
-.post-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.post-card h2 {
-  margin: 0.5em 0 0;
-}
-
-.post-card .title {
-  margin: 0;
-}
-
-.post-card p {
-  font-size: 14px;
-}
-
-.location {
-  margin-left: 67px;
-  margin-top: -40px;
-  font-weight: 350;
-  font-size: 12px;
-  margin-bottom: 20px;
-}
-
-.time {
-  color: #989898;
-  /* Body S light */
-  font-family: Poppins;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  margin-left: 290px;
-  margin-top: -44px;
-}
-
-.caption {
-  color: var(--Brand-black, #121312);
-
-  /* Body light */
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  width: 360px;
-  margin-bottom: 10px;
-}
-
-.hashtags {
-  color: var(--brand-black-50, rgba(18, 19, 18, 0.5));
-  /* Body S light */
-  font-family: Poppins;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
-  margin-top: 5px;
-  margin-bottom: 12px;
-}
-
-/* Reactions */
-
-.reaction-container {
+/* Header Section */
+.post-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  border-top: 1px solid #e0e0e0;
+  margin-bottom: 1rem;
 }
 
-.reaction-group-left,
-.reaction-group-right {
-  display: flex;
-  gap: 15px;
+.post-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
 }
 
-.reaction-button {
-  background: none !important;
-  border: none !important;
-  text-decoration: none !important;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  outline: none;
-  padding: 0;
-  box-shadow: none;
-  cursor: pointer;
-  margin-bottom: -16px;
-}
-
-.reaction-button img {
+.icons img {
   width: 20px;
   height: 20px;
+  margin-left: 0.5rem;
 }
 
-.reaction-button p {
-  color: var(--Brand-black, #121312);
-  font-family: Poppins;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
+/* Ride Info Section */
+.ride-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-/* ---------- Avatar Styling ---------- */
-.avatar {
+.time-location {
   display: flex;
   align-items: center;
-  margin: 0 0 1.2em;
-  text-align: left;
+  gap: 1rem;
 }
 
-.avatar span {
-  margin: 0 0 0 1em;
+.time {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
 }
 
-.avatar h3,
-.avatar p {
-  margin: 0;
-  line-height: 1.2;
-}
-.post-card h3 {
-  margin-top: -15px;
+.location {
+  font-size: 0.9rem;
+  color: #333;
+  display: flex;
+  align-items: center;
 }
 
-.post-card .avatar img {
-  max-width: 50px;
-  max-height: 50px;
-  object-fit: cover;
+.location img {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+}
+
+/* Divider */
+hr {
+  border: 0;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 1rem 0;
+}
+
+/* Driver Info Section */
+.driver-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.driver-details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.driver-image {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  object-fit: cover;
 }
+
+.driver-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.driver-rating {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.star {
+  color: #e0e0e0;
+  font-size: 0.8rem;
+}
+
+.star.filled {
+  color: #f5c518;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+}
+
 
 /* ---------- Post Page Styling ---------- */
 #post-page .post-card > img {
@@ -1414,39 +1420,196 @@ text-underline-position: from-font;
 
 
 
-/* ---------- Explore Page ---------- */
-/* ---------- Explore Page ---------- */
-/* ---------- Explore Page ---------- */
-
-
-/* ---------- Explore Card Styling ---------- */
+/* ---------- Explore / search Page ---------- */
+/* ---------- Explore/ search Page ---------- */
+/* ---------- Explore / search Page ---------- */
 
 
 
-/*search bar*/
+/* General Styles */
+
+
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spaces elements across the bar */
+  padding: 10px 10px; /* Adjust spacing at the edges */
+  background-color: #ffffff;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.logo-container {
+  flex-grow: 1; /* This makes the logo stay centered */
+  display: flex;
+  justify-content: center; /* Ensures the logo is truly centered */
+  margin-right: 20px; /* Allows space for the avatar */
+}
+
+.logo {
+  max-height: 40px; /* Keeps logo properly sized */
+  object-fit: contain;
+}
+
+.avatar-profile {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 0px; /* Moves the avatar further right */
+  margin-right: -30px;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+
+
+/* Search Inputs */
+.search-container {
+  width: 100%;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .search-bar {
   display: flex;
   align-items: center;
-  border-radius: var(--M, 16px);
-  background: #F3F3F3;
-  padding: 15px 15px;
+  background-color: #f5f5f5;
+  padding: 12px;
   border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-  width: 316px;
-  font-family: 'Poppins';
-  height: 55px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+.icon-home {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  
 
 }
 
-.search-bar-button {
+.placeholder-text {
   display: flex;
-  justify-content: space-between;
+  width: 191px;
+  height: 23.158px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--brand-black, #202020);
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 171.429% */
+letter-spacing: -0.154px;
+}
+
+/* CTA Button */
+.cta-button {
+  display: flex;
+
+height: 55px;
+padding: 8px;
+justify-content: center;
+align-items: center;
+gap: 8px;
+  margin-top: 32px;
+  width: 100%;
+  border-radius: 16px;
+  background: var(--Brand-blue, #16559F);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: var(--Brand-white, #F7F7F7);
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+
+
+.weird-text {
+  width: 361px;
+height: 33px;
+flex-shrink: 0;
+color: var(--brand-black, #202020);
+font-feature-settings: 'liga' off, 'clig' off;
+
+/* Heading 1 */
+font-family: Poppins;
+font-size: 8px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+
+
+
+
+.search-bar {
+  display: flex;
   align-items: center;
-  margin-top: 16px; /* Adjust as needed */
-  padding: 0 16px;
+  background-color: #f5f5f5;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-family: Poppins;
   
 }
+.input-container-home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  font-family: Poppins;
+}
+
+.input-icon-home {
+  position: absolute;
+margin-left: 12px !important;
+  width: 24px;
+  height: 24px;
+  pointer-events: none; /* Makes the icon non-interactive */
+  font-family: Poppins;
+}
+
+.input-field-home {
+  width: 100%;
+  padding: 12px 12px 12px 44px; /* Add left padding to make room for the icon */
+  border-radius: var(--M, 16px);
+  background: #F3F3F3;
+  font-size: 16px;
+  font-family: Poppins;
+  outline: none;
+  height: 55px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1769,6 +1932,12 @@ font-size: 24px;
 }
 
 
+.weird-text-messages {
+  margin-bottom: -60px;
+  margin-top: -60px;
+}
+
+
 
 /* Profile Page */
 /* Profile Page */
@@ -1781,302 +1950,164 @@ font-size: 24px;
 /* Profile Page Basic Styles */
 
 
-.profile-page {
-  font-family: "Poppins", sans-serif;
-  color: #333;
-  max-width: 400px;
-  margin: 0 auto;
-}
 
-
-/* Earth Section */
-.earth-section {
-  z-index: -1;
-}
-
-.earth-image {
-  background-image: url("./src/assets/earth-image1.png");
-  background-size: cover;
-  width: 100%;
-  height: 720px;
-  position: relative;
-}
-
-.countries-stats {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+/* General page container */
+/* General page container */
+/* General page container */
+/* General page container */
+/* General page container */
+/* General page container */
+.ziptrip-car-page {
+  padding: 20px;
   font-family: Arial, sans-serif;
 }
 
-.stat {
-  text-align: center;
-  margin-top: 570px;
-}
-
-.stat-number {
-  font-size: 2rem;
+.ziptrip-car-page h1 {
+  font-size: 1.5rem;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
-.stat-label {
-  font-size: 1rem;
-  color: #a0a0a0;
-}
-
-.divider {
+/* Scrollable container for the car cards */
+.ziptrip-car-list {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 16px;
-  flex-direction: column;
-  margin-top: 570px;
-  margin-left: -7px;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
-.divider hr {
-  width: 1px;
-  height: 40px;
-  background-color: white;
-  border: none;
-  margin: 0 52px;
-}
-
-.arrow-icon {
-  margin-top: 8px;
-  width: 36px;
-  height: 36px;
-  margin-left: 0px;
-}
-
-/* Profile Info Section */
-.profile-info {
-  background: var(--brand-white);
-  padding: 20px;
+.ziptrip-car-card {
+  flex: 0 0 auto;
+  width: 300px;
+  background-color: #fff;
+  padding: 15px;
   border-radius: 12px;
-  margin-top: -55px;
-  height: 800px;
-}
-
-.profile-header {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-}
-
-/* Outer container for positioning */
-.outer-thumbnail-container {
   position: relative;
-  top: -10px;
-  display: flex;
-  justify-content: center;
-  z-index: 1;
+  scroll-snap-align: start;
+  margin-bottom: 30px;
 }
 
-/* White circular container */
-.profile-thumbnail-container {
-  width: 90px;
-  height: 90px;
-  background-color: var(--brand-white);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.ziptrip-car-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 15px;
 }
 
-/* Profile image styling */
-.profile-thumbnail {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-image: url("./src/assets/profile-img.png");
-  background-size: cover;
-}
-
-h2 {
-  margin: 5px 0;
-  font-size: 1.4em;
+.ziptrip-car-card h3 {
+  font-size: 1.2rem;
   font-weight: 600;
-}
-
-p {
-  margin: 2px 0;
-}
-
-/* Buttons */
-.action-btn {
-  display: inline-block;
-  width: 48%;
-  padding: 10px;
-  margin: 15px 1%;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  text-align: center;
-  color: #333;
-  font-weight: 500;
-  background-color: var(--brand-white);
-}
-
-/* Verification Section */
-.verification {
+  margin: 10px 0;
   text-align: left;
-  background: var(--brand-white);
-  padding: 10px;
-  border-radius: 8px;
-  margin: 0px 0;
+  margin-top: -13px;
+}
+
+.ziptrip-car-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 5px 0;
+  text-align: left;
+  margin-top: -10px;
+  margin-left: -20px;
+}
+
+.ziptrip-details {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 10px;
+  margin-left: -20px;
+}
+
+.ziptrip-details p {
   display: flex;
   align-items: center;
-  gap: 40px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-weight: 500;
+  margin: 5px 0;
 }
 
-.verification-icon {
-  width: 50px;
-  height: 50px;
-  margin-left: 15px;
+.ziptrip-details p img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
 }
 
-.verification span {
-  font-size: 12px;
-  color: gray;
-  font-weight: 400;
+/* Discount Badge */
+.ziptrip-discount {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #B8FF44;
+  color: var(--brand-black);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
-.settings-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 15px 0;
+/* Tags for Keyless and Black Friday */
+.ziptrip-keyless,
+.ziptrip-black-friday {
+  display: inline-block;
+  margin-top: 10px;
+
+  font-size: 0.75rem;
+  color: #333;
 }
 
-.settings-list li {
-  padding: 10px 0;
-  border-bottom: 1px solid #ccc;
-  cursor: pointer;
+.ziptrip-keyless {
+width: 80px;
+margin-left: -50px;
 }
 
-.icon-profile {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  vertical-align: middle;
+.ziptrip-black-friday {
+
+  color: #fff;
+  font-weight: bold;
+  width: 120px;
 }
 
-/* Settings List */
-.settings-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 15px 0;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-}
-
-.settings-list li {
+/* Footer */
+.ziptrip-footer {
   display: flex;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--brand-white);
-  cursor: pointer;
-  margin-left: 20px;
-}
-
-/* travel assistant */
-.travel-assistant-card {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 16px;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-  position: relative;
-  z-index: 1 important!;
-}
-
-.pro-feature-badge {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background-color: #2a6352;
-  color: white;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 12px;
-}
-
-.travel-content {
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-}
-
-.travel-text h2 {
-  font-size: 16px;
-  margin: 0;
-  margin-top: 0px;
-}
-
-.travel-text p {
-  font-size: 12px;
-  color: gray;
-  font-weight: 400;
-}
-
-.cta-link {
-  color: #2a6352;
-  text-decoration: underline;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 12px;
-}
-
-.travel-icon {
-  width: 68px;
-  height: 68px;
-  margin-left: 16px;
   margin-top: 20px;
+  font-size: 0.85rem;
 }
 
-.language-display {
-  display: flex;
-  align-items: center;
-  margin-left: 135px;
-  margin-top: -5px;
-  margin-bottom: 20px;
-}
-
-.language-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
-}
-
-.your-countries-button {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  display: flex;
-  align-items: center;
-  background-color: white;
-  padding: 8px 12px;
-  border-radius: 12px;
-  margin-top: 40px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 12px;
-  color: black;
+.ziptrip-footer .ziptrip-rent-btn {
+  background-color: #61b77d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
   cursor: pointer;
+  font-weight: bold;
 }
 
-.your-countries-button .icon {
+.ziptrip-footer .ziptrip-rent-btn:hover {
+  background-color: #4a9a60;
+}
+
+.ziptrip-footer img {
   width: 20px;
   height: 20px;
-  margin-right: 8px;
 }
 
 
+.car-image {
+  width: 220px;
+}
 
-
+/* Styling icons in the car details section */
+.ziptrip-details p img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  vertical-align: midd;
+}
 
 
 /* ---------- Barcelona Page ---------- */
@@ -2197,190 +2228,199 @@ p {
 /* ---------- Create Trip Page ---------- */
 /* ---------- Create Trip Page ---------- */
 /* Page Container */
-.page.create-post-page {
+/* General Styles */
+.host-ride-container-custom {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.step-custom {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  background-color: #fff;
-  font-family: Arial, sans-serif;
-  color: #333;
-  font-family: poppins;
+  gap: 20px;
+  margin-top: 40px;
+  
 }
 
-.page.create-post-page p {
-  font-size: 16px;
-  padding: 30px;
-  color: var(--Brand-black, #121312);
-  text-align: center;
-  font-family: "SF Pro Text";
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 22px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Header */
-.create-post-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 16px;
-  border-bottom: 1px solid #e0e0e0;
-  background-color: #fff;
-  font-size: 16px;
-  font-family: "SF Pro Text";
-}
-
-.header-btn {
-  font-size: 16px;
-  color: #333;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.header-btn.share-btn {
-  color: var(--brand-blue);
-  font-weight: bold;
-  padding: 10px;
-}
-
-/* Post Input Area */
-.post-input-container {
-  flex: 1;
-  padding: 16px;
-  overflow-y: auto;
-}
-
-.profile-section {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.profile-image {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 12px;
-}
-
-.privacy-selector {
-  display: flex;
-  align-items: center;
-  padding: 4px 8px;
-  background-color: #f0f0f0;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 14px;
-  color: #333;
-}
-
-.privacy-icon {
-  width: 16px;
-  height: 16px;
-  margin-right: 5px;
-}
-
-.caption-input {
-  width: 100%;
-  font-size: 14px;
-  padding: 12px;
-  border: none;
-  outline: none;
-  resize: none;
-  min-height: 80px;
-  background-color: #fafafa;
-  border-radius: 8px;
-  color: #333;
-  margin-bottom: 16px;
-}
-
-.image-url-input {
-  width: 100%;
-  font-size: 14px;
-  padding: 10px;
+.step-custom h2 {
+  font-size: 24px;
   margin-bottom: 10px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  outline: none;
   color: #333;
+  text-align: center;
+  color: #202020;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-align: left;
+margin-left: -20px;
+
 }
 
-.image-preview {
+/* Input Fields */
+.input-field-custom {
+  width: 355px;
+  height: 55px;
+  flex-shrink: 0;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: var(--M, 16px);
+  border: 1px solid #BBB;
+  background: var(--brand-white, #FAFEFF);
+  color: #BBB;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 171.429% */
+letter-spacing: -0.154px;
+}
+
+/* Input Fields */
+.input-field-custom-price {
+  width: 355px;
+  height: 55px;
+  flex-shrink: 0;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: var(--M, 16px);
+  border: 1px solid #BBB;
+  background: var(--brand-white, #FAFEFF);
+  color: #BBB;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 171.429% */
+letter-spacing: -0.154px;
+margin-bottom: 415px;
+}
+
+.input-checkbox-custom {
+  margin-right: 8px;
+}
+
+/* Preferences Buttons */
+.preferences-options-custom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 255px;
+}
+
+.preference-button-custom {
+  padding: 10px 16px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+
+  background-color: #f9f9f9;
+  cursor: pointer;
+  text-align: center;
+  color: #333;
+  display: flex;
+
+}
+
+.preference-button-custom.selected {
+  background-color: var(--brand-blue);
+  color: #fff;
+  border-color: var(--brand-blue);
+}
+
+.preference-button-custom:hover {
+  background-color: #e0e0e0;
+}
+
+/* Vehicle Image Preview */
+.vehicle-image-preview-custom {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.vehicle-image-preview-custom img {
   width: 100%;
-  max-height: 200px;
-  object-fit: cover;
+  max-width: 300px;
+  height: auto;
+  border: 1px solid #ddd;
   border-radius: 8px;
   margin-top: 8px;
-  border: 1px solid #e0e0e0;
-}
-
-/* Media Options Footer */
-.media-options {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-  background-color: #fff;
-  margin-bottom: 300px;
-  border: none;
-}
-
-.media-option {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: none;
-  border: none;
-  color: var(--brand-black);
-  cursor: pointer;
-  font-size: 14px;
-  border: none;
-}
-
-.media-icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 5px;
-  border: none;
-}
-
-/* Create Page Styles */
-
-.media-preview {
-  width: 100%;
-  max-height: 300px;
-  margin-top: 10px;
-  border-radius: 8px;
   object-fit: cover;
 }
 
-.media-options {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-.media-option {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  background: none;
+/* Navigation Buttons */
+.button-custom {
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #fff;
   border: none;
-  color: var(--Brand-black);
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
+  text-align: center;
+  margin-bottom: 50px;
+  display: flex;
+  width: 361px;
+  height: 55px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 16px;
+  background: var(--Brand-blue, #16559F);
 }
 
-.media-option img.media-icon {
-  width: 20px;
-  height: 20px;
+.button-custom:hover {
+  opacity: 0.9;
 }
 
+.button-custom:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
 
+/* Specific Button Colors */
+.next-button-custom {
+  background-color: var(--brand-blue);
+}
+
+.next-button-custom:hover {
+  background-color: var(--brand-blue);
+}
+
+.back-button-custom {
+  background-color: #6c757d;
+}
+
+.back-button-custom:hover {
+  background-color: #495057;
+}
+
+.submit-button-custom {
+  background-color: var(--brand-blue);
+}
+
+.submit-button-custom:hover {
+  background-color: var(--brand-blue);
+}
+
+.checkbox-label-custom {
+  font-family: Poppins;
+  margin-bottom: 125px;
+}
+
+.backbutton-host {
+  width: 80px;
+  margin-top: -80px;
+  margin-left: -10px;
+}
 
 
 /* ---------- Update Trip Page ---------- */
@@ -2517,4 +2557,432 @@ p {
   flex: 1;
   font-size: 14px;
   color: #333;
+}
+
+
+
+
+
+/* ---------- Post Detailed Page ---------- */
+/* General styles for the post detail page */
+.post-detail-page {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  background-color: var(--brand-white);
+}
+
+/* Header section */
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.detail-header button {
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.detail-header h2 {
+  color: #202020;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: -50px;
+
+}
+
+.ride-summary {
+  padding: 20px;
+  background-color: var(--brand-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.ride-summary h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.ride-times {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  gap: 10px; /* Add space between elements */
+}
+
+.ride-times > div {
+  display: flex;
+  align-items: center;
+}
+
+.time {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.location img {
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+}
+
+.ferry-route {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  margin-left: 10px;
+}
+
+.ferry-route img {
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+}
+
+.ride-price {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ride-price p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ride-price p:first-child {
+  color: #333;
+}
+
+.ride-price p:last-child {
+  color: #888;
+}
+
+
+/* Section Titles */
+.details-section h4,
+.preferences-section h4,
+.driver-section h4,
+.vehicle-section h4,
+.environment-section h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #333;
+  background-color: var(--brand-white);
+}
+
+/* Details Section */
+.details-section {
+  background-color: var(--brand-white);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.details-section p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+/* Preferences Section */
+.preferences-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.preferences-section li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+/* Driver Section */
+.driver-section {
+  background-color: var(--brand-white);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.driver-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.driver-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.driver-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.driver-section p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+/* Vehicle Section */
+.vehicle-section {
+  background-color: var(--brand-white);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.vehicle-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.vehicle-section .vehicle-image {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.vehicle-section .vehicle-image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+.vehicle-section li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  flex: 1 1 calc(50% - 16px); /* Two-column layout */
+}
+
+.vehicle-section img {
+  width: 32px;
+  height: 32px;
+}
+
+
+/* Environmental Benefits Section */
+.environment-section {
+  background-color: var(--brand-white);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.environment-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.environment-section li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  flex: 1 1 calc(50% - 16px); /* Two-column layout */
+}
+
+.environment-section img {
+  width: 32px;
+  height: 32px;
+}
+
+
+
+
+
+
+/* Report Issue Button */
+.report-issue {
+  display: block;
+  width: 100%;
+  background-color: #ff4d4d;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.report-issue:hover {
+  background-color: #e04343;
+}
+
+.details-section {
+  padding: 20px;
+  background-color: #fff; /* Add a background color if needed */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.details-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Adds spacing between each detail item */
+}
+
+.details-item img {
+  width: 24px; /* Adjust the size of icons */
+  height: 24px;
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.details-item div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.details-item h5 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; /* Dark color for titles */
+  margin-bottom: 5px; /* Space between the title and description */
+}
+
+.details-item p {
+  font-size: 14px;
+  color: #666; /* Lighter color for description */
+  margin-top: 0;
+  line-height: 1.5;
+  margin-left: -20px;
+}
+
+/* Optional: Add some bottom margin for the last item */
+.details-item:last-child {
+  margin-bottom: 0;
+}
+
+.details-section h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333; /* Color for the section title */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Edit Post/ Update Post */
+/* Edit Post/ Update Post */
+/* Edit Post/ Update Post */
+
+/* Update Page Styling */
+#update-page {
+  padding: 1rem;
+}
+
+#update-page h1 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.input,
+.file-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #007aff;
+}
+
+.image-preview {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+}
+
+.header-btn.share-btn {
+  background-color: #007aff;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.header-btn.share-btn:hover {
+  background-color: #005bb5;
+}
+
+.header-btn.share-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }

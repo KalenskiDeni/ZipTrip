@@ -3,114 +3,183 @@ import { useNavigate, useParams } from "react-router-dom";
 import "/src/styles.css";
 
 export default function UpdatePage() {
-  const [content, setContent] = useState("");
-  const [image, setImage] = useState("");
-  const [location, setLocation] = useState("");
-  const params = useParams();
+  const { id } = useParams(); // Get post ID from URL
+  const [post, setPost] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
-  const url = `https://ziptrip-ec0b6-default-rtdb.firebaseio.com//posts/${params.id}.json`;
+  const url = `https://ziptrip-ec0b6-default-rtdb.firebaseio.com/posts/${id}.json`;
 
-  // Fetch post data from the database
+  // Fetch the current post details
   useEffect(() => {
     async function getPost() {
-      const response = await fetch(url);
-      const postData = await response.json();
-      console.log("Fetched Data:", postData);
-      if (postData) {
-        setContent(postData.content);
-        setImage(postData.image);
-        setLocation(postData.location || "");
-      } else {
-        console.log("Error fetching post data or post does not exist");
+      try {
+        const response = await fetch(url);
+        const postData = await response.json();
+        if (postData) {
+          setPost(postData);
+        } else {
+          console.log("Post not found");
+        }
+      } catch (error) {
+        console.error("Error fetching post data:", error);
       }
     }
 
     getPost();
   }, [url]);
 
-  async function handleSubmit(event) {
-    event.preventDefault();
+  // Handle input changes
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setPost((prev) => ({ ...prev, [name]: value }));
+  }
 
-    const postToUpdate = { content, image, location };
+  // Handle image upload
+  function handleImageChange(event) {
+    const file = event.target.files[0];
+    if (file && file.size < 500000) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setPost((prev) => ({ ...prev, image: e.target.result }));
+      };
+      reader.readAsDataURL(file);
+    } else {
+      console.log("Image file is too large or not valid");
+    }
+  }
+
+  // Submit updated post to the database
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setIsSubmitting(true);
 
     try {
       const response = await fetch(url, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(postToUpdate),
+        body: JSON.stringify(post),
       });
 
       if (response.ok) {
-        console.log("Update successful");
-        navigate(`/posts/${params.id}`);
+        navigate(`/posts/${id}`);
       } else {
-        console.error("Update failed", response.statusText);
+        console.error("Failed to update post:", response.statusText);
       }
     } catch (error) {
       console.error("Error updating post:", error);
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
-  function handleImageChange(event) {
-    const file = event.target.files[0];
-    if (file && file.size < 500000) {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        setImage(event.target.result);
-      };
-      reader.readAsDataURL(file);
-    } else {
-      console.log("Image file is too large or no file selected");
-    }
+  if (!post) {
+    return <p>Loading...</p>; // Display a loading message until post data is fetched
   }
 
-  // Return the JSX for the UpdatePage component
   return (
     <section className="page create-post-page" id="update-page">
       <div className="container post-input-container">
         <h1>Update Post</h1>
         <form className="form-grid" onSubmit={handleSubmit}>
-          <label htmlFor="content">Content</label>
-          <textarea
-            id="content"
-            name="content"
-            rows="4"
-            value={content}
-            aria-label="content"
-            placeholder="Update your post content..."
-            onChange={(e) => setContent(e.target.value)}
-            className="caption-input"
-          />
-          <label htmlFor="location">Location</label>
+          {/* Date */}
+          <label htmlFor="date">Date</label>
           <input
             type="text"
-            id="location"
-            name="location"
-            value={location}
-            placeholder="Enter location..."
-            onChange={(e) => setLocation(e.target.value)}
-            className="caption-input"
+            id="date"
+            name="date"
+            value={post.date}
+            placeholder="Enter date..."
+            onChange={handleChange}
+            className="input"
           />
-          <label htmlFor="image-url">Image</label>
+
+          {/* Pickup Location */}
+          <label htmlFor="pickupLocation">Pickup Location</label>
+          <input
+            type="text"
+            id="pickupLocation"
+            name="pickupLocation"
+            value={post.pickupLocation}
+            placeholder="Enter pickup location..."
+            onChange={handleChange}
+            className="input"
+          />
+
+          {/* Dropoff Location */}
+          <label htmlFor="dropoffLocation">Dropoff Location</label>
+          <input
+            type="text"
+            id="dropoffLocation"
+            name="dropoffLocation"
+            value={post.dropoffLocation}
+            placeholder="Enter dropoff location..."
+            onChange={handleChange}
+            className="input"
+          />
+
+          {/* Price */}
+          <label htmlFor="price">Price</label>
+          <input
+            type="number"
+            id="price"
+            name="price"
+            value={post.price}
+            placeholder="Enter price per seat..."
+            onChange={handleChange}
+            className="input"
+          />
+
+          {/* Number of Seats */}
+          <label htmlFor="seats">Seats</label>
+          <input
+            type="number"
+            id="seats"
+            name="seats"
+            value={post.seats}
+            placeholder="Enter number of seats..."
+            onChange={handleChange}
+            className="input"
+          />
+
+          {/* Image */}
+          <label htmlFor="image">Image</label>
           <input
             type="file"
-            className="file-input"
+            id="image"
+            name="image"
             accept="image/*"
             onChange={handleImageChange}
+            className="file-input"
           />
-          <label
-            htmlFor="image-preview"
-            className="image-preview-label"
-          ></label>
-          <img
-            id="image-preview"
-            className="image-preview"
-            src={image || "placeholder-image-url"}
-            alt="Image Preview"
+          {post.image && (
+            <img
+              src={post.image}
+              alt="Post Preview"
+              className="image-preview"
+            />
+          )}
+
+          {/* Detour Info */}
+          <label htmlFor="detour">Detour</label>
+          <input
+            type="text"
+            id="detour"
+            name="details.detour"
+            value={post.details?.detour || ""}
+            placeholder="Enter detour info..."
+            onChange={(e) =>
+              setPost((prev) => ({
+                ...prev,
+                details: { ...prev.details, detour: e.target.value },
+              }))
+            }
+            className="input"
           />
-          <button type="submit" className="header-btn share-btn">
-            Update Post
+
+          {/* Submit Button */}
+          <button type="submit" className="header-btn share-btn" disabled={isSubmitting}>
+            {isSubmitting ? "Updating..." : "Update Post"}
           </button>
         </form>
       </div>
