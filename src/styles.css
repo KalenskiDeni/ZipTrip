@@ -3092,6 +3092,22 @@ border-radius: 16px;
 
 /* Update Page Styling */
 /* Style the form inputs */
+.update-ride-title{
+  color: #202020;
+  text-align: center;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.backbutton-updatepage {
+  margin-left: -280px;
+  margin-bottom: -55px;
+}
+
 .form-grid {
   display: flex;
   flex-direction: column;
@@ -3103,6 +3119,8 @@ label {
   font-size: 14px;
   font-weight: bold;
   margin-bottom: 8px; /* Add space between label and input */
+margin-left: -290px;
+margin-bottom: -15px;
 }
 
 /* Style the input fields */
@@ -3111,6 +3129,9 @@ label {
   font-size: 16px;
   border-radius: 8px;
   border: 1px solid #ddd;
+  width: 341px;
+height: 55px;
+flex-shrink: 0;
 }
 
 .file-input {
