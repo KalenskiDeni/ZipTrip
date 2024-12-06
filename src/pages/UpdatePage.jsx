@@ -80,7 +80,7 @@ export default function UpdatePage() {
   return (
     <section className="page create-post-page" id="update-page">
       <div className="container post-input-container">
-        <h1>Update Post</h1>
+        <h1>Update ride</h1>
         <form className="form-grid" onSubmit={handleSubmit}>
           {/* Date */}
           <label htmlFor="date">Date</label>
@@ -177,12 +177,16 @@ export default function UpdatePage() {
             className="input"
           />
 
-          {/* Submit Button */}
-          <button type="submit" className="header-btn share-btn" disabled={isSubmitting}>
-            {isSubmitting ? "Updating..." : "Update Post"}
+           {/* Submit Button */}
+   
+       <button type="submit" className="header-btn share-btn" disabled={isSubmitting}>
+            {isSubmitting ? "Updating..." : "Update Ride"}
           </button>
+   
         </form>
+        
       </div>
+     
     </section>
   );
 }

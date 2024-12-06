@@ -52,6 +52,7 @@ export default function PostDetailPage() {
   }
 
   const {
+    
     date,
     pickupLocation,
     dropoffLocation,
@@ -90,6 +91,8 @@ export default function PostDetailPage() {
     }
   }
 
+  
+  const handleBack = () => setStep((prev) => prev - 1);
 
   const { pickup = "Unknown Pickup", dropoff = "Unknown Dropoff" } = post;
 
@@ -100,7 +103,12 @@ export default function PostDetailPage() {
       <header className="detail-header">
 
     <img src={bar} alt="status bar" className="bar" />
-      <img src={backButton} alt="Back" />
+    <img
+            src={backButton}
+            onClick={/*handleBack*/ () => navigate("/explore")}
+            alt="Back"
+            className="backbutton-rides"
+          />
       <h2>{`${pickupLocation || "Unknown Pickup"} - ${dropoffLocation || "Unknown Dropoff"}`}</h2>
 
  
@@ -210,13 +218,14 @@ export default function PostDetailPage() {
             alt="Driver"
           />
           <div>
-            <p className="driver-name">{driver.name || "Unknown Driver"}</p>
-            <p>Joined {driver.joinDate || "N/A"}</p>
+            <p className="driver-name1">{driver.name || "Unknown Driver"}</p>
+          
           </div>
         </div>
         <p>
-          <img src={phoneVerifiedIcon} alt="Phone Verified Icon" /> Phone
-          number verified
+        Phone
+          number
+          <img src={phoneVerifiedIcon} alt="Phone Verified Icon" className="verified-img"/> 
         </p>
       </div>
 
@@ -263,16 +272,16 @@ export default function PostDetailPage() {
         <ul>
           
           <li>
-            <img src={co2Icon} alt="CO2 Icon" /> {environmentalBenefits.co2 || 0} kg CO2 saved
+            <img src={co2Icon} alt="CO2 Icon" /> {environmentalBenefits.co2 || 89} kg CO2 saved
           </li>
           <li>
-            <img src={airIcon} alt="Clean Air Icon" /> {environmentalBenefits.cleanAir || 0}% clean air
+            <img src={airIcon} alt="Clean Air Icon" /> {environmentalBenefits.cleanAir || 9}% clean air
           </li>
           <li>
-            <img src={gasIcon} alt="Gas Icon" /> {environmentalBenefits.gas || 0} gallons of gas saved
+            <img src={gasIcon} alt="Gas Icon" /> {environmentalBenefits.gas || 13} gallons of gas saved
           </li>
           <li>
-            <img src={treeIcon} alt="Tree Icon" /> {environmentalBenefits.trees || 0} trees saved
+            <img src={treeIcon} alt="Tree Icon" /> {environmentalBenefits.trees || 1.5} trees saved
           </li>
         </ul>
       </div>
@@ -285,8 +294,8 @@ export default function PostDetailPage() {
   <button className="delete-button" onClick={handleDelete}>
     Delete Ride
   </button>
-  <button className="report-issue">Start Instant Booking</button>
-  <button className="report-issue">Report issue with ride</button>
+  <button className="start-instant-booking">Start Instant Booking</button>
+  <button className="report-issue-but">Report issue with ride</button>
 </div>
 
     </section>

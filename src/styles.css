@@ -277,9 +277,8 @@ form {
   grid-template-columns: 1fr 2fr;
   gap: 1em;
   align-items: center;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
   padding: 1.5em;
-  background-color: var(--white);
+  background-color: var(--brand-white);
   transition: 0.5s;
   animation: fadeIn 0.5s;
   border-radius: 8px;
@@ -2517,9 +2516,29 @@ margin-bottom: 415px;
   padding: 10px;
 }
 
-.header-btn.share-btn {
-  color: var(--brand-blue); /* Blue color for Share button */
-  font-weight: bold; /* Bold text */
+.header-btn.share-btn{
+  display: flex;
+  border-radius: 16px;
+  border-radius: 16px;
+  background: var(--Brand-blue, #16559F);
+  width: 361px;
+  height: 55px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 100px;
+  border-radius: 16px;
+background: var(--Brand-blue, #16559F);
+color: var(--Brand-white, #F7F7F7);
+font-feature-settings: 'liga' off, 'clig' off;
+
+/* H2 */
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
 }
 
 
@@ -2623,7 +2642,7 @@ p {
 .detail-header button {
   background-color: transparent;
   border: none;
-  color: #007bff;
+  color: var(--brand-blue);
   font-size: 16px;
   cursor: pointer;
 }
@@ -2639,6 +2658,11 @@ p {
   line-height: normal;
   margin-left: -50px;
 
+}
+
+
+.backbutton-rides{
+  margin-top: 20px;
 }
 
 .ride-summary {
@@ -2777,10 +2801,21 @@ p {
 }
 
 .preferences-section li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex
+;
+  flex-wrap: wrap;
+  gap: 16px;
+  color: #000;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 137.5% */
+flex: 1 1 calc(50% - 16px); /* Two-column layout */
 }
 
 /* Driver Section */
@@ -2794,7 +2829,7 @@ p {
 .driver-info {
   display: flex;
   align-items: center;
-  gap: 12px;
+
   margin-bottom: 12px;
 }
 
@@ -2805,9 +2840,10 @@ p {
   object-fit: cover;
 }
 
-.driver-name {
+.driver-name1 {
   font-size: 16px;
   font-weight: bold;
+  margin-left: -270px;
 }
 
 .driver-section p {
@@ -2815,7 +2851,13 @@ p {
   align-items: center;
   gap: 8px;
   font-size: 14px;
+
 }
+
+.verified-img {
+  margin-left: 160px;
+}
+
 
 /* Vehicle Section */
 .vehicle-section {
@@ -2904,22 +2946,73 @@ margin-left: 25px;
 
 
 /* Report Issue Button */
-.report-issue {
+.edit-button,
+.delete-button {
+  display: inline-flex;  /* Make the buttons sit next to each other */
+  width: 50%;            /* Make each button take up nearly half the width */
+  height: 55px;
+ 
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 16px;
+  background: var(--brand-white);
+  color: #000;
+  margin-top: 20px;
+}
+
+
+
+.start-instant-booking {
+  display: flex;
+  width: 361px;
+  height: 55px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 16px;
+  background: var(--Brand-blue, #16559F);
+  margin-top: 700px;
+  position: fixed;  /* Make the button fixed to the screen */
+  top: 0;           /* Place it at the top of the viewport */
+  left: 50%;        /* Center the button horizontally */
+  transform: translateX(-50%);  /* Correct the centering due to the button's width */
+  z-index: 9999;    /* Ensure the button stays on top of other elements */
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3); /* Add black drop shadow */
+}
+
+
+
+.report-issue-but {
   display: block;
-  width: 100%;
-  background-color: #ff4d4d;
+  width: 361px;
+  height: 55px;
+  border-radius: 16px;
+  background: #FFEAEA;
   color: #ffffff;
   border: none;
   padding: 12px;
-  border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
   text-align: center;
+  margin-bottom: 150px;
+  color: #FF5151;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-top: 10px;
+border-radius: 16px;
+
 }
 
 .report-issue:hover {
   background-color: #e04343;
 }
+
 
 .details-section {
   padding: 20px;
@@ -2998,142 +3091,215 @@ margin-left: 25px;
 /* Edit Post/ Update Post */
 
 /* Update Page Styling */
-#update-page {
-  padding: 1rem;
-}
-
-#update-page h1 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
+/* Style the form inputs */
 .form-grid {
-  display: grid;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between each form element */
+
 }
 
-.input,
-.file-input {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px; /* Add space between label and input */
+}
+
+/* Style the input fields */
+.input, .file-input {
+  padding: 10px;
+  font-size: 16px;
   border-radius: 8px;
-  font-size: 1rem;
+  border: 1px solid #ddd;
 }
 
-.input:focus {
-  outline: none;
-  border-color: #007aff;
+.file-input {
+  padding: 5px;
 }
 
 .image-preview {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  margin-top: 0.5rem;
-  border-radius: 8px;
-}
-
-.header-btn.share-btn {
-  background-color: #007aff;
-  color: white;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.header-btn.share-btn:hover {
-  background-color: #005bb5;
-}
-
-.header-btn.share-btn:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-
-
-
-
-
-
-
-
-
-/* Profile Page Container */
-/* Profile Page Container */
-/* Profile Page Container */
-.profile-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9;
-  min-height: 100vh;
-}
-
-/* Avatar Section */
-.avatar-container {
-  text-align: center;
-  margin-bottom: 20px;
-
-}
-
-.avatar-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #ddd;
-  margin-bottom: 20px;
-}
-
-/* Avatar Info */
-.avatar-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-
-}
-
-.image-url-input {
-  padding: 8px;
-  width: 80%;
-  max-width: 400px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  font-size: 14px;
-}
-
-.save-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.save-button:hover {
-  background-color: #0056b3;
-}
-
-.save-button:disabled {
-  background-color: #cccccc;
-  cursor: not-allowed;
-}
-
-/* Error Message */
-.error-message {
-  color: red;
-  font-size: 14px;
+  max-width: 100%;
+  height: auto;
   margin-top: 10px;
 }
 
+/* Submit button should be outside the form */
+button[type="submit"] {
+  display: block;
+  width: 100%; /* Make button span the full width */
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  background-color: var(--Brand-blue, #16559F);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px; /* Add some space between form and button */
+}
+
+button[type="submit"]:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+/* Profile Page Container */
+/* Profile Page Container */
+/* Profile Page Container */
+/* General Styling */
+
+.page {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Profile Image */
+.profile-image-container {
+  margin-top: 20px;
+  position: relative;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+margin-top: -50px;
+margin-bottom: 50px;
+  background-color: var(--brand-white);
+  object-fit: cover;
+}
+
+.image-url-input {
+  border-radius: var(--M, 16px);
+  background: #F3F3F3;
+  width: 361px;
+height: 55px;
+flex-shrink: 0;
+color: var(--brand-black, #202020);
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 171.429% */
+letter-spacing: -0.154px;
+}
+
+/* Profile Name */
+.profile-name  {
+  margin-top: 20px;
+  
+}
+
+
+
+.profile-name-input {
+  border-radius: var(--M, 16px);
+  background: #F3F3F3;
+  width: 361px;
+height: 55px;
+flex-shrink: 0;
+color: var(--brand-black, #202020);
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 171.429% */
+letter-spacing: -0.154px;
+}
+
+/* Save Button */
+.save-button {
+  display: flex;
+  width: 361px;
+  height: 55px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 170px;
+  border-radius: 16px;
+background: var(--Brand-blue, #16559F);
+}
+
+.save-button:hover {
+  background-color: var(--brand-blue);
+  color: var(--brand-white);
+}
+
+/* Profile Information Section */
+.profile-info {
+  margin-top: 30px;
+  text-align: left;
+  color: var(--brand-black, #202020);
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: -0.154px;
+}
+
+/* Card Styling */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-icon {
+  font-size: 20px;
+  color: #333;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-subtitle {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Footer Section */
+.footer {
+  margin-top: 30px;
+}
+
+.footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.footer-icon span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.backbutton-profile {
+  margin-left: -260px;
+}
+
+.profile-textt {
+  margin-top: -38px;
+  margin-bottom: 120px;
+}

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { auth } from "../firebase-config"; // Firebase Authentication
 import { updateProfile } from "firebase/auth"; // Firebase function to update profile
 import "/src/styles.css";
+import { useNavigate } from "react-router-dom";
+
+import backButton from "../assets/icons/backButton.svg";
 
 const ProfilePage = () => {
   const [profileImage, setProfileImage] = useState(auth.currentUser?.photoURL || "https://via.placeholder.com/150");
@@ -20,9 +23,18 @@ const ProfilePage = () => {
     setName(e.target.value);
   };
 
+
+
+
   // Handle the URL input for the profile image
   const handleImageUrlChange = (e) => {
     setImageUrl(e.target.value);
+  };
+
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate("/"); // Navigate to the home page
   };
 
   // Save the profile changes to Firebase
@@ -46,7 +58,13 @@ const ProfilePage = () => {
 
   return (
     <section id="profile-page" className="page">
-      <h1>Your Profile</h1>
+         <img
+            src={backButton}
+            onClick={handleBack}
+            alt="Back"
+            className="backbutton-profile"
+          />
+      <p className="profile-textt">Your Profile</p>
 
       {/* Profile Image */}
       <div className="profile-image-container">
@@ -62,7 +80,7 @@ const ProfilePage = () => {
 
       {/* Name */}
       <div className="profile-name">
-        <label htmlFor="name">Name:</label>
+        <label className = "name-label" htmlFor="name">Name:</label>
         <input
           type="text"
           id="name"
@@ -72,16 +90,18 @@ const ProfilePage = () => {
         />
       </div>
 
-      {/* Save Button */}
-      <button onClick={handleSave} className="save-button">
-        Save Changes
-      </button>
+   
 
       {/* Additional Profile Information */}
       <div className="profile-info">
         <p>Email: {auth.currentUser?.email}</p>
         <p>Account created: {auth.currentUser?.metadata.creationTime}</p>
       </div>
+
+        {/* Save Button */}
+        <button onClick={handleSave} className="save-button">
+        Save Changes
+      </button>
     </section>
   );
 };

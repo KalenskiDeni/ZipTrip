@@ -1,6 +1,6 @@
 // Created by Deni Kalenski
 import { useState, useEffect } from "react";
-
+import { useNavigate } from "react-router-dom";  // Import useNavigate for navigation
 import "/src/styles.css";
 
 import logo from "/src/assets/logoziptrip.png"; // Logo path
@@ -16,6 +16,11 @@ export default function ChatPage() {
   const [activeTab, setActiveTab] = useState("all");
   const [chats, setChats] = useState({ allChats: [], matchChats: [] });
   const [loading, setLoading] = useState(true);
+
+  const navigate = useNavigate();
+  const handleAvatarClick = () => {
+    navigate("/profile"); // Navigate to ProfilePage when avatar is clicked
+  };
 
   const user = auth.currentUser;
   // Fetch the chat data from our firebase
@@ -48,11 +53,6 @@ export default function ChatPage() {
   }, []);
 
 
-    // Function to handle avatar click and navigate to the ProfilePage
-    const handleAvatarClick = () => {
-      navigate("/profile"); // Navigate to ProfilePage when avatar is clicked
-    };
-  
 
 
   // Determine which chats to display based on the active tab
@@ -63,6 +63,8 @@ export default function ChatPage() {
     return <div>Loading...</div>;
   }
 
+
+  
   // Return the chat page
   return (
     <section className="chat-page">
