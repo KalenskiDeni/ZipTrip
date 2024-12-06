@@ -1,36 +1,58 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";  // Import useNavigate for navigation
 import "/src/styles.css";
 import bar from "../assets/status-bar.png";
-import logo from "/src/assets/logoziptrip.png"; // Logo path
-import userAvatar from "../assets/icons/userAvatar.svg"; // Placeholder for user avatar
-import locationIcon1 from "../assets/icons/locationIcon1.svg"; // Add icons for inputs
-import locationIcon2 from "../assets/icons/locationIcon2.svg"; // Add icons for inputs
+import logo from "/src/assets/logoziptrip.png"; 
+import userAvatar from "../assets/icons/userAvatar.svg"; 
+import locationIcon1 from "../assets/icons/locationIcon1.svg";
+import locationIcon2 from "../assets/icons/locationIcon2.svg";
 import calendarIcon from "../assets/icons/calendarIcon.svg";
 import illustration from "../assets/icons/car-people.svg";
+import { auth } from "../firebase-config"; // Firebase authentication
 
-export default function ExplorePage() {
+export default function HomePage() {
   // State for inputs
   const [fromLocation, setFromLocation] = useState("");
   const [toLocation, setToLocation] = useState("");
   const [travelDate, setTravelDate] = useState("");
 
+  // Initialize useNavigate hook to navigate to the results page
+  const navigate = useNavigate();
+  const user = auth.currentUser;
+
+  const handleSearchClick = () => {
+    // Navigate to the /rides page and pass the search data as query parameters
+    navigate(`/rides?from=${fromLocation}&to=${toLocation}&date=${travelDate}`);
+  };
+
+  const handleAvatarClick = () => {
+    navigate("/profile"); // Navigate to ProfilePage when avatar is clicked
+  };
+
+
+
+  
   return (
     <section className="page">
       {/* Top Bar */}
       <header className="top-bar">
-  <div className="top-bar-content">
-    <img src={bar} alt="status bar" className="bar" />
-    <div className="logo-container">
-      <img src={logo} alt="ZipTrip Logo" className="logo" />
-    </div>
-    <img src={userAvatar} alt="User Profile" className="avatar-profile" />
-  </div>
-</header>
+        <div className="top-bar-content">
+          <img src={bar} alt="status bar" className="bar" />
+          <div className="logo-container">
+            <img src={logo} alt="ZipTrip Logo" className="logo" />
+          </div>
+         {/* Avatar Image from Firebase Authentication */}
+         <img
+            src={user?.photoURL || "https://via.placeholder.com/150"} // Use photoURL from Firebase or fallback
+            alt="User Avatar"
+            className="avatar-profile"
+            onClick={handleAvatarClick} // Navigate to profile page on click
+          />
+        </div>
+      </header>
 
-
-       {/* Page Heading */}
-       <div className="weird-text">
+      {/* Page Heading */}
+      <div className="weird-text">
         <h1>Search your destination</h1>
       </div>
 
@@ -78,12 +100,7 @@ export default function ExplorePage() {
       </section>
 
       {/* CTA Button */}
-      <button
-        className="cta-button"
-        onClick={() =>
-          console.log(`From: ${fromLocation}, To: ${toLocation}, Date: ${travelDate}`)
-        }
-      >
+      <button className="cta-button" onClick={handleSearchClick}>
         Search rides
       </button>
     </section>

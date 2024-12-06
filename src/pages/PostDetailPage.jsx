@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { auth } from "../firebase-config"; // Firebase authentication
 
 // Importing all icons and images
 import locationIcon from "../assets/icons/location-icon1.svg";

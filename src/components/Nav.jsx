@@ -52,12 +52,12 @@ export default function Nav() {
         />
         <span>Messages</span>
       </NavLink>
-      <NavLink to="/profile" activeClassName="active">
+      <NavLink to="/rent" activeClassName="active">
         <img
           src={
-            location.pathname === "/profile" ? profileFilled : profileOutlined
+            location.pathname === "/rent" ? profileFilled : profileOutlined
           }
-          alt="Profile"
+          alt="Rent"
           className="icon"
         />
         <span>Rent</span>

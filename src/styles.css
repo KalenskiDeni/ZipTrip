@@ -38,6 +38,21 @@ h1 {
   line-height: 1.1;
 }
 
+
+
+.rides-h1 {
+  color: #202020;
+text-align: center;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+
+
 h2,
 h3 {
   font-weight: 500;
@@ -640,15 +655,20 @@ text-decoration: none !important;
 }
 
 .post-header h3 {
-  font-size: 1rem;
+  color: #000;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
   font-weight: 600;
-  margin: 0;
+  line-height: 22px; /* 110% */
 }
 
 .icons img {
-  width: 20px;
-  height: 20px;
-  margin-left: 0.5rem;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin: 5px;
 }
 
 /* Ride Info Section */
@@ -666,16 +686,22 @@ text-decoration: none !important;
 }
 
 .time {
-  font-size: 1rem;
-  font-weight: bold;
   color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .location {
-  font-size: 0.9rem;
-  color: #333;
-  display: flex;
-  align-items: center;
+  color: #000;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 157.143% */
 }
 
 .location img {
@@ -713,14 +739,19 @@ hr {
 }
 
 .driver-name {
-  font-size: 0.9rem;
-  font-weight: 600;
   color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .driver-rating {
   font-size: 0.8rem;
   color: #666;
+  font-family: Poppins;
+  margin-top: -15px;
 }
 
 .star {
@@ -729,13 +760,17 @@ hr {
 }
 
 .star.filled {
-  color: #f5c518;
+  color: var(--brand-blue);
 }
 
 .price {
-  font-size: 1.2rem;
-  font-weight: bold;
   color: #000;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px; /* 110% */
 }
 
 
@@ -920,7 +955,7 @@ line-height: normal;
 .login-subtext {
   color: #6b6b6b;
   margin-bottom: 20px;
-  margin-left: -20px;
+  margin-left: 0px;
   color: var(--brand-black-50, rgba(18, 19, 18, 0.50));
 font-family: Poppins;
 font-size: 16px;
@@ -1217,7 +1252,7 @@ line-height: normal;
   font-weight: 400;
   line-height: normal;
   margin-bottom: 50px;
-  margin-left: -20px;
+  margin-left: 0px;
 
 }
 
@@ -2501,7 +2536,13 @@ h2 {
 }
 
 p {
-  padding-left: 20px;
+  color: #000;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 137.5% */
 }
 
 .modal-overlay {
@@ -2604,14 +2645,18 @@ p {
   padding: 20px;
   background-color: var(--brand-white);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
   margin-bottom: 20px;
 }
 
 .ride-summary h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: bold;
+  color: #000;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px; /* 110% */
 }
 
 .ride-times {
@@ -2665,8 +2710,13 @@ p {
 }
 
 .ride-price p {
-  font-size: 16px;
-  font-weight: bold;
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 .ride-price p:first-child {
@@ -2674,7 +2724,13 @@ p {
 }
 
 .ride-price p:last-child {
-  color: #888;
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
 
@@ -2684,16 +2740,19 @@ p {
 .driver-section h4,
 .vehicle-section h4,
 .environment-section h4 {
-  font-size: 18px;
-  margin-bottom: 12px;
-  color: #333;
-  background-color: var(--brand-white);
+  color: #000;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px; /* 110% */
 }
 
 /* Details Section */
 .details-section {
   background-color: var(--brand-white);
-  border: 1px solid #e0e0e0;
+
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 16px;
@@ -2727,7 +2786,6 @@ p {
 /* Driver Section */
 .driver-section {
   background-color: var(--brand-white);
-  border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 16px;
@@ -2762,7 +2820,6 @@ p {
 /* Vehicle Section */
 .vehicle-section {
   background-color: var(--brand-white);
-  border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 16px;
@@ -2806,7 +2863,7 @@ p {
 /* Environmental Benefits Section */
 .environment-section {
   background-color: var(--brand-white);
-  border: 1px solid #e0e0e0;
+
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 16px;
@@ -2822,17 +2879,24 @@ p {
 }
 
 .environment-section li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
+  color: #000;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; /* 137.5% */
   flex: 1 1 calc(50% - 16px); /* Two-column layout */
 }
 
-.environment-section img {
-  width: 32px;
-  height: 32px;
+.environment-section img.illustration22 {
+  width: 259px;
+  height: 193px;
+  flex-shrink: 0;
+margin-bottom: 20px;
+margin-left: 25px;
 }
+
 
 
 
@@ -2859,7 +2923,7 @@ p {
 
 .details-section {
   padding: 20px;
-  background-color: #fff; /* Add a background color if needed */
+  background-color: var(--brand-white);
   border-radius: 8px; /* Rounded corners */
 }
 
@@ -2893,7 +2957,7 @@ p {
   color: #666; /* Lighter color for description */
   margin-top: 0;
   line-height: 1.5;
-  margin-left: -20px;
+  margin-left: 0px;
 }
 
 /* Optional: Add some bottom margin for the last item */
@@ -2902,10 +2966,13 @@ p {
 }
 
 .details-section h4 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #333; /* Color for the section title */
+  color: #000;
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px; /* 110% */
 }
 
 
@@ -2986,3 +3053,87 @@ p {
   background-color: #ccc;
   cursor: not-allowed;
 }
+
+
+
+
+
+
+
+
+
+
+/* Profile Page Container */
+/* Profile Page Container */
+/* Profile Page Container */
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* Avatar Section */
+.avatar-container {
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+.avatar-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  margin-bottom: 20px;
+}
+
+/* Avatar Info */
+.avatar-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.image-url-input {
+  padding: 8px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.save-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
+
+.save-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+

@@ -5,6 +5,7 @@ import bar from "../assets/status-bar.png";
 import userAvatar from "../assets/icons/userAvatar.svg"; // Placeholder for user avatar
 import logo from "/src/assets/logoziptrip.png"; // Path to the logo
 import backButton from "../assets/icons/backButton.svg";
+import { auth } from "../firebase-config"; // Firebase authentication
 
 const HostRideSteps = () => {
   const [step, setStep] = useState(1);
@@ -31,7 +32,7 @@ const HostRideSteps = () => {
   const navigate = useNavigate();
 
   
-
+  const user = auth.currentUser;
   const handleNext = () => setStep((prev) => prev + 1);
   const handleBack = () => setStep((prev) => prev - 1);
 
@@ -61,6 +62,15 @@ const HostRideSteps = () => {
     });
   };
 
+
+
+
+    // Function to handle avatar click and navigate to the ProfilePage
+    const handleAvatarClick = () => {
+      navigate("/profile"); // Navigate to ProfilePage when avatar is clicked
+    };
+  
+
   // Handle the file input for the vehicle image
   const handleFileUpload = (e) => {
     const file = e.target.files[0];
@@ -79,14 +89,24 @@ const HostRideSteps = () => {
   };
 
   const handleSubmit = async () => {
-    console.log("Submitting ride details:", rideDetails); // Debugging to see the data
+    const user = auth.currentUser; // Get the logged-in user's data from Firebase
+  
+    const rideWithUserInfo = {
+      ...rideDetails,
+      driver: {
+        name: user.displayName || "Anonymous", // Use the displayName from Firebase or fallback to "Anonymous"
+        profileImage: user.photoURL || "https://via.placeholder.com/40", // Use the photoURL or fallback to a placeholder image
+        rating: 5, // Set a default rating or pull it from somewhere else
+        ratingCount: 0, // Default to 0 ratings
+      },
+    };
 
     try {
       const response = await fetch(
         "https://ziptrip-ec0b6-default-rtdb.firebaseio.com/posts.json",
         {
           method: "POST",
-          body: JSON.stringify(rideDetails),
+          body: JSON.stringify(rideWithUserInfo),
           headers: { "Content-Type": "application/json" },
         }
       );
@@ -104,13 +124,21 @@ const HostRideSteps = () => {
   };
 
   return (
+    
     <div className="host-ride-container-custom">
+      
       <div className="top-bar-content">
         <img src={bar} alt="status bar" className="bar" />
         <div className="logo-container">
           <img src={logo} alt="ZipTrip Logo" className="logo" />
         </div>
-        <img src={userAvatar} alt="User Profile" className="avatar-profile" />
+        {/* Avatar Image from Firebase Authentication */}
+        <img
+            src={user?.photoURL || "https://via.placeholder.com/150"} // Use photoURL from Firebase or fallback
+            alt="User Avatar"
+            className="avatar-profile"
+            onClick={handleAvatarClick} // Navigate to profile page on click
+          />
       </div>
 
       {/* Step 1: Basic Ride Details */}

@@ -4,9 +4,11 @@ import "/src/styles.css";
 import locationIcon from "../assets/icons/location-icon1.svg"; 
 import ferryIcon from "../assets/icons/ferry-icon.svg"; 
 import ecoIcon from "../assets/icons/eco-icon.svg"; 
+import { auth } from "../firebase-config"; // Firebase authentication
 
 const PostCard = ({ ride }) => {
   // Ensure proper destructuring of the ride object
+  const user = auth.currentUser; // Get the logged-in user's data from Firebase
   const {
     date = "N/A",
     time = "N/A",
@@ -19,16 +21,13 @@ const PostCard = ({ ride }) => {
     price = "N/A",
   } = ride || {}; // Ensure ride data is not null or undefined
 
+  // If the ride was created by the logged-in user, display their info
   const {
-    profileImage = "https://via.placeholder.com/40", 
-    name = "Unknown Driver",
-    rating = 0,
-    ratingCount = 0,
-  } = driver;
-
-
-
-
+    profileImage = driver.profileImage || (user ? user.photoURL : "https://via.placeholder.com/40"), // Fallback to logged-in user's image if available
+    name = driver.name || (user ? user.displayName : "Unknown Driver"), // Use name from ride driver or fallback
+    rating = 5, // Default rating
+    ratingCount = 100, // Default rating count
+  } = driver; // Use ride's driver data, if available
   
   return (
     <Link to={`/posts/${ride.id}`} className="post-card-link">
@@ -71,10 +70,7 @@ const PostCard = ({ ride }) => {
               <p className="driver-name">{name}</p>
               <p className="driver-rating">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <span
-                    key={i}
-                    className={`star ${i < rating ? "filled" : ""}`}
-                  >
+                  <span key={i} className={`star ${i < rating ? "filled" : ""}`}>
                     ★
                   </span>
                 ))}

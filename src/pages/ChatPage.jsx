@@ -6,6 +6,10 @@ import "/src/styles.css";
 import logo from "/src/assets/logoziptrip.png"; // Logo path
 import userAvatar from "../assets/icons/userAvatar.svg"; // Placeholder for user avatar
 import bar from "../assets/status-bar.png";
+import { auth } from "../firebase-config"; // Firebase authentication
+
+
+
 
 // ChatPage component
 export default function ChatPage() {
@@ -13,6 +17,7 @@ export default function ChatPage() {
   const [chats, setChats] = useState({ allChats: [], matchChats: [] });
   const [loading, setLoading] = useState(true);
 
+  const user = auth.currentUser;
   // Fetch the chat data from our firebase
   useEffect(() => {
     async function fetchChats() {
@@ -42,6 +47,14 @@ export default function ChatPage() {
     fetchChats();
   }, []);
 
+
+    // Function to handle avatar click and navigate to the ProfilePage
+    const handleAvatarClick = () => {
+      navigate("/profile"); // Navigate to ProfilePage when avatar is clicked
+    };
+  
+
+
   // Determine which chats to display based on the active tab
   const chatsToDisplay =
     activeTab === "all" ? chats.allChats : chats.matchChats;
@@ -61,7 +74,13 @@ export default function ChatPage() {
     <div className="logo-container">
       <img src={logo} alt="ZipTrip Logo" className="logo" />
     </div>
-    <img src={userAvatar} alt="User Profile" className="avatar-profile" />
+     {/* Avatar Image from Firebase Authentication */}
+     <img
+            src={user?.photoURL || "https://via.placeholder.com/150"} // Use photoURL from Firebase or fallback
+            alt="User Avatar"
+            className="avatar-profile"
+            onClick={handleAvatarClick} // Navigate to profile page on click
+          />
   </div>
 </header>
 

@@ -35,13 +35,15 @@
   },
 
   "users": {
-    "John": {
-      "image": "https://plus.unsplash.com/premium_photo-1670985849576-175bab7fe0e4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "name": "John Smith"
+    "userUID1": {
+      "name": "John Doe",
+      "mail": "johndoe@example.com",
+      "profilePicture": "https://plus.unsplash.com/premium_photo-1670985849576-175bab7fe0e4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
-    "Amanda": {
-      "image": "https://images.unsplash.com/photo-1584650854920-c728d644c77f?q=80&w=1905&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "name": "Amanda Davis"
+    "userUID2": {
+      "name": "Jane Doe",
+      "mail": "janedoe@example.com",
+      "profilePicture": "https://images.unsplash.com/photo-1533621834623-d0b25d0b14e7?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   },
 

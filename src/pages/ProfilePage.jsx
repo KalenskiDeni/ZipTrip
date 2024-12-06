@@ -1,92 +1,89 @@
 import React, { useState, useEffect } from "react";
+import { auth } from "../firebase-config"; // Firebase Authentication
+import { updateProfile } from "firebase/auth"; // Firebase function to update profile
+import "/src/styles.css";
 
-import "/src/styles.css"; // Import the CSS styles
-
-// Importing all the icons for the car details
-import keylessIcon from "../assets/icons/keyless.svg";
-import blackFridayIcon from "../assets/icons/black-friday.svg";
-import electricIcon from "../assets/icons/electric.svg";
-import luggageIcon from "../assets/icons/luggage.svg";
-import seatsIcon from "../assets/icons/seats.svg";
-import distanceIcon from "../assets/icons/distance.svg";
-
-export default function ProfilePage() {
-  const [cars, setCars] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  // Fetching the cars data from Firebase Realtime Database
+const ProfilePage = () => {
+  const [profileImage, setProfileImage] = useState(auth.currentUser?.photoURL || "https://via.placeholder.com/150");
+  const [imageUrl, setImageUrl] = useState(profileImage); // Store the new image URL
+  const [name, setName] = useState(auth.currentUser?.displayName || "Anonymous");
+  
   useEffect(() => {
-    async function fetchCars() {
-      try {
-        const carsResponse = await fetch(
-          "https://ziptrip-ec0b6-default-rtdb.firebaseio.com/cars.json"
-        );
-        const carsData = await carsResponse.json();
-        console.log("Fetched Cars Data:", carsData); // Log the fetched data to check if it's coming in
-        setCars(carsData || []);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching car data:", error);
-        setLoading(false);
-      }
+    if (auth.currentUser) {
+      setProfileImage(auth.currentUser.photoURL || "https://via.placeholder.com/150");
+      setName(auth.currentUser.displayName || "Anonymous");
     }
-
-    fetchCars();
   }, []);
 
-  if (loading) {
-    console.log("Loading..."); // Log loading state
-    return <div>Loading...</div>;
-  }
+  // Function to handle name change
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
 
-  console.log("Cars Data in State:", cars); // Log the cars data stored in state
+  // Handle the URL input for the profile image
+  const handleImageUrlChange = (e) => {
+    setImageUrl(e.target.value);
+  };
+
+  // Save the profile changes to Firebase
+  const handleSave = async () => {
+    const user = auth.currentUser;
+    if (user) {
+      try {
+        await updateProfile(user, {
+          displayName: name,
+          photoURL: imageUrl, // Use the image URL from the input field
+        });
+        console.log("Profile updated successfully");
+        setProfileImage(imageUrl); // Update the profile image in the state
+        alert("Profile updated successfully!");
+      } catch (error) {
+        console.error("Error updating profile:", error);
+        alert("An error occurred while updating your profile.");
+      }
+    }
+  };
 
   return (
-    <div className="ziptrip-car-page">
-      <h1>Rent a Car</h1>
-      <div className="ziptrip-car-list">
-        {cars.map((car, index) => (
-          <div key={index} className="ziptrip-car-card">
-            <img src={car.image || "https://via.placeholder.com/150"} alt={car.name} className="ziptrip-car-image" />
-            <h3>{car.name}</h3>
-            <p>{car.price} {car.currency} for {car.duration}</p>
-            <div className="ziptrip-details">
-              <p>
-                <img src={seatsIcon} alt="Seats" /> {car.seats} seats
-              </p>
-              <p>
-                <img src={distanceIcon} alt="Distance Included" /> {car.distanceIncluded} km included
-              </p>
-              <p>
-                {car.isElectric ? (
-                  <img src={electricIcon} alt="Electric" />
-                ) : (
-                  "Not Electric"
-                )}
-              </p>
-              <p>
-                {car.hasLuggageSpace && (
-                  <img src={luggageIcon} alt="Luggage Space" />
-                )}
-                {car.hasLuggageSpace && " Space for Luggage"}
-              </p>
-              {car.hasKeyless && (
-                <div className="ziptrip-keyless">
-                  <img src={keylessIcon} alt="Keyless" />
-                  
-                </div>
-              )}
-              {car.discount >= 10 && (
-                <div className="ziptrip-black-friday">
-                  <img src={blackFridayIcon} alt="Black Friday" />
-                
-                </div>
-              )}
-              <div className="ziptrip-discount">{car.discount}% Off</div>
-            </div>
-          </div>
-        ))}
+    <section id="profile-page" className="page">
+      <h1>Your Profile</h1>
+
+      {/* Profile Image */}
+      <div className="profile-image-container">
+        <img src={profileImage} alt="Profile" className="profile-image" />
+        <input
+          type="text"
+          placeholder="Enter Image URL"
+          value={imageUrl}
+          onChange={handleImageUrlChange}
+          className="image-url-input"
+        />
       </div>
-    </div>
+
+      {/* Name */}
+      <div className="profile-name">
+        <label htmlFor="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          value={name}
+          onChange={handleNameChange}
+          className="profile-name-input"
+        />
+      </div>
+
+      {/* Save Button */}
+      <button onClick={handleSave} className="save-button">
+        Save Changes
+      </button>
+
+      {/* Additional Profile Information */}
+      <div className="profile-info">
+        <p>Email: {auth.currentUser?.email}</p>
+        <p>Account created: {auth.currentUser?.metadata.creationTime}</p>
+      </div>
+    </section>
   );
-}
+};
+
+export default ProfilePage;

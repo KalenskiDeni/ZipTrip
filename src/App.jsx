@@ -8,13 +8,18 @@ import PostDetailPage from "./pages/PostDetailPage";
 import ExplorePage from "./pages/ExplorePage";
 import MatchPage from "./pages/MatchPage";
 import ChatPage from "./pages/ChatPage";
-import ProfilePage from "./pages/ProfilePage";
+import RentPage from "./pages/RentPage";
 import SearchPage from "./pages/SearchPage";
 import BarcelonaPage from "./pages/BarcelonaPage";
 import UpdatePage from "./pages/UpdatePage";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
+import RidesPage from "./pages/RidesPage";
+import ProfilePage from "./pages/ProfilePage";
+
+
 import OnBoarding from "./pages/OnBoarding";
+
 import { auth } from "./firebase-config";
 import { onAuthStateChanged } from "firebase/auth";
 import { useState } from "react";
@@ -51,7 +56,13 @@ function App() {
         <Route path="/barcelona" element={<BarcelonaPage />} />
         <Route path="/create" element={<CreatePage />} />
         <Route path="/posts/:id/update" element={<UpdatePage />} />
+        <Route path="/rent" element={<RentPage />} />
+        <Route path="/rides" element={<RidesPage />} />
         <Route path="/profile" element={<ProfilePage />} />
+        
+       
+ 
+    
 
         {/* Catch-all redirect */}
         <Route path="*" element={<Navigate to="/" />} />
