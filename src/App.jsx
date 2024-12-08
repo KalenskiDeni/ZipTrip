@@ -5,12 +5,12 @@ import Nav from "./components/Nav";
 import CreatePage from "./pages/CreatePage";
 import HomePage from "./pages/HomePage";
 import PostDetailPage from "./pages/PostDetailPage";
-import ExplorePage from "./pages/ExplorePage";
-import MatchPage from "./pages/MatchPage";
+import ExploreRidesPage from "./pages/ExploreRidesPage";
+
 import ChatPage from "./pages/ChatPage";
 import RentPage from "./pages/RentPage";
 import SearchPage from "./pages/SearchPage";
-import BarcelonaPage from "./pages/BarcelonaPage";
+
 import UpdatePage from "./pages/UpdatePage";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
@@ -49,11 +49,11 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/posts/:id" element={<PostDetailPage />} />
-        <Route path="/explore" element={<ExplorePage />} />
-        <Route path="/match" element={<MatchPage />} />
+        <Route path="/explore" element={<ExploreRidesPage />} />
+   
         <Route path="/chat" element={<ChatPage />} />
         <Route path="/search" element={<SearchPage />} />
-        <Route path="/barcelona" element={<BarcelonaPage />} />
+
         <Route path="/create" element={<CreatePage />} />
         <Route path="/posts/:id/update" element={<UpdatePage />} />
         <Route path="/rent" element={<RentPage />} />

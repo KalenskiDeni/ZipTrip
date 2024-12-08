@@ -35,8 +35,8 @@ export default function RegisterPage() {
           displayName: name, // Set the user's display name
           photoURL: "https://via.placeholder.com/150" // You can use a default image or upload one
         }).then(() => {
-          console.log("User registered with name:", name);
-          storeUserData(user.uid, name, mail); // Save user data to the Realtime Database
+          // Save user data to the database
+          storeUserData(user.uid, name, mail);
         });
 
       })
