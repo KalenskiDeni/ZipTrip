@@ -1,4 +1,3 @@
-// Created by Deni Kalenski
 import { NavLink, useLocation } from "react-router-dom";
 import homeOutlined from "../assets/icons/search-outlined.svg";
 import homeFilled from "../assets/icons/search-filled.svg";
@@ -54,9 +53,7 @@ export default function Nav() {
       </NavLink>
       <NavLink to="/rent" activeClassName="active">
         <img
-          src={
-            location.pathname === "/rent" ? profileFilled : profileOutlined
-          }
+          src={location.pathname === "/rent" ? profileFilled : profileOutlined}
           alt="Rent"
           className="icon"
         />

@@ -13,7 +13,7 @@ export default function UserAvatar({ uid }) {
       const data = await response.json();
       setUser(data); // set the user state with the data from firebase
     }
-  }, [uid]); // <--- "[id]" VERY IMPORTANT!!!
+  }, [uid]);
   return (
     <div className="avatar">
       <img src={user?.image} alt={user?.id} />

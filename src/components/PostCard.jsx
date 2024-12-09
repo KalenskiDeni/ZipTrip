@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "/src/styles.css";
-import locationIcon from "../assets/icons/location-icon1.svg"; 
-import ferryIcon from "../assets/icons/ferry-icon.svg"; 
-import ecoIcon from "../assets/icons/eco-icon.svg"; 
+import locationIcon from "../assets/icons/location-icon1.svg";
+import ferryIcon from "../assets/icons/ferry-icon.svg";
+import ecoIcon from "../assets/icons/eco-icon.svg";
 import { auth } from "../firebase-config"; // Firebase authentication
 
 const PostCard = ({ ride }) => {
@@ -19,22 +19,25 @@ const PostCard = ({ ride }) => {
     ferry = false,
     driver = {},
     price = "N/A",
-  } = ride || {}; // Ensure ride data is not null or undefined
+  } = ride || {}; // Ensure ride data is not null or undefined xd
 
   // If the ride was created by the logged-in user, display their info
   const {
-    profileImage = driver.profileImage || (user ? user.photoURL : "https://via.placeholder.com/40"), // Fallback to logged-in user's image if available
+    profileImage = driver.profileImage ||
+      (user ? user.photoURL : "https://via.placeholder.com/40"), // Fallback to logged-in user's image if available
     name = driver.name || (user ? user.displayName : "Unknown Driver"), // Use name from ride driver or fallback
     rating = 5, // Default rating
     ratingCount = 100, // Default rating count
   } = driver; // Use ride's driver data, if available
-  
+
   return (
     <Link to={`/posts/${ride.id}`} className="post-card-link">
       <div className="post-card">
         {/* Ride Date and Time */}
         <div className="post-header">
-          <h3>{date}, {time}</h3>
+          <h3>
+            {date}, {time}
+          </h3>
           <div className="icons">
             {ferry && <img src={ferryIcon} alt="Ferry Icon" />}
             <img src={ecoIcon} alt="Eco Icon" />
@@ -70,7 +73,10 @@ const PostCard = ({ ride }) => {
               <p className="driver-name">{name}</p>
               <p className="driver-rating">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <span key={i} className={`star ${i < rating ? "filled" : ""}`}>
+                  <span
+                    key={i}
+                    className={`star ${i < rating ? "filled" : ""}`}
+                  >
                     ★
                   </span>
                 ))}

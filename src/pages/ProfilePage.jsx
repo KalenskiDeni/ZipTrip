@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { auth } from "../firebase-config"; // Firebase Authentication
-import { updateProfile } from "firebase/auth"; // Firebase function to update profile
+import { auth } from "../firebase-config"; // firebase authentication
+import { updateProfile } from "firebase/auth"; // firebase function to update profile
 import "/src/styles.css";
 import { useNavigate } from "react-router-dom";
 
@@ -10,7 +10,7 @@ const ProfilePage = () => {
   const [profileImage, setProfileImage] = useState(
     auth.currentUser?.photoURL || "https://via.placeholder.com/150"
   );
-  const [imageUrl, setImageUrl] = useState(profileImage); // Store the new image URL
+  const [imageUrl, setImageUrl] = useState(profileImage); // store the new image URL
   const [name, setName] = useState(
     auth.currentUser?.displayName || "Anonymous"
   );
@@ -24,12 +24,12 @@ const ProfilePage = () => {
     }
   }, []);
 
-  // Function to handle name change
+  // function to handle name change
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
 
-  // Handle the URL input for the profile image
+  // handle the URL input for the profile image
   const handleImageUrlChange = (e) => {
     setImageUrl(e.target.value);
   };

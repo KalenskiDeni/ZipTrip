@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
 import "/src/styles.css";
-import gif from "/src/assets/tesla.gif"; // GIF for the first screen
-import image1 from "/src/assets/onboarding1.png"; // Illustration for the second screen
-import image2 from "/src/assets/onboarding2.png"; // Illustration for the third screen
-import image3 from "/src/assets/onboarding3.png"; // Illustration for the fourth screen
-import image4 from "/src/assets/onboarding4.png"; // Illustration for the fifth screen
-import logo from "/src/assets/logoziptrip.png"; // Path to the logo
-import whiteLogo from "/src/assets/logoziptripwhite.png"; // White logo for the first screen
+import gif from "/src/assets/tesla.gif";
+import image1 from "/src/assets/onboarding1.png";
+import image2 from "/src/assets/onboarding2.png";
+import image3 from "/src/assets/onboarding3.png";
+import image4 from "/src/assets/onboarding4.png";
+import logo from "/src/assets/logoziptrip.png";
+import whiteLogo from "/src/assets/logoziptripwhite.png";
 
 const onboardingScreens = [
   {

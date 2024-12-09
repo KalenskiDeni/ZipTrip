@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom"; // Import useNavigate
+import { NavLink, useNavigate } from "react-router-dom";
 import PostCard from "../components/PostCard";
 import avatarImage from "../assets/story-alex.png";
-import logo from "/src/assets/logoziptrip.png"; // Path to the logo
+import logo from "/src/assets/logoziptrip.png";
 import searchIcon from "../assets/icons/search-icon.svg";
 import settingsIcon from "../assets/icons/cog-icon.svg";
 import bar from "../assets/status-bar.png";

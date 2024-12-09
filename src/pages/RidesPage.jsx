@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PostCard from "../components/PostCard";
-import backButton from "../assets/icons/backButton.svg"; // Assuming this is the component you use to display the post
+import backButton from "../assets/icons/backButton.svg";
 import bar from "../assets/status-bar.png";
 import logo from "/src/assets/logoziptrip.png";
 import userAvatar from "../assets/icons/userAvatar.svg";
@@ -11,20 +11,20 @@ export default function RidesPage() {
   const [rides, setRides] = useState([]);
   const [filteredRides, setFilteredRides] = useState([]);
 
-  // Get query params from the URL
+  // get query params from the URL
   const queryParams = new URLSearchParams(location.search);
   const fromLocation = queryParams.get("from");
   const toLocation = queryParams.get("to");
   const travelDate = queryParams.get("date");
 
-  // Function to format the travel date from YYYY-MM-DD to a comparable format
+  // function to format the travel date from YYYY-MM-DD to a comparable format
   const formatDate = (date) => {
     const d = new Date(date);
     return d.toLocaleDateString("en-GB", {
       weekday: "short",
       day: "numeric",
       month: "short",
-    }); // Format to "Wed, 11 Dec"
+    });
   };
 
   // Fetch ride data from Firebase

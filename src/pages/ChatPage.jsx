@@ -1,6 +1,5 @@
-// Created by Deni Kalenski
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";  // Import useNavigate for navigation
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "/src/styles.css";
 
 import logo from "/src/assets/logoziptrip.png"; // Logo path
@@ -8,16 +7,13 @@ import userAvatar from "../assets/icons/userAvatar.svg"; // Placeholder for user
 import bar from "../assets/status-bar.png";
 import { auth } from "../firebase-config"; // Firebase authentication
 
-
-
-
 // ChatPage component
 export default function ChatPage() {
   const [activeTab, setActiveTab] = useState("all");
   const [chats, setChats] = useState({ allChats: [], matchChats: [] });
   const [loading, setLoading] = useState(true);
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const handleAvatarClick = () => {
     navigate("/profile"); // Navigate to ProfilePage when avatar is clicked
   };
@@ -52,9 +48,6 @@ export default function ChatPage() {
     fetchChats();
   }, []);
 
-
-
-
   // Determine which chats to display based on the active tab
   const chatsToDisplay =
     activeTab === "all" ? chats.allChats : chats.matchChats;
@@ -63,38 +56,35 @@ export default function ChatPage() {
     return <div>Loading...</div>;
   }
 
-
-  
   // Return the chat page
   return (
     <section className="chat-page">
-
-        {/* Top Bar */}
-        <header className="top-bar">
-  <div className="top-bar-content">
-    <img src={bar} alt="status bar" className="bar" />
-    <div className="logo-container">
-      <img src={logo} alt="ZipTrip Logo" className="logo" />
-    </div>
-     {/* Avatar Image from Firebase Authentication */}
-     <img
+      {/* Top Bar */}
+      <header className="top-bar">
+        <div className="top-bar-content">
+          <img src={bar} alt="status bar" className="bar" />
+          <div className="logo-container">
+            <img src={logo} alt="ZipTrip Logo" className="logo" />
+          </div>
+          {/* Avatar Image from Firebase Authentication */}
+          <img
             src={user?.photoURL || "https://via.placeholder.com/150"} // Use photoURL from Firebase or fallback
             alt="User Avatar"
             className="avatar-profile"
             onClick={handleAvatarClick} // Navigate to profile page on click
           />
-  </div>
-</header>
+        </div>
+      </header>
 
-        {/* Page Heading */}
-        <div className="weird-text-messages">
+      {/* Page Heading */}
+      <div className="weird-text-messages">
         <h1>Messages</h1>
       </div>
 
       <div className="search-bar-chat">
         <input type="text" placeholder="Search..." />
       </div>
-     
+
       <div className="chat-list">
         {chatsToDisplay.map((chat, index) => (
           <div key={index} className="chat-item">

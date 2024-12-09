@@ -123,30 +123,28 @@ form[action$="destroy"] button:hover,
 }
 
 /* ---------- top bar ---------- */
-/* General styling for the header */
 .top-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f0f0ed; /* Background color */
+  background-color: #f0f0ed;
   padding: 10px 0;
 }
 
 .top-bar-content {
   display: flex;
   align-items: center;
-  width: 90%; /* Central alignment with space around */
-  max-width: 800px; /* Adjust width based on your design */
+  width: 90%; 
+  max-width: 800px; 
   justify-content: space-between;
 }
 
-/* Status bar styling */
-/* General styling for the header */
+
 .top-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f0f0ed; /* Background color */
+  background-color: #f0f0ed; 
   padding: 50px 0;
 }
 
@@ -158,7 +156,7 @@ form[action$="destroy"] button:hover,
   justify-content: space-between;
 }
 
-/* Status bar styling */
+
 .bar {
   position: absolute;
   top: 10px;
@@ -168,7 +166,7 @@ form[action$="destroy"] button:hover,
   margin-top: -10px;
 }
 
-/* Logo styling */
+
 .logo {
   width: 101px;
   height: 52px;
@@ -184,7 +182,6 @@ form[action$="destroy"] button:hover,
   justify-content: space-between;
 }
 
-/* Icons container */
 .top-bar-icons {
   display: flex;
   gap: 15px;
@@ -192,7 +189,7 @@ form[action$="destroy"] button:hover,
   margin-bottom: -30px;
 }
 
-/* Styling for individual icons */
+
 .icon {
   height: 20px;
   cursor: pointer;
@@ -212,11 +209,13 @@ form[action$="destroy"] button:hover,
   justify-content: space-between;
 }
 
+
+
+
 /* Register page */
 /* Register page */
 /* Register page */
 
-/* ---------- Form Specific Styling ---------- */
 form input {
   width: 100%;
 }
@@ -297,7 +296,6 @@ form {
 
 .text1-stories {
   color: var(--Brand-dark-blue, #182726);
-  /* H1 */
   font-family: Poppins;
   font-size: 24px;
   font-style: normal;
@@ -328,8 +326,8 @@ nav {
   padding: 0.5em 0;
   border-top: 1px rgb(78, 78, 78);
   z-index: 1000000000000;
-  position: fixed; /* Makes the navbar stay in place */
-  bottom: 0; /* Positions it at the bottom */
+  position: fixed; 
+  bottom: 0;
 }
 
 nav a {
@@ -370,7 +368,7 @@ nav a i {
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 22px; /* 137.5% */
+  line-height: 22px;
   border-radius: 8px;
 
   background: var(--brand-white);
@@ -414,7 +412,6 @@ nav a i {
 /* Onboarding page */
 /* Onboarding page */
 
-/* General container for onboarding */
 .onboarding-container {
   display: flex;
   flex-direction: column;
@@ -423,62 +420,61 @@ nav a i {
   height: 100vh;
   padding: 20px;
   box-sizing: border-box;
-  position: relative; /* Ensures that content stays above the background */
+  position: relative; 
 }
 
-/* Light theme for the first screen */
+
 .onboarding-light {
   color: white;
   position: relative;
   overflow: hidden;
 }
 
-/* Dark theme for subsequent screens */
+
 .onboarding-dark {
-  background: #ffffff; /* White background */
+  background: #ffffff; 
   color: #000;
 }
 
-/* Video (GIF) as the background for the first screen */
+
 .onboarding-video-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; /* Ensures the video is in the background */
+  z-index: 1; 
 }
 
 .onboarding-video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the GIF covers the entire container */
+  object-fit: cover; 
 }
 
-/* Logo at the top */
+
 .onboarding-logo img {
   max-width: 120px;
   height: auto;
   margin-bottom: 20px;
   align-self: flex-start;
-  z-index: 3; /* Keeps logo above the background */
+  z-index: 3; 
 }
 
 .onboarding-logo {
-  top: 20px; /* Adjust as needed */
-  left: 20px; /* Adjust as needed */
-  z-index: 2; /* Make sure the logo is above the GIF */
+  top: 20px; 
+  left: 20px; 
+  z-index: 2; 
 }
 
-/* Content section */
+
 .onboarding-content {
   text-align: left;
   width: 90%;
   position: relative;
-  z-index: 3; /* Ensures the content stays above the video */
+  z-index: 3; 
 }
 
-/* Image styling for other screens */
 .onboarding-image-container {
   display: flex;
   justify-content: center;
@@ -491,7 +487,7 @@ nav a i {
   margin-bottom: 100px;
 }
 
-/* Title and paragraph */
+
 .onboarding-title {
   font-size: 24px;
   font-weight: bold;
@@ -532,35 +528,34 @@ nav a i {
 .onboarding-continue:focus {
   background-color: var(
     --brand-blue
-  ); /* Optional: Keep the background color unchanged */
-  color: white; /* Ensure the text stays white */
-  outline: none; /* Remove focus outline if you prefer */
+  ); 
+  color: white; 
+  outline: none; 
 }
 
-/* Dots indicator container */
+
 .onboarding-dots {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-bottom: 20px; /* Adjust as needed */
+  margin-bottom: 20px; 
 }
 
-/* Individual dot styles */
+
 .onboarding-dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #d3d3d3; /* Light gray by default */
+  background-color: #d3d3d3; 
   transition: background-color 0.3s ease;
 }
 
-/* Active dot (filled with brand blue) */
+
 .onboarding-dot.active {
   background-color: var(--brand-blue, #16559f);
 }
 
 /* ---------- Post Card Styling ---------- */
-/* Post Card Styles */
 .post-card {
   background: #fff;
   border-radius: 12px;
@@ -570,7 +565,7 @@ nav a i {
   font-family: "Inter", sans-serif;
 }
 
-/* Header Section */
+
 .post-header {
   display: flex;
   justify-content: space-between;
@@ -585,7 +580,7 @@ nav a i {
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 22px; /* 110% */
+  line-height: 22px; 
 }
 
 .icons img {
@@ -595,7 +590,7 @@ nav a i {
   margin: 5px;
 }
 
-/* Ride Info Section */
+
 .ride-info {
   display: flex;
   flex-direction: column;
@@ -625,7 +620,7 @@ nav a i {
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 22px; /* 157.143% */
+  line-height: 22px; 
 }
 
 .location img {
@@ -634,7 +629,7 @@ nav a i {
   margin-right: 0.5rem;
 }
 
-/* Divider */
+
 hr {
   border: 0;
   height: 1px;
@@ -642,7 +637,7 @@ hr {
   margin: 1rem 0;
 }
 
-/* Driver Info Section */
+
 .driver-info {
   display: flex;
   justify-content: space-between;
@@ -694,7 +689,7 @@ hr {
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 22px; /* 110% */
+  line-height: 22px; 
 }
 
 /* ---------- Post Page Styling ---------- */
@@ -741,90 +736,7 @@ hr {
   }
 }
 
-/* Stories.css */
-.stories {
-  display: flex;
-  gap: 8px;
-  padding: 23px;
-  overflow-x: auto;
-  margin-bottom: -33px;
-  margin-top: -17px;
-}
 
-.story {
-  width: 100px;
-  height: 180px;
-  border-radius: 15px;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  background-color: #f0f0f0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.story:hover {
-  transform: scale(1.05);
-}
-
-.create-story {
-  background-color: #eaeaea;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #888;
-}
-
-.create-story-button {
-  font-size: 14px;
-  color: #333;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.story-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 15px;
-}
-
-.story-info {
-  position: absolute;
-  bottom: 8px;
-  left: 8px;
-  color: white;
-  font-weight: bold;
-  font-size: 11px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.profile-picture {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 2px solid white;
-}
-
-.create-story .story-image {
-  height: auto;
-}
-
-.create-story .create-story-button {
-  font-weight: bold;
-  font-size: 12px;
-  text-align: center;
-  color: #333;
-  height: 60px;
-}
 
 /* ---------- Login Page Styling ---------- */
 .page {
@@ -906,7 +818,7 @@ hr {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%; /* 16px */
+  line-height: 100%; 
   letter-spacing: -0.384px;
   margin-bottom: 5px;
   display: block;
@@ -945,7 +857,7 @@ hr {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 24px; 
   letter-spacing: -0.176px;
 }
 
@@ -957,7 +869,7 @@ hr {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 200% */
+  line-height: 24px; 
   letter-spacing: -0.132px;
   text-decoration-line: underline;
   text-decoration-style: solid;
@@ -1091,7 +1003,6 @@ hr {
   text-underline-position: from-font;
 }
 
-/* Error Message */
 .error-message {
   text-align: center;
   color: red;
@@ -1110,7 +1021,7 @@ hr {
   color: #333;
 }
 
-/* Header */
+
 .header {
   align-items: center;
 
@@ -1127,7 +1038,7 @@ hr {
   margin-right: 120px;
 }
 
-/* Titles and Subtexts */
+
 .register-title {
   font-size: 28px;
   font-weight: 700;
@@ -1181,7 +1092,7 @@ hr {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%; /* 16px */
+  line-height: 100%; 
   letter-spacing: -0.384px;
   margin-bottom: 5px;
   display: block;
@@ -1223,7 +1134,7 @@ hr {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 24px; 
   letter-spacing: -0.176px;
 }
 
@@ -1250,8 +1161,6 @@ hr {
   margin-top: 100px;
   color: var(--Brand-white, #f7f7f7);
   font-feature-settings: "liga" off, "clig" off;
-
-  /* H2 */
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
@@ -1339,7 +1248,7 @@ hr {
   text-decoration: underline;
 }
 
-/* Error Message */
+
 .error-message {
   text-align: center;
   color: red;
@@ -1351,13 +1260,13 @@ hr {
 /* ---------- Explore rides Page ---------- */
 /* ---------- Explore rides Page ---------- */
 
-/* General Styles */
+
 
 .top-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Spaces elements across the bar */
-  padding: 10px 10px; /* Adjust spacing at the edges */
+  justify-content: space-between; 
+  padding: 10px 10px; 
   background-color: #ffffff;
   position: relative;
   margin-bottom: 70px;
@@ -1371,14 +1280,14 @@ hr {
 }
 
 .logo-container {
-  flex-grow: 1; /* This makes the logo stay centered */
+  flex-grow: 1; 
   display: flex;
-  justify-content: center; /* Ensures the logo is truly centered */
-  margin-right: 20px; /* Allows space for the avatar */
+  justify-content: center; 
+  margin-right: 20px; 
 }
 
 .logo {
-  max-height: 40px; /* Keeps logo properly sized */
+  max-height: 40px; 
   object-fit: contain;
 }
 
@@ -1387,7 +1296,7 @@ hr {
   width: 32px;
   border-radius: 50%;
   object-fit: cover;
-  margin-left: 0px; /* Moves the avatar further right */
+  margin-left: 0px; 
   margin-right: -30px;
   margin-top: 40px;
   margin-left: 10px;
@@ -1429,11 +1338,11 @@ hr {
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 171.429% */
+  line-height: 24px; 
   letter-spacing: -0.154px;
 }
 
-/* CTA Button */
+
 .cta-button {
   display: flex;
 
@@ -1468,8 +1377,6 @@ hr {
   flex-shrink: 0;
   color: var(--brand-black, #202020);
   font-feature-settings: "liga" off, "clig" off;
-
-  /* Heading 1 */
   font-family: Poppins;
   font-size: 8px;
   font-style: normal;
@@ -1499,13 +1406,13 @@ hr {
   margin-left: 12px !important;
   width: 24px;
   height: 24px;
-  pointer-events: none; /* Makes the icon non-interactive */
+  pointer-events: none; 
   font-family: Poppins;
 }
 
 .input-field-home {
   width: 100%;
-  padding: 12px 12px 12px 44px; /* Add left padding to make room for the icon */
+  padding: 12px 12px 12px 44px; 
   border-radius: var(--M, 16px);
   background: #f3f3f3;
   font-size: 16px;
@@ -1620,7 +1527,6 @@ hr {
 /* Rent Page */
 /* Rent Page */
 
-/* General page container */
 .ziptrip-car-page {
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -1632,7 +1538,7 @@ hr {
   margin-bottom: 30px;
 }
 
-/* Scrollable container for the car cards */
+
 .ziptrip-car-list {
   display: flex;
   gap: 20px;
@@ -1699,7 +1605,7 @@ hr {
   margin-right: 8px;
 }
 
-/* Discount Badge */
+
 .ziptrip-discount {
   position: absolute;
   top: 15px;
@@ -1712,7 +1618,7 @@ hr {
   font-size: 0.9rem;
 }
 
-/* Tags for Keyless and Black Friday */
+
 .ziptrip-keyless,
 .ziptrip-black-friday {
   display: inline-block;
@@ -1733,7 +1639,7 @@ hr {
   width: 120px;
 }
 
-/* Footer */
+
 .ziptrip-footer {
   display: flex;
   justify-content: space-between;
@@ -1763,7 +1669,7 @@ hr {
   width: 220px;
 }
 
-/* Styling icons in the car details section */
+
 .ziptrip-details p img {
   width: 24px;
   height: 24px;
@@ -1771,116 +1677,12 @@ hr {
   vertical-align: midd;
 }
 
-/* ---------- Barcelona Page ---------- */
-/* ---------- Barcelona Page ---------- */
-/* ---------- Barcelona Page ---------- */
-.barcelona-page {
-  padding: 16px;
-  font-family: "Poppins", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
 
-.header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.back-button {
-  font-size: 12px;
-  margin-right: 10px;
-}
-
-.title {
-  font-size: 16px;
-  font-weight: bold;
-  color: #4caf50;
-}
-
-.main-image img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.location-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.location-info h1 {
-  font-size: 24px; /* Adjust the size as needed */
-  font-weight: bold; /* Make it bold */
-  color: #2b2b2b; /* Dark color for better readability */
-  text-align: center; /* Center the text */
-  margin: 20px 0; /* Add spacing around it */
-}
-
-.rating {
-  color: var(--brand-blue);
-}
-
-.recommended-places,
-.local-guides,
-.general-info,
-.recent-posts {
-  margin-top: 20px;
-}
-
-.places-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.place {
-  padding: 6px 12px;
-  background-color: #f0f0f0;
-  border-radius: 20px;
-}
-
-.guides-list {
-  display: flex;
-  gap: 22px;
-}
-
-.guide img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-}
-
-.posts-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
-  gap: 16px; /* Space between grid items */
-}
-
-.post {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.post img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.show-more {
-  background-color: var(--brand-blue);
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  width: 100%;
-  margin-top: 10px;
-}
 
 /* ---------- Create Trip Page ---------- */
 /* ---------- Create Trip Page ---------- */
 /* ---------- Create Trip Page ---------- */
-/* Page Container */
-/* General Styles */
+
 .host-ride-container-custom {
   font-family: Arial, sans-serif;
   padding: 20px;
@@ -1914,7 +1716,7 @@ hr {
   margin-left: -20px;
 }
 
-/* Input Fields */
+
 .input-field-custom {
   width: 355px;
   height: 55px;
@@ -1929,11 +1731,11 @@ hr {
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 171.429% */
+  line-height: 24px; 
   letter-spacing: -0.154px;
 }
 
-/* Input Fields */
+
 .input-field-custom-price {
   width: 355px;
   height: 55px;
@@ -1948,7 +1750,7 @@ hr {
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 171.429% */
+  line-height: 24px; 
   letter-spacing: -0.154px;
   margin-bottom: 415px;
 }
@@ -1957,7 +1759,7 @@ hr {
   margin-right: 8px;
 }
 
-/* Preferences Buttons */
+
 .preferences-options-custom {
   display: flex;
   flex-wrap: wrap;
@@ -1988,7 +1790,7 @@ hr {
   background-color: #e0e0e0;
 }
 
-/* Vehicle Image Preview */
+
 .vehicle-image-preview-custom {
   text-align: center;
   margin-top: 10px;
@@ -2004,7 +1806,6 @@ hr {
   object-fit: cover;
 }
 
-/* Navigation Buttons */
 .button-custom {
   padding: 12px 16px;
   font-size: 16px;
@@ -2034,7 +1835,7 @@ hr {
   cursor: not-allowed;
 }
 
-/* Specific Button Colors */
+
 .next-button-custom {
   background-color: var(--brand-blue);
 }
@@ -2073,59 +1874,59 @@ hr {
 /* ---------- Update Trip Page ---------- */
 /* ---------- Update Trip Page ---------- */
 /* ---------- Update Trip Page ---------- */
-/* Page Container */
+
 .page.create-post-page {
   display: flex;
   flex-direction: column;
   height: 100vh;
   background-color: #fff;
-  font-family: Poppins, Arial, sans-serif; /* Include Poppins */
+  font-family: Poppins, Arial, sans-serif; 
   color: #333;
 }
 
-/* Post Input Area */
+
 .post-input-container {
   flex: 1;
   padding: 16px;
   overflow-y: auto;
 }
 
-/* Input Styles */
+
 .caption-input {
   width: 100%;
   font-size: 14px;
   padding: 12px;
-  border: none; /* No border */
-  outline: none; /* No outline */
-  resize: none; /* No resizing */
-  min-height: 80px; /* Minimum height for textarea */
-  background-color: #fafafa; /* Light background */
-  border-radius: 8px; /* Rounded corners */
-  color: #333; /* Text color */
-  margin-bottom: 16px; /* Spacing */
+  border: none; 
+  outline: none; 
+  resize: none; 
+  min-height: 80px; 
+  background-color: #fafafa; 
+  border-radius: 8px; 
+  color: #333; 
+  margin-bottom: 16px; 
 }
 
 .file-input {
-  margin-bottom: 10px; /* Spacing below file input */
+  margin-bottom: 10px; 
 }
 
-/* Image Preview Styles */
+
 .image-preview {
   width: 100%;
   max-height: 200px;
   object-fit: cover;
   border-radius: 8px;
-  margin-top: 8px; /* Spacing above image */
-  border: none; /* No border */
+  margin-top: 8px; 
+  border: none; 
 }
 
-/* Button Styles */
+
 .header-btn {
   font-size: 16px;
   color: #333;
   background: none;
-  border: none; /* No border */
-  cursor: pointer; /* Pointer on hover */
+  border: none; 
+  cursor: pointer; 
   padding: 10px;
 }
 
@@ -2145,8 +1946,6 @@ hr {
   background: var(--Brand-blue, #16559f);
   color: var(--Brand-white, #f7f7f7);
   font-feature-settings: "liga" off, "clig" off;
-
-  /* H2 */
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
@@ -2154,60 +1953,11 @@ hr {
   line-height: normal;
 }
 
-/* ---------- Popout ---------- */
-/* ---------- Popout ---------- */
-/* ---------- Popout ---------- */
-/*created by Beatrise*/
-
-h2 {
-  padding-left: 20px;
-  padding-top: 20px;
-}
-
-p {
-  font-feature-settings: "liga" off, "clig" off;
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 22px; /* 137.5% */
-}
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 300px;
-  height: 150px;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  width: 300px;
-  height: 150px;
-}
-
-.close-button {
-  background-color: #216869;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 20px;
-}
 
 /* ---------- Search bar ---------- */
 /* ---------- Search bar ---------- */
 /* ---------- Search bar ---------- */
-/* Search bar */
+
 .search-bar {
   display: flex;
   align-items: center;
@@ -2215,7 +1965,6 @@ p {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Search input */
 .search-input {
   border: none;
   outline: none;
@@ -2227,14 +1976,16 @@ p {
 }
 
 /* ---------- Post Detailed Page ---------- */
-/* General styles for the post detail page */
+/* ---------- Post Detailed Page ---------- */
+/* ---------- Post Detailed Page ---------- */
+
 .post-detail-page {
   font-family: Arial, sans-serif;
   padding: 16px;
   background-color: var(--brand-white);
 }
 
-/* Header section */
+
 .detail-header {
   display: flex;
   justify-content: space-between;
@@ -2281,13 +2032,13 @@ p {
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 22px; /* 110% */
+  line-height: 22px; 
 }
 
 .ride-times {
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  gap: 10px; /* Add space between elements */
+  flex-direction: column; 
+  gap: 10px; 
 }
 
 .ride-times > div {
@@ -2358,7 +2109,7 @@ p {
   line-height: normal;
 }
 
-/* Section Titles */
+
 .details-section h4,
 .preferences-section h4,
 .driver-section h4,
@@ -2370,10 +2121,10 @@ p {
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 22px; /* 110% */
+  line-height: 22px; 
 }
 
-/* Details Section */
+
 .details-section {
   background-color: var(--brand-white);
 
@@ -2390,7 +2141,7 @@ p {
   margin: 8px 0;
 }
 
-/* Preferences Section */
+
 .preferences-section ul {
   list-style: none;
   padding: 0;
@@ -2413,11 +2164,11 @@ p {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 22px; /* 137.5% */
-  flex: 1 1 calc(50% - 16px); /* Two-column layout */
+  line-height: 22px; 
+  flex: 1 1 calc(50% - 16px); 
 }
 
-/* Driver Section */
+
 .driver-section {
   background-color: var(--brand-white);
   border-radius: 8px;
@@ -2456,7 +2207,7 @@ p {
   margin-left: 160px;
 }
 
-/* Vehicle Section */
+
 .vehicle-section {
   background-color: var(--brand-white);
   border-radius: 8px;
@@ -2490,7 +2241,7 @@ p {
   align-items: center;
   gap: 8px;
   font-size: 14px;
-  flex: 1 1 calc(50% - 16px); /* Two-column layout */
+  flex: 1 1 calc(50% - 16px); 
 }
 
 .vehicle-section img {
@@ -2498,7 +2249,7 @@ p {
   height: 32px;
 }
 
-/* Environmental Benefits Section */
+
 .environment-section {
   background-color: var(--brand-white);
 
@@ -2523,8 +2274,8 @@ p {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 22px; /* 137.5% */
-  flex: 1 1 calc(50% - 16px); /* Two-column layout */
+  line-height: 22px; 
+  flex: 1 1 calc(50% - 16px); 
 }
 
 .environment-section img.illustration22 {
@@ -2535,11 +2286,11 @@ p {
   margin-left: 25px;
 }
 
-/* Report Issue Button */
+
 .edit-button,
 .delete-button {
-  display: inline-flex; /* Make the buttons sit next to each other */
-  width: 50%; /* Make each button take up nearly half the width */
+  display: inline-flex; 
+  width: 50%; 
   height: 55px;
 
   justify-content: center;
@@ -2562,14 +2313,14 @@ p {
   border-radius: 16px;
   background: var(--Brand-blue, #16559f);
   margin-top: 700px;
-  position: fixed; /* Make the button fixed to the screen */
-  top: 0; /* Place it at the top of the viewport */
-  left: 50%; /* Center the button horizontally */
+  position: fixed; 
+  top: 0; 
+  left: 50%; 
   transform: translateX(
     -50%
-  ); /* Correct the centering due to the button's width */
-  z-index: 9999; /* Ensure the button stays on top of other elements */
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3); /* Add black drop shadow */
+  ); 
+  z-index: 9999;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
 .report-issue-but {
@@ -2603,19 +2354,19 @@ p {
 .details-section {
   padding: 20px;
   background-color: var(--brand-white);
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px; 
 }
 
 .details-item {
   display: flex;
   align-items: center;
-  margin-bottom: 20px; /* Adds spacing between each detail item */
+  margin-bottom: 20px; 
 }
 
 .details-item img {
-  width: 24px; /* Adjust the size of icons */
+  width: 24px; 
   height: 24px;
-  margin-right: 10px; /* Space between icon and text */
+  margin-right: 10px; 
 }
 
 .details-item div {
@@ -2627,19 +2378,19 @@ p {
 .details-item h5 {
   font-size: 16px;
   font-weight: bold;
-  color: #333; /* Dark color for titles */
-  margin-bottom: 5px; /* Space between the title and description */
+  color: #333; 
+  margin-bottom: 5px; 
 }
 
 .details-item p {
   font-size: 14px;
-  color: #666; /* Lighter color for description */
+  color: #666; 
   margin-top: 0;
   line-height: 1.5;
   margin-left: 0px;
 }
 
-/* Optional: Add some bottom margin for the last item */
+
 .details-item:last-child {
   margin-bottom: 0;
 }
@@ -2651,15 +2402,13 @@ p {
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 22px; /* 110% */
+  line-height: 22px; 
 }
 
 /* Edit Post/ Update Post */
 /* Edit Post/ Update Post */
 /* Edit Post/ Update Post */
 
-/* Update Page Styling */
-/* Style the form inputs */
 .update-ride-title {
   color: #202020;
   text-align: center;
@@ -2679,18 +2428,18 @@ p {
 .form-grid {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Space between each form element */
+  gap: 20px; 
 }
 
 label {
   font-size: 14px;
   font-weight: bold;
-  margin-bottom: 8px; /* Add space between label and input */
+  margin-bottom: 8px;
   margin-left: -290px;
   margin-bottom: -15px;
 }
 
-/* Style the input fields */
+
 .input,
 .file-input {
   padding: 10px;
@@ -2712,7 +2461,7 @@ label {
   margin-top: 10px;
 }
 
-/* Submit button should be outside the form */
+
 button[type="submit"] {
   display: block;
 
@@ -2723,7 +2472,7 @@ button[type="submit"] {
   color: white;
   border: none;
   cursor: pointer;
-  margin-top: 20px; /* Add some space between form and button */
+  margin-top: 20px; 
 }
 
 button[type="submit"]:disabled {
@@ -2734,7 +2483,6 @@ button[type="submit"]:disabled {
 /* Profile Page Container */
 /* Profile Page Container */
 /* Profile Page Container */
-/* General Styling */
 
 .page {
   max-width: 400px;
@@ -2743,7 +2491,7 @@ button[type="submit"]:disabled {
   text-align: center;
 }
 
-/* Profile Image */
+
 .profile-image-container {
   margin-top: 20px;
   position: relative;
@@ -2770,11 +2518,11 @@ button[type="submit"]:disabled {
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 171.429% */
+  line-height: 24px; 
   letter-spacing: -0.154px;
 }
 
-/* Profile Name */
+
 .profile-name {
   margin-top: 20px;
 }
@@ -2790,11 +2538,11 @@ button[type="submit"]:disabled {
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 171.429% */
+  line-height: 24px;
   letter-spacing: -0.154px;
 }
 
-/* Save Button */
+
 .save-button {
   display: flex;
   width: 361px;
@@ -2813,7 +2561,7 @@ button[type="submit"]:disabled {
   color: var(--brand-white);
 }
 
-/* Profile Information Section */
+
 .profile-info {
   margin-top: 30px;
   text-align: left;
@@ -2822,11 +2570,11 @@ button[type="submit"]:disabled {
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 171.429% */
+  line-height: 24px; 
   letter-spacing: -0.154px;
 }
 
-/* Card Styling */
+
 .card {
   background-color: white;
   border-radius: 10px;
@@ -2854,7 +2602,7 @@ button[type="submit"]:disabled {
   color: #777;
 }
 
-/* Footer Section */
+
 .footer {
   margin-top: 30px;
 }
@@ -2879,15 +2627,6 @@ button[type="submit"]:disabled {
   margin-top: -38px;
   margin-bottom: 120px;
 }
-
-
-
-
-
-
-
-
-
 
 
 

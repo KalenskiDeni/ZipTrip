@@ -6,11 +6,8 @@ import CreatePage from "./pages/CreatePage";
 import HomePage from "./pages/HomePage";
 import PostDetailPage from "./pages/PostDetailPage";
 import ExploreRidesPage from "./pages/ExploreRidesPage";
-
 import ChatPage from "./pages/ChatPage";
 import RentPage from "./pages/RentPage";
-import SearchPage from "./pages/SearchPage";
-
 import UpdatePage from "./pages/UpdatePage";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
@@ -51,7 +48,6 @@ function App() {
         <Route path="/posts/:id" element={<PostDetailPage />} />
         <Route path="/explore" element={<ExploreRidesPage />} />
         <Route path="/chat" element={<ChatPage />} />
-        <Route path="/search" element={<SearchPage />} />
         <Route path="/create" element={<CreatePage />} />
         <Route path="/posts/:id/update" element={<UpdatePage />} />
         <Route path="/rent" element={<RentPage />} />

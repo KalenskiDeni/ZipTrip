@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "/src/styles.css";
 import bar from "../assets/status-bar.png";
 import userAvatar from "../assets/icons/userAvatar.svg"; // Placeholder for user avatar
-import logo from "/src/assets/logoziptrip.png"; // Path to the logo
+import logo from "/src/assets/logoziptrip.png";
 import backButton from "../assets/icons/backButton.svg";
 import { auth } from "../firebase-config"; // Firebase authentication
 
@@ -83,15 +83,15 @@ const HostRideSteps = () => {
   };
 
   const handleSubmit = async () => {
-    const user = auth.currentUser; // Get the logged-in user's data from Firebase
+    const user = auth.currentUser; // get the logged-in user's data from Firebase
 
     const rideWithUserInfo = {
       ...rideDetails,
       driver: {
-        name: user.displayName || "Anonymous", // Use the displayName from Firebase or fallback to "Anonymous"
+        name: user.displayName || "Anonymous", // use the displayName from Firebase or fallback to "Anonymous"
         profileImage: user.photoURL || "https://via.placeholder.com/40", // Use the photoURL or fallback to a placeholder image
-        rating: 5, // Set a default rating or pull it from somewhere else
-        ratingCount: 0, // Default to 0 ratings
+        rating: 5, // set a default rating or pull it from somewhere else
+        ratingCount: 0, // default to 0 ratings
       },
     };
 
@@ -107,7 +107,7 @@ const HostRideSteps = () => {
 
       if (response.ok) {
         alert("Ride created successfully!");
-        navigate("/"); // Redirect to home page
+        navigate("/"); // redirect to home page
       } else {
         alert("Failed to create the ride. Please try again.");
       }
@@ -129,7 +129,7 @@ const HostRideSteps = () => {
           src={user?.photoURL || "https://via.placeholder.com/150"} // Use photoURL from Firebase or fallback
           alt="User Avatar"
           className="avatar-profile"
-          onClick={handleAvatarClick} // Navigate to profile page on click
+          onClick={handleAvatarClick} // navigate to profile page on click
         />
       </div>
 

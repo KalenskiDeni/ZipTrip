@@ -5,11 +5,10 @@ import { auth } from "../firebase-config"; // Firebase Authentication
 import { getDatabase, ref, set } from "firebase/database"; // Firebase Realtime Database
 import "/src/styles.css";
 
-// Importing icons and images
 import mailIcon from "../assets/icons/mail.icon.svg";
 import userIcon from "../assets/icons/user-icon.svg";
 import lockIcon from "../assets/icons/lock-icon.svg";
-import logo from "/src/assets/logoziptrip.png"; // Path to the logo
+import logo from "/src/assets/logoziptrip.png";
 import backButton from "../assets/icons/backButton.svg";
 
 // SignUpPage component
@@ -33,7 +32,7 @@ export default function RegisterPage() {
         // Update the user's profile with the display name and photo
         updateProfile(user, {
           displayName: name, // Set the user's display name
-          photoURL: "https://via.placeholder.com/150", // You can use a default image or upload one
+          photoURL: "https://via.placeholder.com/150",
         }).then(() => {
           // Save user data to the database
           storeUserData(user.uid, name, mail);

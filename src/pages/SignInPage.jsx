@@ -1,17 +1,15 @@
-// Created by Deni Kalenski
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase-config";
 import "/src/styles.css";
 
-// Importing icons and images
 import arrowIcon from "../assets/icons/arrow-icon.svg";
 import mailIcon from "../assets/icons/mail.icon.svg";
 import lockIcon from "../assets/icons/lock-icon.svg";
 import appleIcon from "../assets/icons/apple-icon.svg";
 import googleIcon from "../assets/icons/google-icon.svg";
-import logo from "/src/assets/logoziptrip.png"; // Path to the logo
+import logo from "/src/assets/logoziptrip.png";
 import backButton from "../assets/icons/backButton.svg";
 
 // SignInPage component

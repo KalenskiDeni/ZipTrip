@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { auth } from "../firebase-config"; // Firebase authentication
 
-// Importing all icons and images
 import locationIcon from "../assets/icons/location-icon1.svg";
 import ferryIcon from "../assets/icons/ferry-icon.svg";
 import ecoIcon from "../assets/icons/eco-icon.svg";
@@ -67,7 +66,7 @@ export default function PostDetailPage() {
 
   const handleInstantBooking = () => {
     // Navigate to the booking page when the button is clicked
-    navigate('/booking');
+    navigate("/booking");
   };
 
   async function handleDelete() {
@@ -305,10 +304,13 @@ export default function PostDetailPage() {
           Delete Ride
         </button>
         <div>
-      <button className="start-instant-booking" onClick={handleInstantBooking}>
-        Start Instant Booking
-      </button>
-    </div>
+          <button
+            className="start-instant-booking"
+            onClick={handleInstantBooking}
+          >
+            Start Instant Booking
+          </button>
+        </div>
         <button className="report-issue-but">Report issue with ride</button>
       </div>
     </section>
