@@ -16,8 +16,8 @@ Dive into the world of ZipTrip and discover the travel possibilities, share a ca
 
 ## Technology Stack
 
-Frontend: React, JSX, HTML5, CSS3
-Backend: Firebase (for data storage and authentication)
+Frontend: React, JSX, HTML5, CSS3 <br>
+Backend: Firebase (for data storage and authentication) <br>
 Hosting: GitHub Pages
 
 
