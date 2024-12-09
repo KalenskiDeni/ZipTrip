@@ -14,14 +14,13 @@ For the best experience, resize your browser to 393px x 852px — or better yet,
 Dive into the world of ZipTrip and discover the travel possibilities, share a car, book rides, and enjoy a seamless, fun journey while saving the environment with the app’s easy-to-navigate design! ✈️🗺️
 
 
-
-Technology Stack
+## Technology Stack
 
 Frontend: React, JSX, HTML5, CSS3
 Backend: Firebase (for data storage and authentication)
 Hosting: GitHub Pages
 
 
-Sustainability and CO2 Emissions 🌱
+## Sustainability and CO2 Emissions 🌱
 
 At ZipTrip, we’re committed to sustainability and reducing our environmental impact. By promoting eco-friendly shared trips, we help contribute to a greener planet. ZipTrip is not only about getting from one place to another—it's about making the world a better place, one ride at a time. 🌍🌱
