@@ -1,8 +1,8 @@
-ZipTrip
+# ZipTrip
 
 Welcome to the glorious adventure of my AmAzInG coded app solution! 🎉 ZipTrip is here to make your travel plans as fun and seamless as possible, all with a tap of your fingers. 🚗🌍
 
-Quick Start Guide
+## Quick Start Guide
 
 1. Open the digital solution
 ...duh, simply click the link and get ready to experience the magic! 
