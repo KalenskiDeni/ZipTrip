@@ -16,7 +16,7 @@ import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
 import RidesPage from "./pages/RidesPage";
 import ProfilePage from "./pages/ProfilePage";
-
+import InstantBookingPage from "./pages/InstantBookingPage";
 
 import OnBoarding from "./pages/OnBoarding";
 
@@ -50,19 +50,14 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/posts/:id" element={<PostDetailPage />} />
         <Route path="/explore" element={<ExploreRidesPage />} />
-   
         <Route path="/chat" element={<ChatPage />} />
         <Route path="/search" element={<SearchPage />} />
-
         <Route path="/create" element={<CreatePage />} />
         <Route path="/posts/:id/update" element={<UpdatePage />} />
         <Route path="/rent" element={<RentPage />} />
         <Route path="/rides" element={<RidesPage />} />
         <Route path="/profile" element={<ProfilePage />} />
-        
-       
- 
-    
+        <Route path="/booking" element={<InstantBookingPage />} />
 
         {/* Catch-all redirect */}
         <Route path="*" element={<Navigate to="/" />} />

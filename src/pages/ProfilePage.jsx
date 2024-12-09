@@ -7,13 +7,19 @@ import { useNavigate } from "react-router-dom";
 import backButton from "../assets/icons/backButton.svg";
 
 const ProfilePage = () => {
-  const [profileImage, setProfileImage] = useState(auth.currentUser?.photoURL || "https://via.placeholder.com/150");
+  const [profileImage, setProfileImage] = useState(
+    auth.currentUser?.photoURL || "https://via.placeholder.com/150"
+  );
   const [imageUrl, setImageUrl] = useState(profileImage); // Store the new image URL
-  const [name, setName] = useState(auth.currentUser?.displayName || "Anonymous");
-  
+  const [name, setName] = useState(
+    auth.currentUser?.displayName || "Anonymous"
+  );
+
   useEffect(() => {
     if (auth.currentUser) {
-      setProfileImage(auth.currentUser.photoURL || "https://via.placeholder.com/150");
+      setProfileImage(
+        auth.currentUser.photoURL || "https://via.placeholder.com/150"
+      );
       setName(auth.currentUser.displayName || "Anonymous");
     }
   }, []);
@@ -22,9 +28,6 @@ const ProfilePage = () => {
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
-
-
-
 
   // Handle the URL input for the profile image
   const handleImageUrlChange = (e) => {
@@ -58,12 +61,12 @@ const ProfilePage = () => {
 
   return (
     <section id="profile-page" className="page">
-         <img
-            src={backButton}
-            onClick={handleBack}
-            alt="Back"
-            className="backbutton-profile"
-          />
+      <img
+        src={backButton}
+        onClick={handleBack}
+        alt="Back"
+        className="backbutton-profile"
+      />
       <p className="profile-textt">Your Profile</p>
 
       {/* Profile Image */}
@@ -80,7 +83,9 @@ const ProfilePage = () => {
 
       {/* Name */}
       <div className="profile-name">
-        <label className = "name-label" htmlFor="name">Name:</label>
+        <label className="name-label" htmlFor="name">
+          Name:
+        </label>
         <input
           type="text"
           id="name"
@@ -90,16 +95,14 @@ const ProfilePage = () => {
         />
       </div>
 
-   
-
       {/* Additional Profile Information */}
       <div className="profile-info">
         <p>Email: {auth.currentUser?.email}</p>
         <p>Account created: {auth.currentUser?.metadata.creationTime}</p>
       </div>
 
-        {/* Save Button */}
-        <button onClick={handleSave} className="save-button">
+      {/* Save Button */}
+      <button onClick={handleSave} className="save-button">
         Save Changes
       </button>
     </section>

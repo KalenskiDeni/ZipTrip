@@ -14,7 +14,14 @@
         "rating": 4,
         "ratingCount": 722
       },
-      "price": 150
+      "price": 150,
+      "vehicle": {
+        "model": "Tesla Model 3",
+        "year": 2022,
+        "seats": 5,
+        "type": "Electric",
+        "image": "https://pngimg.com/d/tesla_car_PNG47.png"
+      }
     },
     "post2": {
       "date": "Thu, 12 Dec",
@@ -30,10 +37,16 @@
         "rating": 5,
         "ratingCount": 450
       },
-      "price": 180
+      "price": 180,
+      "vehicle": {
+        "model": "BMW i4",
+        "year": 2023,
+        "seats": 5,
+        "type": "Electric",
+        "image": "https://www.freepnglogos.com/uploads/bmw-png/blue-bmw-coupe-car-png-image-pngpix-5.png"
+      }
     }
   },
-
   "users": {
     "userUID1": {
       "name": "John Doe",
@@ -46,7 +59,6 @@
       "profilePicture": "https://images.unsplash.com/photo-1533621834623-d0b25d0b14e7?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   },
-
   "locals": {
     "Albert": {
       "gender": "male",
@@ -85,7 +97,6 @@
       "background-image": "https://images.unsplash.com/photo-1728942756635-0407678db122?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   },
-
   "stories": {
     "0": {
       "name": "John Smith",
@@ -98,7 +109,6 @@
       "avatar": "https://images.unsplash.com/photo-1584650854920-c728d644c77f?q=80&w=1905&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   },
-
   "allChats": [
     {
       "name": "Emma Jensen",
@@ -173,7 +183,6 @@
       "avatar": "https://images.unsplash.com/photo-1520310809185-5cc119cf8b08?q=80&w=1707&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ],
-
   "explorePosts": {
     "Barcelona": {
       "location": "Barcelona, Spain",
@@ -200,101 +209,63 @@
       "location": "Paris, France",
       "photo": "https://images.unsplash.com/photo-1697831447294-ca0f55c2bc42?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dmFybmElMjBidWxnYXJpYXxlbnwwfHwwfHx8MA%3D%3D"
     }
-  }, 
-
-  "explorePosts": {
-    "date": "Wed, 11 Dec",
-    "departureTime": "13:00",
-    "arrivalTime": "16:00",
-    "pickupLocation": "Hovedbanegarden, København",
-    "dropoffLocation": "Sumatravej 1, Aarhus",
-    "price": 150,
-    "seats": 3,
-    "details": {
-      "detour": "The driver is willing to make a 5 min. detour",
-      "luggageSize": "Large - e.g. bag or suitcase"
-    },
-    "preferences": ["Music", "Smoking", "Pets", "Children"],
-    "driver": {
-      "profileImage": "https://via.placeholder.com/50",
-      "name": "Morten",
-      "joined": "April 2021",
-      "ratings": 722
-    },
-    "vehicle": {
-      "image": "https://via.placeholder.com/400x200",
-      "model": "Tesla Model 3",
-      "year": 2020,
-      "type": "Electric"
-    },
-    "passengers": ["Morten Larsen", "Passenger 2", "Passenger 3"],
-    "environmentalBenefits": {
-      "kg CO2 saved": 37,
-      "clean air": "10%",
-      "gallons of gas": 174,
-      "trees": 1.4
-    }
   },
-
-
-    "cars": [
-      {
-        "name": "Tesla Model Y",
-        "price": 2800,
-        "currency": "DKK",
-        "duration": "5 days",
-        "seats": 5,
-        "distanceIncluded": 1500,
-        "isElectric": true,
-        "hasKeyless": true,
-        "hasLuggageSpace": true,
-        "discount": 20,
-        "image": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "tags": ["BLACK FRIDAY"]
-      },
-      {
-        "name": "Hyundai Ioniq 5",
-        "price": 2600,
-        "currency": "DKK",
-        "duration": "5 days",
-        "seats": 4,
-        "distanceIncluded": 1400,
-        "isElectric": true,
-        "hasKeyless": false,
-        "hasLuggageSpace": true,
-        "discount": 30,
-        "image": "https://images.unsplash.com/photo-1647418552401-f3958302b72a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "tags": ["BLACK FRIDAY"]
-      },
-      {
-        "name": "Polestar 2",
-        "price": 3000,
-        "currency": "DKK",
-        "duration": "5 days",
-        "seats": 5,
-        "distanceIncluded": 1600,
-        "isElectric": true,
-        "hasKeyless": true,
-        "hasLuggageSpace": true,
-        "discount": 10,
-        "image": "https://images.unsplash.com/photo-1655287778401-ce90c81a630f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "tags": ["BLACK FRIDAY"]
-      },
-      {
-        "name": "BMW X6 M",
-        "price": 3800,
-        "currency": "DKK",
-        "duration": "5 days",
-        "seats": 5,
-        "distanceIncluded": 2000,
-        "isElectric": true,
-        "hasKeyless": true,
-        "hasLuggageSpace": true,
-        "discount": 15,
-        "image": "https://images.unsplash.com/photo-1541443131876-44b03de101c5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "tags": ["BLACK FRIDAY"]
-      }
-    ]
-  }
-  
-  
+  "cars": [
+    {
+      "name": "Tesla Model Y",
+      "price": 2800,
+      "currency": "DKK",
+      "duration": "5 days",
+      "seats": 5,
+      "distanceIncluded": 1500,
+      "isElectric": true,
+      "hasKeyless": true,
+      "hasLuggageSpace": true,
+      "discount": 20,
+      "image": "https://images.unsplash.com/photo-1560958089-b8a1929cea89?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": ["BLACK FRIDAY"]
+    },
+    {
+      "name": "Hyundai Ioniq 5",
+      "price": 2600,
+      "currency": "DKK",
+      "duration": "5 days",
+      "seats": 4,
+      "distanceIncluded": 1400,
+      "isElectric": true,
+      "hasKeyless": false,
+      "hasLuggageSpace": true,
+      "discount": 30,
+      "image": "https://images.unsplash.com/photo-1647418552401-f3958302b72a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": ["BLACK FRIDAY"]
+    },
+    {
+      "name": "Polestar 2",
+      "price": 3000,
+      "currency": "DKK",
+      "duration": "5 days",
+      "seats": 5,
+      "distanceIncluded": 1600,
+      "isElectric": true,
+      "hasKeyless": true,
+      "hasLuggageSpace": true,
+      "discount": 10,
+      "image": "https://images.unsplash.com/photo-1655287778401-ce90c81a630f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": ["BLACK FRIDAY"]
+    },
+    {
+      "name": "BMW X6 M",
+      "price": 3800,
+      "currency": "DKK",
+      "duration": "5 days",
+      "seats": 5,
+      "distanceIncluded": 2000,
+      "isElectric": true,
+      "hasKeyless": true,
+      "hasLuggageSpace": true,
+      "discount": 15,
+      "image": "https://images.unsplash.com/photo-1541443131876-44b03de101c5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "tags": ["BLACK FRIDAY"]
+    }
+  ]
+}

@@ -37,7 +37,6 @@ export default function SignInPage() {
   // Return the JSX for the SignInPage component
   return (
     <section id="sign-in-page" className="page">
-      
       <div className="header">
         <img src={backButton} alt="Back Button" className="back-button-login" />
         <img src={logo} alt="Off The Path Logo" className="logo" />

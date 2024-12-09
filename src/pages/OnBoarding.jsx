@@ -102,7 +102,9 @@ function MyComponent() {
             {onboardingScreens.map((_, index) => (
               <div
                 key={index}
-                className={`onboarding-dot ${currentScreen === index ? "active" : ""}`}
+                className={`onboarding-dot ${
+                  currentScreen === index ? "active" : ""
+                }`}
               ></div>
             ))}
           </div>

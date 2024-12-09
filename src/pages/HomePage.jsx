@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";  // Import useNavigate for navigation
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "/src/styles.css";
 import bar from "../assets/status-bar.png";
-import logo from "/src/assets/logoziptrip.png"; 
-import userAvatar from "../assets/icons/userAvatar.svg"; 
+import logo from "/src/assets/logoziptrip.png";
+import userAvatar from "../assets/icons/userAvatar.svg";
 import locationIcon1 from "../assets/icons/locationIcon1.svg";
 import locationIcon2 from "../assets/icons/locationIcon2.svg";
 import calendarIcon from "../assets/icons/calendarIcon.svg";
@@ -29,9 +29,6 @@ export default function HomePage() {
     navigate("/profile"); // Navigate to ProfilePage when avatar is clicked
   };
 
-
-
-  
   return (
     <section className="page">
       {/* Top Bar */}
@@ -41,8 +38,8 @@ export default function HomePage() {
           <div className="logo-container">
             <img src={logo} alt="ZipTrip Logo" className="logo" />
           </div>
-         {/* Avatar Image from Firebase Authentication */}
-         <img
+          {/* Avatar Image from Firebase Authentication */}
+          <img
             src={user?.photoURL || "https://via.placeholder.com/150"} // Use photoURL from Firebase or fallback
             alt="User Avatar"
             className="avatar-profile"
@@ -60,7 +57,11 @@ export default function HomePage() {
       <div className="search-container">
         {/* Where From */}
         <div className="input-container-home">
-          <img src={locationIcon1} alt="Where From Icon" className="input-icon-home" />
+          <img
+            src={locationIcon1}
+            alt="Where From Icon"
+            className="input-icon-home"
+          />
           <input
             type="text"
             placeholder="Where from?"
@@ -72,7 +73,11 @@ export default function HomePage() {
 
         {/* Where To */}
         <div className="input-container-home">
-          <img src={locationIcon2} alt="Where To Icon" className="input-icon-home" />
+          <img
+            src={locationIcon2}
+            alt="Where To Icon"
+            className="input-icon-home"
+          />
           <input
             type="text"
             placeholder="Where to?"
@@ -96,7 +101,11 @@ export default function HomePage() {
 
       {/* Illustration Section */}
       <section className="illustration-section">
-        <img src={illustration} alt="People in a car with a map" className="illustration-image" />
+        <img
+          src={illustration}
+          alt="People in a car with a map"
+          className="illustration-image"
+        />
       </section>
 
       {/* CTA Button */}

@@ -50,8 +50,8 @@ export default function HomePage() {
           <div className="logo-container">
             <img src={logo} alt="ZipTrip Logo" className="logo" />
           </div>
-         {/* Avatar Image from Firebase Authentication */}
-         <img
+          {/* Avatar Image from Firebase Authentication */}
+          <img
             src={user?.photoURL || "https://via.placeholder.com/150"} // Use photoURL from Firebase or fallback
             alt="User Avatar"
             className="avatar-profile"
@@ -83,9 +83,7 @@ export default function HomePage() {
             {/* Posts Grid */}
             <div className="grid">
               {posts.length > 0 ? (
-                posts.map((post) => (
-                  <PostCard key={post.id} ride={post} />
-                ))
+                posts.map((post) => <PostCard key={post.id} ride={post} />)
               ) : (
                 <p>No rides available.</p>
               )}

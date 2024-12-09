@@ -17,7 +17,7 @@ export default function ChatPage() {
   const [chats, setChats] = useState({ allChats: [], matchChats: [] });
   const [loading, setLoading] = useState(true);
 
-  const navigate = useNavigate();
+    const navigate = useNavigate();
   const handleAvatarClick = () => {
     navigate("/profile"); // Navigate to ProfilePage when avatar is clicked
   };

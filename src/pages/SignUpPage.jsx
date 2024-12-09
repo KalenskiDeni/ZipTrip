@@ -33,12 +33,11 @@ export default function RegisterPage() {
         // Update the user's profile with the display name and photo
         updateProfile(user, {
           displayName: name, // Set the user's display name
-          photoURL: "https://via.placeholder.com/150" // You can use a default image or upload one
+          photoURL: "https://via.placeholder.com/150", // You can use a default image or upload one
         }).then(() => {
           // Save user data to the database
           storeUserData(user.uid, name, mail);
         });
-
       })
       .catch((error) => {
         let code = error.code.replaceAll("-", " ").replaceAll("auth/", "");
@@ -49,20 +48,20 @@ export default function RegisterPage() {
   // Store user data in Firebase Realtime Database
   function storeUserData(uid, name, mail) {
     const db = getDatabase(); // Get the Firebase Database instance
-    const userRef = ref(db, 'users/' + uid); // Create a reference to the user's data in Firebase
+    const userRef = ref(db, "users/" + uid); // Create a reference to the user's data in Firebase
     set(userRef, {
       name: name,
       mail: mail,
       profilePicture: "https://via.placeholder.com/150", // Default profile picture
     })
-    .then(() => {
-      console.log("User data saved successfully!");
-      navigate("/profile"); // Redirect to the Profile Page after successful registration
-    })
-    .catch((error) => {
-      console.error("Error saving user data:", error);
-      setErrorMessage("Error saving user data.");
-    });
+      .then(() => {
+        console.log("User data saved successfully!");
+        navigate("/profile"); // Redirect to the Profile Page after successful registration
+      })
+      .catch((error) => {
+        console.error("Error saving user data:", error);
+        setErrorMessage("Error saving user data.");
+      });
   }
 
   return (
@@ -77,10 +76,16 @@ export default function RegisterPage() {
         features of <span className="highlight">ZipTrip!</span>
       </p>
 
-      <form id="register-form" className="register-form" onSubmit={handleRegister}>
+      <form
+        id="register-form"
+        className="register-form"
+        onSubmit={handleRegister}
+      >
         {/* Email Input */}
         <div className="input-group email-group">
-          <label htmlFor="mail" className="input-label">Email</label>
+          <label htmlFor="mail" className="input-label">
+            Email
+          </label>
           <div className="input-field email-field">
             <img src={mailIcon} alt="Mail icon" className="input-icon" />
             <input
@@ -96,7 +101,9 @@ export default function RegisterPage() {
 
         {/* Name Input */}
         <div className="input-group name-group">
-          <label htmlFor="name" className="input-label">Your Name</label>
+          <label htmlFor="name" className="input-label">
+            Your Name
+          </label>
           <div className="input-field name-field">
             <img src={userIcon} alt="User icon" className="input-icon" />
             <input
@@ -112,7 +119,9 @@ export default function RegisterPage() {
 
         {/* Password Input */}
         <div className="input-group password-group">
-          <label htmlFor="password" className="input-label">Your Password</label>
+          <label htmlFor="password" className="input-label">
+            Your Password
+          </label>
           <div className="input-field password-field">
             <img src={lockIcon} alt="Lock icon" className="input-icon" />
             <input
@@ -134,12 +143,16 @@ export default function RegisterPage() {
         )}
 
         {/* Register Button */}
-        <button type="submit" className="register-btn">Register</button>
+        <button type="submit" className="register-btn">
+          Register
+        </button>
       </form>
 
       <p className="login-link">
         Already have an account?{" "}
-        <Link to="/signin" className="login-link-text">Login here</Link>
+        <Link to="/signin" className="login-link-text">
+          Login here
+        </Link>
       </p>
     </section>
   );

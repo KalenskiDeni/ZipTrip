@@ -27,11 +27,9 @@ const HostRideSteps = () => {
       type: "",
     },
     price: "",
-
   });
   const navigate = useNavigate();
 
-  
   const user = auth.currentUser;
   const handleNext = () => setStep((prev) => prev + 1);
   const handleBack = () => setStep((prev) => prev - 1);
@@ -62,14 +60,10 @@ const HostRideSteps = () => {
     });
   };
 
-
-
-
-    // Function to handle avatar click and navigate to the ProfilePage
-    const handleAvatarClick = () => {
-      navigate("/profile"); // Navigate to ProfilePage when avatar is clicked
-    };
-  
+  // Function to handle avatar click and navigate to the ProfilePage
+  const handleAvatarClick = () => {
+    navigate("/profile"); // Navigate to ProfilePage when avatar is clicked
+  };
 
   // Handle the file input for the vehicle image
   const handleFileUpload = (e) => {
@@ -90,7 +84,7 @@ const HostRideSteps = () => {
 
   const handleSubmit = async () => {
     const user = auth.currentUser; // Get the logged-in user's data from Firebase
-  
+
     const rideWithUserInfo = {
       ...rideDetails,
       driver: {
@@ -124,9 +118,7 @@ const HostRideSteps = () => {
   };
 
   return (
-    
     <div className="host-ride-container-custom">
-      
       <div className="top-bar-content">
         <img src={bar} alt="status bar" className="bar" />
         <div className="logo-container">
@@ -134,11 +126,11 @@ const HostRideSteps = () => {
         </div>
         {/* Avatar Image from Firebase Authentication */}
         <img
-            src={user?.photoURL || "https://via.placeholder.com/150"} // Use photoURL from Firebase or fallback
-            alt="User Avatar"
-            className="avatar-profile"
-            onClick={handleAvatarClick} // Navigate to profile page on click
-          />
+          src={user?.photoURL || "https://via.placeholder.com/150"} // Use photoURL from Firebase or fallback
+          alt="User Avatar"
+          className="avatar-profile"
+          onClick={handleAvatarClick} // Navigate to profile page on click
+        />
       </div>
 
       {/* Step 1: Basic Ride Details */}
@@ -168,7 +160,6 @@ const HostRideSteps = () => {
             value={rideDetails.date}
             onChange={(e) => handleInputChange("date", e.target.value)}
             className="input-field-custom"
-            
           />
           {/* Departure Time Input */}
           Departure time
