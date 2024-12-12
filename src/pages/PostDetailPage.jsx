@@ -98,7 +98,7 @@ export default function PostDetailPage() {
   return (
     <section className="post-detail-page">
       <header className="detail-header">
-        <img src={bar} alt="status bar" className="bar" />
+       
         <img
           src={backButton}
           onClick={/*handleBack*/ () => navigate("/explore")}

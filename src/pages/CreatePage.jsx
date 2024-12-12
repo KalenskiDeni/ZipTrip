@@ -120,7 +120,7 @@ const HostRideSteps = () => {
   return (
     <div className="host-ride-container-custom">
       <div className="top-bar-content">
-        <img src={bar} alt="status bar" className="bar" />
+        
         <div className="logo-container">
           <img src={logo} alt="ZipTrip Logo" className="logo" />
         </div>

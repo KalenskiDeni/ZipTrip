@@ -53,7 +53,7 @@ export default function RentPage() {
   return (
     <div className="ziptrip-car-page">
       <div className="top-bar-content">
-        <img src={bar} alt="status bar" className="bar" />
+       
         <div className="logo-container">
           <img src={logo} alt="ZipTrip Logo" className="logo" />
         </div>
