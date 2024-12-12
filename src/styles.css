@@ -353,7 +353,7 @@ nav a i {
 .tab-buttons-home {
   margin-top: 15px;
   display: flex;
-  margin-top: -60px;
+margin-bottom: 15px;
   padding: 0 25px;
   display: flex;
   width: 361px;
@@ -2528,12 +2528,25 @@ button[type="submit"]:disabled {
   letter-spacing: -0.154px;
 }
 
-
-.profile-name {
+.name-label {
   margin-top: 20px;
+  margin-left: -50px;
+   text-align: left;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; 
+  letter-spacing: -0.154px;
 }
 
-.profile-name-input {
+.profile-name {
+  margin-top: 40px;
+  margin-left: -230px;
+
+}
+
+.profile-name-inputtt {
   border-radius: var(--M, 16px);
   background: #f3f3f3;
   width: 361px;
@@ -2546,6 +2559,7 @@ button[type="submit"]:disabled {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.154px;
+  margin-left: 229px;
 }
 
 
@@ -2560,6 +2574,7 @@ button[type="submit"]:disabled {
   margin-top: 170px;
   border-radius: 16px;
   background: var(--Brand-blue, #16559f);
+  margin-bottom: 50px;
 }
 
 .save-button:hover {

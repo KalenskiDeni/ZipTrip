@@ -91,7 +91,7 @@ const ProfilePage = () => {
           id="name"
           value={name}
           onChange={handleNameChange}
-          className="profile-name-input"
+          className="profile-name-inputtt"
         />
       </div>
 
