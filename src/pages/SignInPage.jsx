@@ -65,7 +65,7 @@ export default function SignInPage() {
 
         <div className="input-group password-group">
           <label htmlFor="password" className="input-label">
-            Your Password
+            Password
           </label>
           <div className="input-field password-field">
             <img src={lockIcon} alt="Lock icon" className="input-icon" />

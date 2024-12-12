@@ -101,7 +101,7 @@ export default function RegisterPage() {
         {/* Name Input */}
         <div className="input-group name-group">
           <label htmlFor="name" className="input-label">
-            Your Name
+            Name
           </label>
           <div className="input-field name-field">
             <img src={userIcon} alt="User icon" className="input-icon" />
@@ -119,7 +119,7 @@ export default function RegisterPage() {
         {/* Password Input */}
         <div className="input-group password-group">
           <label htmlFor="password" className="input-label">
-            Your Password
+            Password
           </label>
           <div className="input-field password-field">
             <img src={lockIcon} alt="Lock icon" className="input-icon" />
