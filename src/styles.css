@@ -2321,6 +2321,7 @@ hr {
   margin-top: 700px;
   position: fixed; 
   top: 0; 
+  margin-bottom: 80px;
   left: 50%; 
   transform: translateX(
     -50%
